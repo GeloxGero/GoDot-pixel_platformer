@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://characters_packed.png" type="Texture" id=1]
-[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/Entities/Common Entities/characters_packed.png" type="Texture" id=1]
+[ext_resource path="res://assets/Entities/Common Entities/Player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.0
