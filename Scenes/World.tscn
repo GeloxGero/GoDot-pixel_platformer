@@ -1,3 +1,200 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Environment/Start/DirtTile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Environment/Start/main background.png" type="Texture" id=2]
 
 [node name="World" type="Node2D"]
+
+[node name="MainBackground" type="Sprite" parent="."]
+position = Vector2( 173, 89 )
+scale = Vector2( 0.646429, 0.646429 )
+texture = ExtResource( 2 )
+
+[node name="DirtTile" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 26, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 38, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 51, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 77, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 90, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 103, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 116, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 129, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 142, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 155, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 181, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 194, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 207, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 220, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 233, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 246, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 259, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 272, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile23" parent="." instance=ExtResource( 1 )]
+position = Vector2( 285, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile24" parent="." instance=ExtResource( 1 )]
+position = Vector2( 298, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile25" parent="." instance=ExtResource( 1 )]
+position = Vector2( 311, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile26" parent="." instance=ExtResource( 1 )]
+position = Vector2( 324, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile27" parent="." instance=ExtResource( 1 )]
+position = Vector2( 337, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 13, 170 )
+scale = Vector2( 0.165714, 0.164361 )
+__meta__ = {
+"_edit_group_": true
+}

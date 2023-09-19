@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Environment/Start/dirt_tile.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.09662, 6.38952 )
+
+[node name="DirtTile" type="StaticBody2D"]
+position = Vector2( 143, 86 )
+scale = Vector2( 0.284064, 0.281745 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -91.5287, 14.1972 )
+scale = Vector2( 2.42036, 2.85212 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -91.5287, 14.1972 )
+scale = Vector2( 5.727, -6.24924 )
+shape = SubResource( 1 )
