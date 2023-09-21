@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grass_tile.png-8a0f87c1449c114438cec703fc4164d3.stex"
+path="res://.import/dirt2.png-6f4ae989197460d327f934aebcc2c571.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/Start/grass_tile.png"
-dest_files=[ "res://.import/grass_tile.png-8a0f87c1449c114438cec703fc4164d3.stex" ]
+source_file="res://Assets/Environment/Start/Blocks/dirt2.png"
+dest_files=[ "res://.import/dirt2.png-6f4ae989197460d327f934aebcc2c571.stex" ]
 
 [params]
 

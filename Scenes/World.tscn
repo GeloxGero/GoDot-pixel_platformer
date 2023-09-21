@@ -1,200 +1,390 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Environment/Start/DirtTile.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Environment/Start/main background.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/Start/Blocks/Dirt1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Environment/Start/Misc/main background.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/Start/Blocks/dirt2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Environment/Start/Blocks/grass-top.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Entities/Player/Player.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 
 [node name="MainBackground" type="Sprite" parent="."]
-position = Vector2( 173, 89 )
+position = Vector2( 188, 88 )
 scale = Vector2( 0.646429, 0.646429 )
 texture = ExtResource( 2 )
-
-[node name="DirtTile" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 170 )
-scale = Vector2( 0.165714, 0.164361 )
 __meta__ = {
-"_edit_group_": true
+"_edit_lock_": true
 }
 
-[node name="DirtTile2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 26, 170 )
-scale = Vector2( 0.165714, 0.164361 )
+[node name="Dirt1" parent="MainBackground" instance=ExtResource( 1 )]
+position = Vector2( -287.734, 136.132 )
+scale = Vector2( 0.25, 0.25 )
 __meta__ = {
-"_edit_group_": true
+"_edit_lock_": true
 }
 
-[node name="DirtTile4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 38, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt2" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 61.8789, 0 )
 
-[node name="DirtTile5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 51, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt3" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 123.758, 0 )
 
-[node name="DirtTile6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt4" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 185.637, 0 )
 
-[node name="DirtTile7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 77, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt5" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 247.514, 0 )
 
-[node name="DirtTile8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 90, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt6" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 309.393, 0 )
 
-[node name="DirtTile9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 103, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt7" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 371.272, 0 )
 
-[node name="DirtTile10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 116, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt8" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 433.151, 0 )
 
-[node name="DirtTile11" parent="." instance=ExtResource( 1 )]
-position = Vector2( 129, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt9" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 495.028, 0 )
 
-[node name="DirtTile12" parent="." instance=ExtResource( 1 )]
-position = Vector2( 142, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt10" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 556.907, 0 )
 
-[node name="DirtTile13" parent="." instance=ExtResource( 1 )]
-position = Vector2( 155, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt11" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 618.786, 0 )
 
-[node name="DirtTile14" parent="." instance=ExtResource( 1 )]
-position = Vector2( 168, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt12" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 680.665, 0 )
 
-[node name="DirtTile15" parent="." instance=ExtResource( 1 )]
-position = Vector2( 181, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt13" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 742.542, 0 )
 
-[node name="DirtTile16" parent="." instance=ExtResource( 1 )]
-position = Vector2( 194, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt14" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 804.421, 0 )
 
-[node name="DirtTile17" parent="." instance=ExtResource( 1 )]
-position = Vector2( 207, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt15" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 866.3, 0 )
 
-[node name="DirtTile18" parent="." instance=ExtResource( 1 )]
-position = Vector2( 220, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt16" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 928.179, 0 )
 
-[node name="DirtTile19" parent="." instance=ExtResource( 1 )]
-position = Vector2( 233, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt17" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 990.055, 0 )
 
-[node name="DirtTile20" parent="." instance=ExtResource( 1 )]
-position = Vector2( 246, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt18" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1051.93, 0 )
 
-[node name="DirtTile21" parent="." instance=ExtResource( 1 )]
-position = Vector2( 259, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt19" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1113.81, 0 )
 
-[node name="DirtTile22" parent="." instance=ExtResource( 1 )]
-position = Vector2( 272, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt20" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1175.69, 0 )
 
-[node name="DirtTile23" parent="." instance=ExtResource( 1 )]
-position = Vector2( 285, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt21" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1237.57, 0 )
 
-[node name="DirtTile24" parent="." instance=ExtResource( 1 )]
-position = Vector2( 298, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt22" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1299.45, 0 )
 
-[node name="DirtTile25" parent="." instance=ExtResource( 1 )]
-position = Vector2( 311, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt23" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1361.33, 0 )
 
-[node name="DirtTile26" parent="." instance=ExtResource( 1 )]
-position = Vector2( 324, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt24" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1423.21, 0 )
 
-[node name="DirtTile27" parent="." instance=ExtResource( 1 )]
-position = Vector2( 337, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt25" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1485.08, 0 )
 
-[node name="DirtTile3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 13, 170 )
-scale = Vector2( 0.165714, 0.164361 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Dirt26" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1546.96, 0 )
+
+[node name="Dirt27" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1608.84, 0 )
+
+[node name="Dirt28" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1670.72, 0 )
+
+[node name="Dirt29" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1732.6, 0 )
+
+[node name="Dirt30" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1794.48, 0 )
+
+[node name="Dirt31" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1856.35, 0 )
+
+[node name="Dirt32" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1918.23, 0 )
+
+[node name="Dirt33" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
+position = Vector2( 1980.11, 0 )
+
+[node name="Dirt2" type="Sprite" parent="."]
+position = Vector2( 2, 166 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 3 )
+
+[node name="Dirt3" type="Sprite" parent="Dirt2"]
+position = Vector2( 62.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt4" type="Sprite" parent="Dirt2"]
+position = Vector2( 125, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt5" type="Sprite" parent="Dirt2"]
+position = Vector2( 187.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt6" type="Sprite" parent="Dirt2"]
+position = Vector2( 250, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt7" type="Sprite" parent="Dirt2"]
+position = Vector2( 312.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt8" type="Sprite" parent="Dirt2"]
+position = Vector2( 375, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt9" type="Sprite" parent="Dirt2"]
+position = Vector2( 437.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt10" type="Sprite" parent="Dirt2"]
+position = Vector2( 500, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt11" type="Sprite" parent="Dirt2"]
+position = Vector2( 562.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt12" type="Sprite" parent="Dirt2"]
+position = Vector2( 625, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt13" type="Sprite" parent="Dirt2"]
+position = Vector2( 687.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt14" type="Sprite" parent="Dirt2"]
+position = Vector2( 750, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt15" type="Sprite" parent="Dirt2"]
+position = Vector2( 812.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt16" type="Sprite" parent="Dirt2"]
+position = Vector2( 875, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt17" type="Sprite" parent="Dirt2"]
+position = Vector2( 937.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt18" type="Sprite" parent="Dirt2"]
+position = Vector2( 1000, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt19" type="Sprite" parent="Dirt2"]
+position = Vector2( 1062.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt20" type="Sprite" parent="Dirt2"]
+position = Vector2( 1125, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt21" type="Sprite" parent="Dirt2"]
+position = Vector2( 1187.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt22" type="Sprite" parent="Dirt2"]
+position = Vector2( 1250, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt23" type="Sprite" parent="Dirt2"]
+position = Vector2( 1312.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt24" type="Sprite" parent="Dirt2"]
+position = Vector2( 1375, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt25" type="Sprite" parent="Dirt2"]
+position = Vector2( 1437.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt26" type="Sprite" parent="Dirt2"]
+position = Vector2( 1487.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt27" type="Sprite" parent="Dirt2"]
+position = Vector2( 1550, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt28" type="Sprite" parent="Dirt2"]
+position = Vector2( 1612.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt29" type="Sprite" parent="Dirt2"]
+position = Vector2( 1675, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt30" type="Sprite" parent="Dirt2"]
+position = Vector2( 1737.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt31" type="Sprite" parent="Dirt2"]
+position = Vector2( 1800, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt32" type="Sprite" parent="Dirt2"]
+position = Vector2( 1862.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt33" type="Sprite" parent="Dirt2"]
+position = Vector2( 1925, 0 )
+texture = ExtResource( 3 )
+
+[node name="Dirt34" type="Sprite" parent="Dirt2"]
+position = Vector2( 1987.5, 0 )
+texture = ExtResource( 3 )
+
+[node name="Grass-top" type="Sprite" parent="."]
+position = Vector2( 2, 156 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top2" type="Sprite" parent="Grass-top"]
+position = Vector2( 62.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top3" type="Sprite" parent="Grass-top"]
+position = Vector2( 125, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top4" type="Sprite" parent="Grass-top"]
+position = Vector2( 187.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top5" type="Sprite" parent="Grass-top"]
+position = Vector2( 250, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top6" type="Sprite" parent="Grass-top"]
+position = Vector2( 312.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top7" type="Sprite" parent="Grass-top"]
+position = Vector2( 375, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top8" type="Sprite" parent="Grass-top"]
+position = Vector2( 437.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top9" type="Sprite" parent="Grass-top"]
+position = Vector2( 500, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top10" type="Sprite" parent="Grass-top"]
+position = Vector2( 562.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top11" type="Sprite" parent="Grass-top"]
+position = Vector2( 625, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top12" type="Sprite" parent="Grass-top"]
+position = Vector2( 687.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top13" type="Sprite" parent="Grass-top"]
+position = Vector2( 750, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top14" type="Sprite" parent="Grass-top"]
+position = Vector2( 812.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top15" type="Sprite" parent="Grass-top"]
+position = Vector2( 875, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top16" type="Sprite" parent="Grass-top"]
+position = Vector2( 937.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top17" type="Sprite" parent="Grass-top"]
+position = Vector2( 1000, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top18" type="Sprite" parent="Grass-top"]
+position = Vector2( 1062.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top19" type="Sprite" parent="Grass-top"]
+position = Vector2( 1125, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top20" type="Sprite" parent="Grass-top"]
+position = Vector2( 1187.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top21" type="Sprite" parent="Grass-top"]
+position = Vector2( 1250, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top22" type="Sprite" parent="Grass-top"]
+position = Vector2( 1312.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top23" type="Sprite" parent="Grass-top"]
+position = Vector2( 1375, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top24" type="Sprite" parent="Grass-top"]
+position = Vector2( 1437.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top25" type="Sprite" parent="Grass-top"]
+position = Vector2( 1500, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top26" type="Sprite" parent="Grass-top"]
+position = Vector2( 1562.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top27" type="Sprite" parent="Grass-top"]
+position = Vector2( 1625, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top28" type="Sprite" parent="Grass-top"]
+position = Vector2( 1687.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top29" type="Sprite" parent="Grass-top"]
+position = Vector2( 1750, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top30" type="Sprite" parent="Grass-top"]
+position = Vector2( 1812.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top31" type="Sprite" parent="Grass-top"]
+position = Vector2( 1875, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top32" type="Sprite" parent="Grass-top"]
+position = Vector2( 1937.5, 0 )
+texture = ExtResource( 4 )
+
+[node name="Grass-top33" type="Sprite" parent="Grass-top"]
+position = Vector2( 2000, 0 )
+texture = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 42, 140 )
+scale = Vector2( 0.5, 0.5 )

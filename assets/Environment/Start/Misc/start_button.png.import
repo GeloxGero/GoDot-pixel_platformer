@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dirt_tile.png-3ea42d73e455d0d7b5b186c6597eccb6.stex"
+path="res://.import/start_button.png-cb4d33988de9fdfe770c157d68f16228.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/Start/dirt_tile.png"
-dest_files=[ "res://.import/dirt_tile.png-3ea42d73e455d0d7b5b186c6597eccb6.stex" ]
+source_file="res://Assets/Environment/Start/Misc/start_button.png"
+dest_files=[ "res://.import/start_button.png-cb4d33988de9fdfe770c157d68f16228.stex" ]
 
 [params]
 

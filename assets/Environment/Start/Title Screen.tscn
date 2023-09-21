@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/TitleScreen.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Environment/Start/quit_button.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Environment/Start/start_button.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Environment/Start/title.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Environment/Start/main background.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Environment/Start/Misc/quit_button.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/Start/Misc/start_button.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Environment/Start/Misc/title.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Environment/Start/Misc/main background.png" type="Texture" id=5]
 
 [node name="Title Screen" type="Control"]
 rect_pivot_offset = Vector2( 194, 229 )
@@ -14,6 +14,10 @@ script = ExtResource( 1 )
 position = Vector2( 159, 91 )
 scale = Vector2( 0.651751, 0.651751 )
 texture = ExtResource( 5 )
+
+[node name="Title" type="Sprite" parent="MainBackground"]
+position = Vector2( -4.60298, -44.4955 )
+texture = ExtResource( 4 )
 
 [node name="StartButton" type="TextureButton" parent="."]
 margin_left = 74.0
@@ -34,7 +38,6 @@ expand = true
 [node name="Title" type="Sprite" parent="."]
 position = Vector2( 155, 66 )
 scale = Vector2( 0.721154, 0.721154 )
-texture = ExtResource( 4 )
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
