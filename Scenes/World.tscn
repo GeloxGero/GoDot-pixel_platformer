@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Environment/Start/Blocks/Dirt1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Environment/Start/Misc/main background.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Environment/Start/Blocks/dirt2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Environment/Start/Blocks/grass-top.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Environment/Start/Blocks/GrassSurface.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Entities/Player/Player.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
@@ -119,272 +119,274 @@ position = Vector2( 1918.23, 0 )
 [node name="Dirt33" parent="MainBackground/Dirt1" instance=ExtResource( 1 )]
 position = Vector2( 1980.11, 0 )
 
-[node name="Dirt2" type="Sprite" parent="."]
-position = Vector2( 2, 166 )
-scale = Vector2( 0.16, 0.16 )
+[node name="Dirt2" type="Sprite" parent="MainBackground"]
+position = Vector2( -287.735, 120.663 )
+scale = Vector2( 0.247514, 0.247514 )
 texture = ExtResource( 3 )
 
-[node name="Dirt3" type="Sprite" parent="Dirt2"]
+[node name="Dirt3" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 62.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt4" type="Sprite" parent="Dirt2"]
+[node name="Dirt4" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 125, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt5" type="Sprite" parent="Dirt2"]
+[node name="Dirt5" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 187.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt6" type="Sprite" parent="Dirt2"]
+[node name="Dirt6" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 250, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt7" type="Sprite" parent="Dirt2"]
+[node name="Dirt7" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 312.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt8" type="Sprite" parent="Dirt2"]
+[node name="Dirt8" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 375, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt9" type="Sprite" parent="Dirt2"]
+[node name="Dirt9" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 437.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt10" type="Sprite" parent="Dirt2"]
+[node name="Dirt10" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 500, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt11" type="Sprite" parent="Dirt2"]
+[node name="Dirt11" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 562.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt12" type="Sprite" parent="Dirt2"]
+[node name="Dirt12" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 625, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt13" type="Sprite" parent="Dirt2"]
+[node name="Dirt13" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 687.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt14" type="Sprite" parent="Dirt2"]
+[node name="Dirt14" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 750, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt15" type="Sprite" parent="Dirt2"]
+[node name="Dirt15" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 812.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt16" type="Sprite" parent="Dirt2"]
+[node name="Dirt16" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 875, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt17" type="Sprite" parent="Dirt2"]
+[node name="Dirt17" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 937.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt18" type="Sprite" parent="Dirt2"]
+[node name="Dirt18" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1000, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt19" type="Sprite" parent="Dirt2"]
+[node name="Dirt19" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1062.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt20" type="Sprite" parent="Dirt2"]
+[node name="Dirt20" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1125, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt21" type="Sprite" parent="Dirt2"]
+[node name="Dirt21" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1187.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt22" type="Sprite" parent="Dirt2"]
+[node name="Dirt22" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1250, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt23" type="Sprite" parent="Dirt2"]
+[node name="Dirt23" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1312.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt24" type="Sprite" parent="Dirt2"]
+[node name="Dirt24" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1375, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt25" type="Sprite" parent="Dirt2"]
+[node name="Dirt25" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1437.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt26" type="Sprite" parent="Dirt2"]
+[node name="Dirt26" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1487.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt27" type="Sprite" parent="Dirt2"]
+[node name="Dirt27" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1550, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt28" type="Sprite" parent="Dirt2"]
+[node name="Dirt28" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1612.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt29" type="Sprite" parent="Dirt2"]
+[node name="Dirt29" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1675, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt30" type="Sprite" parent="Dirt2"]
+[node name="Dirt30" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1737.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt31" type="Sprite" parent="Dirt2"]
+[node name="Dirt31" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1800, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt32" type="Sprite" parent="Dirt2"]
+[node name="Dirt32" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1862.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt33" type="Sprite" parent="Dirt2"]
+[node name="Dirt33" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1925, 0 )
 texture = ExtResource( 3 )
 
-[node name="Dirt34" type="Sprite" parent="Dirt2"]
+[node name="Dirt34" type="Sprite" parent="MainBackground/Dirt2"]
 position = Vector2( 1987.5, 0 )
 texture = ExtResource( 3 )
 
-[node name="Grass-top" type="Sprite" parent="."]
-position = Vector2( 2, 156 )
-scale = Vector2( 0.16, 0.16 )
-texture = ExtResource( 4 )
+[node name="GrassSurface" parent="MainBackground" instance=ExtResource( 4 )]
+position = Vector2( -287.735, 105.193 )
+scale = Vector2( 0.243646, 0.243646 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Grass-top2" type="Sprite" parent="Grass-top"]
-position = Vector2( 62.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface2" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 63.4921, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top3" type="Sprite" parent="Grass-top"]
-position = Vector2( 125, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface3" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 126.984, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top4" type="Sprite" parent="Grass-top"]
-position = Vector2( 187.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface4" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 190.476, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top5" type="Sprite" parent="Grass-top"]
-position = Vector2( 250, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface5" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 253.968, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top6" type="Sprite" parent="Grass-top"]
-position = Vector2( 312.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface6" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 317.46, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top7" type="Sprite" parent="Grass-top"]
-position = Vector2( 375, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface7" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 380.952, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top8" type="Sprite" parent="Grass-top"]
-position = Vector2( 437.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface8" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 444.444, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top9" type="Sprite" parent="Grass-top"]
-position = Vector2( 500, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface9" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 507.936, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top10" type="Sprite" parent="Grass-top"]
-position = Vector2( 562.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface10" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 571.429, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top11" type="Sprite" parent="Grass-top"]
-position = Vector2( 625, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface11" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 634.921, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top12" type="Sprite" parent="Grass-top"]
-position = Vector2( 687.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface12" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 698.413, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top13" type="Sprite" parent="Grass-top"]
-position = Vector2( 750, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface13" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 761.904, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top14" type="Sprite" parent="Grass-top"]
-position = Vector2( 812.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface14" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 825.397, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top15" type="Sprite" parent="Grass-top"]
-position = Vector2( 875, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface15" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 888.889, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top16" type="Sprite" parent="Grass-top"]
-position = Vector2( 937.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface25" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1523.81, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top17" type="Sprite" parent="Grass-top"]
-position = Vector2( 1000, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface16" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 952.381, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top18" type="Sprite" parent="Grass-top"]
-position = Vector2( 1062.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface17" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1015.87, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top19" type="Sprite" parent="Grass-top"]
-position = Vector2( 1125, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface18" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1079.36, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top20" type="Sprite" parent="Grass-top"]
-position = Vector2( 1187.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface19" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1142.86, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top21" type="Sprite" parent="Grass-top"]
-position = Vector2( 1250, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface20" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1206.35, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top22" type="Sprite" parent="Grass-top"]
-position = Vector2( 1312.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface21" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1269.84, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top23" type="Sprite" parent="Grass-top"]
-position = Vector2( 1375, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface22" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1333.33, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top24" type="Sprite" parent="Grass-top"]
-position = Vector2( 1437.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface23" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1396.83, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top25" type="Sprite" parent="Grass-top"]
-position = Vector2( 1500, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface24" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1460.32, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top26" type="Sprite" parent="Grass-top"]
-position = Vector2( 1562.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface26" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1968.25, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top27" type="Sprite" parent="Grass-top"]
-position = Vector2( 1625, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface33" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 2031.75, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top28" type="Sprite" parent="Grass-top"]
-position = Vector2( 1687.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface27" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1587.3, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top29" type="Sprite" parent="Grass-top"]
-position = Vector2( 1750, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface28" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1650.79, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top30" type="Sprite" parent="Grass-top"]
-position = Vector2( 1812.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface29" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1714.29, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top31" type="Sprite" parent="Grass-top"]
-position = Vector2( 1875, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface30" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1777.78, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top32" type="Sprite" parent="Grass-top"]
-position = Vector2( 1937.5, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface31" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1841.27, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="Grass-top33" type="Sprite" parent="Grass-top"]
-position = Vector2( 2000, 0 )
-texture = ExtResource( 4 )
+[node name="GrassSurface32" parent="MainBackground/GrassSurface" instance=ExtResource( 4 )]
+position = Vector2( 1904.76, 0 )
+scale = Vector2( 1, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 42, 140 )
+position = Vector2( 52, 108 )
 scale = Vector2( 0.5, 0.5 )
