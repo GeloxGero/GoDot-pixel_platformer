@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
-
+onready var animation = $AnimationPlayer
 
 var _state : int = States.ON_GROUND
 
@@ -15,27 +15,37 @@ var jump_force = 1
 
 func _physics_process(delta):
 	# Get input direction
+	var right = Input.is_action_pressed('ui_right')
+	var left = Input.is_action_pressed('ui_left')
+	var down = Input.is_action_just_pressed('ui_down')
+	var up = Input.is_action_just_pressed('ui_up')
+	var on_floor = is_on_floor()
+	var direction = Vector2()
 	
-	if _state != States.CROUCH and is_on_floor():
+	if _state != States.CROUCH and on_floor:
 		_state = States.ON_GROUND
 	
-	if(Input.is_action_just_pressed('ui_up')):
+	if(up):
 		if _state == States.CROUCH:
 			_state = States.ON_GROUND
 		elif _state == States.ON_GROUND:
 			velocity.y = jump_speed * jump_force
 			_state = States.IN_AIR
-	
-	if _state == States.ON_GROUND and Input.is_action_pressed('ui_down'):
-		_state = States.CROUCH
-	
-	print(_state)
-	
-	var direction = Vector2()
-	if Input.is_action_pressed('ui_right'):
+	elif(down):
+		if _state == States.ON_GROUND:
+			_state = States.CROUCH
+	elif(right):
+		$Sprite.flip_h = false
 		direction.x += 1
-	if Input.is_action_pressed('ui_left'):
+		animation.play("run")
+	elif(left):
+		$Sprite.flip_h = true
 		direction.x -= 1
+		animation.play("run")
+		
+	else:
+		animation.play("idle")
+	
 
 	# Normalize direction
 	direction = direction.normalized()
