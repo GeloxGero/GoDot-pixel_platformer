@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/Environment/Common Environment/tiles_packed.png" type="Texture" id=1]
+[ext_resource path="res://assets/Environment/Common Environment/tiles_packed.png" type="Texture2D" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.75, 8 )
+size = Vector2( 7.75, 8 )
 
 [node name="Block" type="StaticBody2D"]
 position = Vector2( 63, 117 )
@@ -11,7 +11,7 @@ position = Vector2( 63, 117 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 126, 36, 18, 18 )

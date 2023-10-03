@@ -1,7 +1,7 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
-onready var animation = $AnimationPlayer
+@onready var animation = $AnimationPlayer
 
 var _state : int = States.ON_GROUND
 
@@ -10,7 +10,6 @@ var _state : int = States.ON_GROUND
 var speed = 140
 var jump_speed = -250 # Negative because 2D space's y-axis is down
 var gravity = 980 # The force of gravity
-var velocity = Vector2()
 var jump_force = 1
 
 func _physics_process(delta):
@@ -42,14 +41,13 @@ func _physics_process(delta):
 	elif(right):
 		if _state == States.ON_GROUND:
 			animation.play("run")
-		$Sprite.flip_h = false
+		$Sprite2D.flip_h = false
 		direction.x += 1
 	elif(left):
 		if _state == States.ON_GROUND:
 			animation.play("run")
-		$Sprite.flip_h = true
+		$Sprite2D.flip_h = true
 		direction.x -= 1
-		animation.play("run")
 	else:
 		if _state == States.ON_GROUND:
 			animation.play("idle")
@@ -68,7 +66,10 @@ func _physics_process(delta):
 	# Jumping
 
 	# Move the character
-	velocity = move_and_slide(velocity, Vector2.UP)
+	set_velocity(velocity)
+	set_up_direction(Vector2.UP)
+	move_and_slide()
+	velocity = velocity
 
 
 	# Keep the character within the screen bounds
