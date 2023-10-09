@@ -3,10 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bvu8u4wif775" path="res://Assets/Entities/Player/Orange_cat_spritesheet.png" id="1"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2"]
 
-[sub_resource type="CapsuleShape2D" id="1"]
-radius = 7.0
-height = 28.0
-
 [sub_resource type="Animation" id="2"]
 length = 0.001
 tracks/0/type = "value"
@@ -75,6 +71,10 @@ _data = {
 "run": SubResource("4")
 }
 
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 7.0
+height = 28.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("2")
 
@@ -87,11 +87,21 @@ hframes = 8
 vframes = 8
 region_filter_clip_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1)
-shape = SubResource("1")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_em271")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 1)
+shape = SubResource("1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 2
+limit_right = 1263
+limit_bottom = 183
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.5
+drag_right_margin = 0.5

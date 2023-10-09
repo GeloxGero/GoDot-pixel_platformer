@@ -73,8 +73,9 @@ func _physics_process(delta):
 
 
 	# Keep the character within the screen bounds
-	var screen_size = get_viewport_rect().size
-	if position.x < 0:
-		position.x = 0
-	if position.x > screen_size.x:
-		position.x = screen_size.x
+	
+	#var screen_size = get_viewport_rect().size
+	#if position.x < 0:
+		#position.x = 0
+	#if position.x > screen_size.x:
+		#position.x = screen_size.x
