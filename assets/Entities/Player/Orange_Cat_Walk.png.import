@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uu7bgyr7yw8"
-path="res://.godot/imported/Orange_Cat_Walk.png-bfbcaee2129d8d6789e337bd28cc8938.ctex"
+path="res://.godot/imported/Orange_Cat_Walk.png-b50a533f090cb85a120233de65154e5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Entities/Player/Orange_Cat_Walk.png"
-dest_files=["res://.godot/imported/Orange_Cat_Walk.png-bfbcaee2129d8d6789e337bd28cc8938.ctex"]
+source_file="res://assets/Entities/Player/Orange_Cat_Walk.png"
+dest_files=["res://.godot/imported/Orange_Cat_Walk.png-b50a533f090cb85a120233de65154e5b.ctex"]
 
 [params]
 

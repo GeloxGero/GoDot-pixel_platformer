@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://5x0oa87g8kqy"]
 
-[ext_resource type="Texture2D" uid="uid://bhf4gfluqnvxj" path="res://Assets/Environment/Start/Misc/main background.png" id="1_ccoj7"]
+[ext_resource type="Texture2D" uid="uid://bhf4gfluqnvxj" path="res://assets/Environment/Start/Misc/main background.png" id="1_ccoj7"]
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
-[ext_resource type="PackedScene" uid="uid://ellb4k8fb5nn" path="res://Assets/Environment/Start/Blocks/GrassSurface.tscn" id="4_ipxeg"]
-[ext_resource type="PackedScene" uid="uid://bgav4msmbr0sc" path="res://Assets/Entities/Player/Player.tscn" id="5_eqgv7"]
+[ext_resource type="PackedScene" uid="uid://ellb4k8fb5nn" path="res://assets/Environment/Start/Blocks/GrassSurface.tscn" id="4_ipxeg"]
+[ext_resource type="PackedScene" uid="uid://bgav4msmbr0sc" path="res://assets/Entities/Player/Player.tscn" id="5_eqgv7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxkyq"]
 size = Vector2(20, 163)
