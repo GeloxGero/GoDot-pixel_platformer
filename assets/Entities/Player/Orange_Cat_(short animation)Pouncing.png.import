@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu00ml4gan8l5"
-path="res://.godot/imported/Orange_Cat_(short animation)Pouncing.png-a8e36b013f446ddb66b0e32ff2cccbcf.ctex"
+path="res://.godot/imported/Orange_Cat_(short animation)Pouncing.png-84160916eb13bd3ecddf5b46bb3fb7f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Entities/Player/Orange_Cat_(short animation)Pouncing.png"
-dest_files=["res://.godot/imported/Orange_Cat_(short animation)Pouncing.png-a8e36b013f446ddb66b0e32ff2cccbcf.ctex"]
+source_file="res://assets/Entities/Player/Orange_Cat_(short animation)Pouncing.png"
+dest_files=["res://.godot/imported/Orange_Cat_(short animation)Pouncing.png-84160916eb13bd3ecddf5b46bb3fb7f6.ctex"]
 
 [params]
 

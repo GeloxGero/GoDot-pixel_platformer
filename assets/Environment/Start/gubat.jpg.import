@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtai5l0yqsd1q"
-path="res://.godot/imported/Orange_Cat_Jump.png-f261eb9cfdf0030e522973bcc5e04a75.ctex"
+uid="uid://cjttns4gdjud4"
+path="res://.godot/imported/gubat.jpg-f89fe34900466bb5cfd2db4f6a1135c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Entities/Player/Orange_Cat_Jump.png"
-dest_files=["res://.godot/imported/Orange_Cat_Jump.png-f261eb9cfdf0030e522973bcc5e04a75.ctex"]
+source_file="res://assets/Environment/Start/gubat.jpg"
+dest_files=["res://.godot/imported/gubat.jpg-f89fe34900466bb5cfd2db4f6a1135c4.ctex"]
 
 [params]
 
