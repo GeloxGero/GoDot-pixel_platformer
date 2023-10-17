@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsyou8nyl6ldl"]
-
-[ext_resource type="Texture2D" uid="uid://i01gwwow7aun" path="res://Assets/Environment/Start/Blocks/dirt2.png" id="1"]
+[gd_scene load_steps=2 format=3 uid="uid://bgpo1ojt61qu5"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(64, 64)
@@ -13,4 +11,3 @@ shape = SubResource("1")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Dirt2" type="Sprite2D" parent="."]
-texture = ExtResource("1")

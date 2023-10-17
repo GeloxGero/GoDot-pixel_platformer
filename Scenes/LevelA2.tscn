@@ -1,0 +1,288 @@
+[gd_scene load_steps=5 format=3 uid="uid://1bmalf5j3q3v"]
+
+[ext_resource type="Texture2D" uid="uid://bhf4gfluqnvxj" path="res://Assets/Environment/Start/Misc/main background.png" id="1_gk3on"]
+[ext_resource type="PackedScene" uid="uid://ellb4k8fb5nn" path="res://Assets/Environment/Start/Blocks/GrassSurface.tscn" id="2_fkm62"]
+[ext_resource type="PackedScene" uid="uid://bgav4msmbr0sc" path="res://Assets/Entities/Player/Player.tscn" id="3_5f3oj"]
+[ext_resource type="PackedScene" uid="uid://df61drsc24h6k" path="res://Assets/Environment/Start/Blocks/dirt_1.tscn" id="4_meeem"]
+
+[node name="LevelA1" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [42.0]
+
+[node name="MainBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(181, 92)
+scale = Vector2(0.646429, 0.646429)
+texture = ExtResource("1_gk3on")
+
+[node name="GrassSurface" parent="MainBackground" instance=ExtResource("2_fkm62")]
+position = Vector2(-249.061, 126.851)
+scale = Vector2(1.54696, 1.54696)
+
+[node name="GrassSurface5" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(-22, 0)
+
+[node name="GrassSurface2" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(23, 0)
+
+[node name="GrassSurface3" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(46, 0)
+
+[node name="GrassSurface4" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(69, 0)
+
+[node name="GrassSurface6" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(113, 0)
+
+[node name="GrassSurface7" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(91, 0)
+
+[node name="GrassSurface8" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(136, 0)
+
+[node name="GrassSurface9" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(159, 0)
+
+[node name="GrassSurface10" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(182, 0)
+
+[node name="GrassSurface11" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(227, 0)
+
+[node name="GrassSurface12" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(205, 0)
+
+[node name="GrassSurface13" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(250, 0)
+
+[node name="GrassSurface14" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(273, 0)
+
+[node name="GrassSurface15" parent="MainBackground/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(296, 0)
+
+[node name="MainBackground2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(499, 92)
+scale = Vector2(0.646429, 0.646429)
+texture = ExtResource("1_gk3on")
+
+[node name="GrassSurface" parent="MainBackground2" instance=ExtResource("2_fkm62")]
+position = Vector2(-249.061, 126.851)
+scale = Vector2(1.54696, 1.54696)
+
+[node name="GrassSurface5" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(-22, 0)
+
+[node name="GrassSurface2" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(23, 0)
+
+[node name="GrassSurface3" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(46, 0)
+
+[node name="GrassSurface4" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(69, 0)
+
+[node name="GrassSurface6" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(113, 0)
+
+[node name="GrassSurface7" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(91, 0)
+
+[node name="GrassSurface8" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(136, 0)
+
+[node name="GrassSurface9" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(159, 0)
+
+[node name="GrassSurface10" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(182, 0)
+
+[node name="GrassSurface11" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(227, 0)
+
+[node name="GrassSurface12" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(205, 0)
+
+[node name="GrassSurface13" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(250, 0)
+
+[node name="GrassSurface14" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(273, 0)
+
+[node name="GrassSurface15" parent="MainBackground2/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(296, 0)
+
+[node name="MainBackground4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(818.036, 92)
+scale = Vector2(0.646548, 0.646429)
+texture = ExtResource("1_gk3on")
+
+[node name="GrassSurface" parent="MainBackground4" instance=ExtResource("2_fkm62")]
+position = Vector2(-249.061, 126.851)
+scale = Vector2(1.54696, 1.54696)
+
+[node name="GrassSurface5" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(-22, 0)
+
+[node name="GrassSurface2" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(23, 0)
+
+[node name="GrassSurface3" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(46, 0)
+
+[node name="GrassSurface4" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(69, 0)
+
+[node name="GrassSurface6" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(113, 0)
+
+[node name="GrassSurface7" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(91, 0)
+
+[node name="GrassSurface8" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(136, 0)
+
+[node name="GrassSurface9" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(159, 0)
+
+[node name="GrassSurface10" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(182, 0)
+
+[node name="GrassSurface11" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(227, 0)
+
+[node name="GrassSurface12" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(205, 0)
+
+[node name="GrassSurface13" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(250, 0)
+
+[node name="GrassSurface14" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(273, 0)
+
+[node name="GrassSurface15" parent="MainBackground4/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(296, 0)
+
+[node name="MainBackground5" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1136, 92)
+scale = Vector2(0.646548, 0.646429)
+texture = ExtResource("1_gk3on")
+
+[node name="GrassSurface" parent="MainBackground5" instance=ExtResource("2_fkm62")]
+position = Vector2(-249.061, 126.851)
+scale = Vector2(1.54696, 1.54696)
+
+[node name="GrassSurface5" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(-22, 0)
+
+[node name="GrassSurface2" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(23, 0)
+
+[node name="GrassSurface3" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(46, 0)
+
+[node name="GrassSurface4" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(69, 0)
+
+[node name="GrassSurface6" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(113, 0)
+
+[node name="GrassSurface7" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(91, 0)
+
+[node name="GrassSurface8" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(136, 0)
+
+[node name="GrassSurface9" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(159, 0)
+
+[node name="GrassSurface10" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(182, 0)
+
+[node name="GrassSurface11" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(227, 0)
+
+[node name="GrassSurface12" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(205, 0)
+
+[node name="GrassSurface13" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(250, 0)
+
+[node name="GrassSurface14" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(273, 0)
+
+[node name="GrassSurface15" parent="MainBackground5/GrassSurface" instance=ExtResource("2_fkm62")]
+position = Vector2(296, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_5f3oj")]
+position = Vector2(21, 128)
+
+[node name="Dirt-1" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(381, 177)
+
+[node name="Dirt-2" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(438, 160)
+
+[node name="Dirt-3" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(490, 145)
+
+[node name="Dirt-4" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(544, 131)
+
+[node name="Dirt-5" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(644, 145)
+rotation = -0.442116
+
+[node name="Dirt-12" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(583, 150)
+rotation = -2.71334
+
+[node name="Dirt-6" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(705, 129)
+rotation = 1.0472
+
+[node name="Dirt-7" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(806, 132)
+rotation = 1.8326
+
+[node name="Dirt-8" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(748, 132)
+rotation = 1.8326
+
+[node name="Dirt-9" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(859, 115)
+rotation = 2.61799
+
+[node name="Dirt-10" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(912, 119)
+rotation = 2.87979
+
+[node name="Dirt-11" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(965, 96)
+rotation = 3.40339
+
+[node name="Dirt-13" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(1009, 120)
+rotation = 2.87979
+
+[node name="Dirt-14" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(1240, 124)
+rotation = 2.87979
+
+[node name="Dirt-18" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(1285, 104)
+rotation = 2.87979
+
+[node name="Dirt-15" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(1119, 122)
+rotation = 2.87979
+
+[node name="Dirt-17" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(1060, 138)
+rotation = 0.415821
+
+[node name="Dirt-16" parent="." instance=ExtResource("4_meeem")]
+position = Vector2(1174, 128)
+rotation = 2.87979

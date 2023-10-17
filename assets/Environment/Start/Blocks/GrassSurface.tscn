@@ -1,14 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://jxcpv4n6uibl"]
+[gd_scene load_steps=3 format=3 uid="uid://ellb4k8fb5nn"]
 
-[ext_resource type="Texture2D" uid="uid://ct1y5qf15s5y5" path="res://Assets/Environment/Start/Blocks/grass-top.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b35cy6wsjevs" path="res://Assets/Environment/Start/map-spritesheet-removebg-preview.png" id="1_sgun6"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(64, 64)
+size = Vector2(22, 21)
 
 [node name="GrassSurface" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
 shape = SubResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1")
+texture_filter = 1
+texture = ExtResource("1_sgun6")
+region_enabled = true
+region_rect = Rect2(192, 217.054, 23, 22.9462)

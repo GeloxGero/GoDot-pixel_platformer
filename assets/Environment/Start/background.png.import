@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct8jrgnihiobs"
-path="res://.godot/imported/dirt1.png-c33f6077e763598cf5e3e18d23c8bf9d.ctex"
+uid="uid://dd623minfoima"
+path="res://.godot/imported/background.png-3f2d9ad0d67d412ebff5cd5c028f2aef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/Start/Blocks/dirt1.png"
-dest_files=["res://.godot/imported/dirt1.png-c33f6077e763598cf5e3e18d23c8bf9d.ctex"]
+source_file="res://Assets/Environment/Start/background.png"
+dest_files=["res://.godot/imported/background.png-3f2d9ad0d67d412ebff5cd5c028f2aef.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

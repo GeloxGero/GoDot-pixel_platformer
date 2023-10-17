@@ -12,6 +12,10 @@ var jump_speed = -250 # Negative because 2D space's y-axis is down
 var gravity = 980 # The force of gravity
 var jump_force = 1
 
+func player():
+	pass
+	
+
 func _physics_process(delta):
 	# Get input direction
 	#
@@ -72,6 +76,8 @@ func _physics_process(delta):
 	velocity = velocity
 
 
+
+	print(Global.current_scene)
 	# Keep the character within the screen bounds
 	
 	#var screen_size = get_viewport_rect().size
@@ -79,3 +85,6 @@ func _physics_process(delta):
 		#position.x = 0
 	#if position.x > screen_size.x:
 		#position.x = screen_size.x
+
+
+
