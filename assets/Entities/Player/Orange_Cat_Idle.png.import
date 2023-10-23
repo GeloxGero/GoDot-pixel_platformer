@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0cei62qu6kcj"
-path="res://.godot/imported/Orange_Cat_Idle.png-63e13eaa45b521db55660624e2ec46fd.ctex"
+path="res://.godot/imported/Orange_Cat_Idle.png-620e2cf2c6f6158d8db80b1476bd55e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Entities/Player/Orange_Cat_Idle.png"
-dest_files=["res://.godot/imported/Orange_Cat_Idle.png-63e13eaa45b521db55660624e2ec46fd.ctex"]
+source_file="res://Assets/Entities/Player/Orange_Cat_Idle.png"
+dest_files=["res://.godot/imported/Orange_Cat_Idle.png-620e2cf2c6f6158d8db80b1476bd55e1.ctex"]
 
 [params]
 

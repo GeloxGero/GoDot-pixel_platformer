@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://1bmalf5j3q3v"]
 
-[ext_resource type="Texture2D" uid="uid://bhf4gfluqnvxj" path="res://assets/Environment/Start/Misc/main background.png" id="1_gk3on"]
+[ext_resource type="Texture2D" uid="uid://bhf4gfluqnvxj" path="res://Assets/Environment/Start/Misc/main background.png" id="1_gk3on"]
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_vl6vr"]
-[ext_resource type="PackedScene" uid="uid://ellb4k8fb5nn" path="res://assets/Environment/Start/Blocks/GrassSurface.tscn" id="2_fkm62"]
-[ext_resource type="PackedScene" uid="uid://bgav4msmbr0sc" path="res://assets/Entities/Player/Player.tscn" id="3_5f3oj"]
-[ext_resource type="PackedScene" uid="uid://df61drsc24h6k" path="res://assets/Environment/Start/Blocks/dirt_1.tscn" id="4_meeem"]
+[ext_resource type="PackedScene" uid="uid://ellb4k8fb5nn" path="res://Assets/Environment/Start/Blocks/GrassSurface.tscn" id="2_fkm62"]
+[ext_resource type="PackedScene" uid="uid://bgav4msmbr0sc" path="res://Assets/Entities/Player/Player.tscn" id="3_5f3oj"]
+[ext_resource type="PackedScene" uid="uid://df61drsc24h6k" path="res://Assets/Environment/Start/Blocks/dirt_1.tscn" id="4_meeem"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbrkr"]
 size = Vector2(9, 162)
@@ -269,7 +269,6 @@ rotation = 2.61799
 [node name="Dirt-10" parent="Dirt-1" instance=ExtResource("4_meeem")]
 position = Vector2(531, -58)
 rotation = 2.87979
-scale = Vector2(1, 1)
 
 [node name="Dirt-11" parent="Dirt-1" instance=ExtResource("4_meeem")]
 position = Vector2(584, -81)
@@ -278,12 +277,10 @@ rotation = -2.8798
 [node name="Dirt-13" parent="Dirt-1" instance=ExtResource("4_meeem")]
 position = Vector2(628, -57)
 rotation = 2.87979
-scale = Vector2(1, 1)
 
 [node name="Dirt-15" parent="Dirt-1" instance=ExtResource("4_meeem")]
 position = Vector2(738, -55)
 rotation = 2.87979
-scale = Vector2(1, 1)
 
 [node name="Dirt-17" parent="Dirt-1" instance=ExtResource("4_meeem")]
 position = Vector2(679, -39)
