@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://5x0oa87g8kqy"]
 
-[ext_resource type="Texture2D" uid="uid://bhf4gfluqnvxj" path="res://assets/Environment/Start/Misc/main background.png" id="1_ccoj7"]
+[ext_resource type="Texture2D" uid="uid://bhf4gfluqnvxj" path="res://Assets/Environment/Start/Misc/main background.png" id="1_ccoj7"]
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
-[ext_resource type="PackedScene" uid="uid://ellb4k8fb5nn" path="res://assets/Environment/Start/Blocks/GrassSurface.tscn" id="4_ipxeg"]
-[ext_resource type="PackedScene" uid="uid://bgav4msmbr0sc" path="res://assets/Entities/Player/Player.tscn" id="5_eqgv7"]
+[ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://Assets/Environment/Start/tile_map1.tscn" id="3_ws4dh"]
+[ext_resource type="PackedScene" uid="uid://bgav4msmbr0sc" path="res://Assets/Entities/Player/Player.tscn" id="5_eqgv7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxkyq"]
 size = Vector2(20, 163)
@@ -18,210 +18,23 @@ position = Vector2(181, 92)
 scale = Vector2(0.646429, 0.646429)
 texture = ExtResource("1_ccoj7")
 
-[node name="GrassSurface" parent="MainBackground" instance=ExtResource("4_ipxeg")]
-position = Vector2(-249.061, 126.851)
-scale = Vector2(1.54696, 1.54696)
-
-[node name="GrassSurface5" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(-22, 0)
-
-[node name="GrassSurface2" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(23, 0)
-
-[node name="GrassSurface3" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(46, 0)
-
-[node name="GrassSurface4" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(69, 0)
-
-[node name="GrassSurface6" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(113, 0)
-
-[node name="GrassSurface7" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(91, 0)
-
-[node name="GrassSurface8" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(136, 0)
-
-[node name="GrassSurface9" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(159, 0)
-
-[node name="GrassSurface10" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(182, 0)
-
-[node name="GrassSurface11" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(227, 0)
-
-[node name="GrassSurface12" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(205, 0)
-
-[node name="GrassSurface13" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(250, 0)
-
-[node name="GrassSurface14" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(273, 0)
-
-[node name="GrassSurface15" parent="MainBackground/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(296, 0)
-
-[node name="MainBackground2" type="Sprite2D" parent="."]
+[node name="MainBackground2" type="Sprite2D" parent="MainBackground"]
 texture_filter = 1
-position = Vector2(499, 92)
-scale = Vector2(0.646429, 0.646429)
+position = Vector2(498.121, -3.09392)
 texture = ExtResource("1_ccoj7")
 
-[node name="GrassSurface" parent="MainBackground2" instance=ExtResource("4_ipxeg")]
-position = Vector2(-249.061, 126.851)
-scale = Vector2(1.54696, 1.54696)
-
-[node name="GrassSurface5" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(-22, 0)
-
-[node name="GrassSurface2" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(23, 0)
-
-[node name="GrassSurface3" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(46, 0)
-
-[node name="GrassSurface4" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(69, 0)
-
-[node name="GrassSurface6" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(113, 0)
-
-[node name="GrassSurface7" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(91, 0)
-
-[node name="GrassSurface8" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(136, 0)
-
-[node name="GrassSurface9" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(159, 0)
-
-[node name="GrassSurface10" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(182, 0)
-
-[node name="GrassSurface11" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(227, 0)
-
-[node name="GrassSurface12" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(205, 0)
-
-[node name="GrassSurface13" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(250, 0)
-
-[node name="GrassSurface14" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(273, 0)
-
-[node name="GrassSurface15" parent="MainBackground2/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(296, 0)
-
-[node name="MainBackground4" type="Sprite2D" parent="."]
+[node name="MainBackground3" type="Sprite2D" parent="MainBackground"]
 texture_filter = 1
-position = Vector2(818.036, 92)
-scale = Vector2(0.646548, 0.646429)
+position = Vector2(991.602, -3.09392)
 texture = ExtResource("1_ccoj7")
 
-[node name="GrassSurface" parent="MainBackground4" instance=ExtResource("4_ipxeg")]
-position = Vector2(-249.061, 126.851)
-scale = Vector2(1.54696, 1.54696)
-
-[node name="GrassSurface5" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(-22, 0)
-
-[node name="GrassSurface2" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(23, 0)
-
-[node name="GrassSurface3" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(46, 0)
-
-[node name="GrassSurface4" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(69, 0)
-
-[node name="GrassSurface6" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(113, 0)
-
-[node name="GrassSurface7" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(91, 0)
-
-[node name="GrassSurface8" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(136, 0)
-
-[node name="GrassSurface9" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(159, 0)
-
-[node name="GrassSurface10" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(182, 0)
-
-[node name="GrassSurface11" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(227, 0)
-
-[node name="GrassSurface12" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(205, 0)
-
-[node name="GrassSurface13" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(250, 0)
-
-[node name="GrassSurface14" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(273, 0)
-
-[node name="GrassSurface15" parent="MainBackground4/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(296, 0)
-
-[node name="MainBackground5" type="Sprite2D" parent="."]
+[node name="MainBackground4" type="Sprite2D" parent="MainBackground"]
 texture_filter = 1
-position = Vector2(1136, 92)
-scale = Vector2(0.646548, 0.646429)
+position = Vector2(1488.18, -3.09393)
 texture = ExtResource("1_ccoj7")
 
-[node name="GrassSurface" parent="MainBackground5" instance=ExtResource("4_ipxeg")]
-position = Vector2(-249.061, 126.851)
-scale = Vector2(1.54696, 1.54696)
-
-[node name="GrassSurface5" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(-22, 0)
-
-[node name="GrassSurface2" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(23, 0)
-
-[node name="GrassSurface3" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(46, 0)
-
-[node name="GrassSurface4" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(69, 0)
-
-[node name="GrassSurface6" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(113, 0)
-
-[node name="GrassSurface7" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(91, 0)
-
-[node name="GrassSurface8" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(136, 0)
-
-[node name="GrassSurface9" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(159, 0)
-
-[node name="GrassSurface10" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(182, 0)
-
-[node name="GrassSurface11" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(227, 0)
-
-[node name="GrassSurface12" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(205, 0)
-
-[node name="GrassSurface13" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(250, 0)
-
-[node name="GrassSurface14" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(273, 0)
-
-[node name="GrassSurface15" parent="MainBackground5/GrassSurface" instance=ExtResource("4_ipxeg")]
-position = Vector2(296, 0)
-
-[node name="Player" parent="." instance=ExtResource("5_eqgv7")]
-position = Vector2(21, 128)
+[node name="TileMap" parent="." instance=ExtResource("3_ws4dh")]
+layer_0/tile_data = PackedInt32Array(327680, 720896, 11, 327681, 720896, 11, 327682, 720896, 11, 327683, 720896, 11, 327684, 720896, 11, 327685, 720896, 11, 327686, 720896, 11, 327687, 720896, 11, 327688, 720896, 11, 327689, 720896, 11, 327690, 720896, 11, 327691, 720896, 11, 327692, 720896, 11, 327693, 720896, 11, 327694, 720896, 11, 327695, 720896, 11, 327696, 720896, 11, 327697, 720896, 11, 327698, 720896, 11, 327699, 720896, 11, 327700, 720896, 11, 327701, 720896, 11, 327702, 720896, 11, 327703, 720896, 11, 327704, 720896, 11, 327705, 720896, 11, 327706, 720896, 11, 327707, 720896, 11, 327708, 720896, 11, 327709, 720896, 11, 327710, 720896, 11, 327711, 720896, 11, 327712, 720896, 11, 327713, 720896, 11, 327714, 720896, 11, 327715, 720896, 11, 327716, 720896, 11, 327717, 720896, 11, 327718, 720896, 11, 327719, 720896, 11)
 
 [node name="collisions" type="StaticBody2D" parent="."]
 
@@ -237,6 +50,9 @@ polygon = PackedVector2Array(2, 0, 2, 164, -9, 164, -7.94849, 76.198, -7, -3)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EdgeRight"]
 position = Vector2(1260, 81.5)
 shape = SubResource("RectangleShape2D_lxkyq")
+
+[node name="Player" parent="." instance=ExtResource("5_eqgv7")]
+position = Vector2(35, 129)
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]
