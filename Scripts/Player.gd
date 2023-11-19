@@ -5,49 +5,94 @@ enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
 
 var _state : int = States.ON_GROUND
 
-
+var lock_x : bool = false
+var lock_jump: bool = false
+var on_ladder : bool = false
 # Member variables
-var speed = 140
+@export var speed: float = 140
+@export var jump_force: float = 1.2
 var jump_speed = -250 # Negative because 2D space's y-axis is down
 var gravity = 980 # The force of gravity
-var jump_force = 1
+
+
 
 func player():
 	pass
 	
 
-func _physics_process(delta):
-	# Get input direction
-	#
+func _physics_process(delta):	
+	if(_state == States.IN_AIR):
+		if not $AnimationPlayer.current_animation == "jump": 
+			_state == States.DROP
+
 	# continuous click
-	var right = Input.is_action_pressed('ui_right')
-	var left = Input.is_action_pressed('ui_left')
+	var up = Input.is_action_pressed('up')
+	var right = Input.is_action_pressed('right')
+	var left = Input.is_action_pressed('left')
 	
 	# per click
-	var down = Input.is_action_just_pressed('ui_down')
-	var up = Input.is_action_just_pressed('ui_up')
-	var on_floor = is_on_floor()
+
+	var down = Input.is_action_just_pressed('down')
+	var jump = Input.is_action_just_pressed('jump')
 	var direction = Vector2()
 	
-	if _state != States.CROUCH and on_floor:
+	var on_floor = is_on_floor()
+	
+	if on_floor and _state != States.CROUCH and _state != States.CLIMB:
 		_state = States.ON_GROUND
 	
-	if(up):
-		if _state == States.CROUCH:
-			_state = States.ON_GROUND
-		elif _state == States.ON_GROUND:
+	match _state:
+		States.ON_GROUND:
+			lock_x = false
+			lock_jump = false
+		States.DROP:
+			lock_jump = true
+			animation.play("fall")
+		States.CLIMB:
+			down = Input.is_action_pressed('down')
+			velocity.y = 0
+			gravity = 0
+			if not on_ladder:
+				_state = States.DROP
+				gravity = 980
+		States.DROP:
+			lock_jump = true
+		States.IN_AIR:
+			lock_jump = true
+	
+	if(jump and not lock_jump):
+		if on_ladder:
+			_state = States.DROP
+			gravity = 980
+		else:
 			animation.play("jump")
 			velocity.y = jump_speed * jump_force
 			_state = States.IN_AIR
+		
+	elif(up):
+		if on_ladder:
+			if _state == States.CLIMB:
+				velocity.y = -80
+				animation.play("climb")
+			else:
+				_state = States.CLIMB
+		elif _state == States.CROUCH:
+			_state = States.ON_GROUND
 	elif(down):
+		if on_ladder:
+			if _state == States.CLIMB:
+				velocity.y = 80
+				animation.play("climb")
+			else:
+				_state = States.CLIMB
 		if _state == States.ON_GROUND:
 			_state = States.CROUCH
-	elif(right):
+	elif(right and not lock_x):
 		if _state == States.ON_GROUND:
 			animation.play("run")
 		$Sprite2D.flip_h = false
 		direction.x += 1
-	elif(left):
+	elif(left and not lock_x):
 		if _state == States.ON_GROUND:
 			animation.play("run")
 		$Sprite2D.flip_h = true
@@ -61,23 +106,25 @@ func _physics_process(delta):
 	# Normalize direction
 	direction = direction.normalized()
 
+
+	
+	print(_state)
 	# Apply horizontal movement
 	velocity.x = direction.x * speed
-
-	# Apply gravity
 	velocity.y += gravity * delta
+	
 
-	# Jumping
-
+	
+	
+	
 	# Move the character
 	set_velocity(velocity)
 	set_up_direction(Vector2.UP)
 	move_and_slide()
-	velocity = velocity
 
 
 
-	print(Global.current_scene)
+
 	# Keep the character within the screen bounds
 	
 	#var screen_size = get_viewport_rect().size
@@ -86,5 +133,8 @@ func _physics_process(delta):
 	#if position.x > screen_size.x:
 		#position.x = screen_size.x
 
+func _on_ladder_checker_body_entered(body):
+	on_ladder = true
 
-
+func _on_ladder_checker_body_exited(body):
+	on_ladder = false

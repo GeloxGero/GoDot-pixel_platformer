@@ -1,9 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://1bmalf5j3q3v"]
+[gd_scene load_steps=12 format=3 uid="uid://1bmalf5j3q3v"]
 
-[ext_resource type="Texture2D" uid="uid://bhf4gfluqnvxj" path="res://Assets/Environment/Start/Misc/main background.png" id="1_gk3on"]
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_vl6vr"]
-[ext_resource type="PackedScene" uid="uid://bgav4msmbr0sc" path="res://Assets/Entities/Player/Player.tscn" id="3_5f3oj"]
+[ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://Assets/Environment/Start/bg/plx-1.png" id="2_kedl6"]
+[ext_resource type="PackedScene" uid="uid://ihvc1sbpvo6q" path="res://Assets/Entities/Player/Player.tscn" id="3_5f3oj"]
+[ext_resource type="Texture2D" uid="uid://sjv0gwdp8fq" path="res://Assets/Environment/Start/bg/plx-5.png" id="3_q46hs"]
 [ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://Assets/Environment/Start/tile_map1.tscn" id="3_v3cl8"]
+[ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://Assets/Environment/Start/bg/plx-2.png" id="4_2y7yr"]
+[ext_resource type="Texture2D" uid="uid://waygwibvnisi" path="res://Assets/Environment/Start/bg/plx-3.png" id="5_b8j4t"]
+[ext_resource type="Texture2D" uid="uid://chu02ygvmvtm2" path="res://Assets/Environment/Start/bg/plx-4.png" id="6_c6irj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbrkr"]
 size = Vector2(9, 162)
@@ -18,32 +22,88 @@ size = Vector2(20, 162)
 script = ExtResource("1_vl6vr")
 metadata/_edit_horizontal_guides_ = [42.0]
 
-[node name="MainBackground" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(181, 92)
-scale = Vector2(0.646429, 0.646429)
-texture = ExtResource("1_gk3on")
+[node name="Plx-1" type="Sprite2D" parent="."]
+position = Vector2(100, 65)
+texture = ExtResource("2_kedl6")
 
-[node name="MainBackground2" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(499, 92)
-scale = Vector2(0.646429, 0.646429)
-texture = ExtResource("1_gk3on")
+[node name="Plx-2" type="Sprite2D" parent="Plx-1"]
+texture = ExtResource("4_2y7yr")
+metadata/_edit_lock_ = true
 
-[node name="MainBackground3" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(820, 92)
-scale = Vector2(0.646429, 0.646429)
-texture = ExtResource("1_gk3on")
+[node name="Plx-3" type="Sprite2D" parent="Plx-1"]
+texture = ExtResource("5_b8j4t")
+metadata/_edit_lock_ = true
 
-[node name="MainBackground4" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(1130, 91)
-scale = Vector2(0.646429, 0.646429)
-texture = ExtResource("1_gk3on")
+[node name="Plx-4" type="Sprite2D" parent="Plx-1"]
+texture = ExtResource("6_c6irj")
+metadata/_edit_lock_ = true
+
+[node name="Plx-5" type="Sprite2D" parent="Plx-1"]
+texture = ExtResource("3_q46hs")
+metadata/_edit_lock_ = true
+
+[node name="Plx-2" type="Sprite2D" parent="."]
+position = Vector2(480, 65)
+texture = ExtResource("2_kedl6")
+
+[node name="Plx-2" type="Sprite2D" parent="Plx-2"]
+texture = ExtResource("4_2y7yr")
+metadata/_edit_lock_ = true
+
+[node name="Plx-3" type="Sprite2D" parent="Plx-2"]
+texture = ExtResource("5_b8j4t")
+metadata/_edit_lock_ = true
+
+[node name="Plx-4" type="Sprite2D" parent="Plx-2"]
+texture = ExtResource("6_c6irj")
+metadata/_edit_lock_ = true
+
+[node name="Plx-5" type="Sprite2D" parent="Plx-2"]
+texture = ExtResource("3_q46hs")
+metadata/_edit_lock_ = true
+
+[node name="Plx-3" type="Sprite2D" parent="."]
+position = Vector2(864, 65)
+texture = ExtResource("2_kedl6")
+
+[node name="Plx-2" type="Sprite2D" parent="Plx-3"]
+texture = ExtResource("4_2y7yr")
+metadata/_edit_lock_ = true
+
+[node name="Plx-3" type="Sprite2D" parent="Plx-3"]
+texture = ExtResource("5_b8j4t")
+metadata/_edit_lock_ = true
+
+[node name="Plx-4" type="Sprite2D" parent="Plx-3"]
+texture = ExtResource("6_c6irj")
+metadata/_edit_lock_ = true
+
+[node name="Plx-5" type="Sprite2D" parent="Plx-3"]
+texture = ExtResource("3_q46hs")
+metadata/_edit_lock_ = true
+
+[node name="Plx-4" type="Sprite2D" parent="."]
+position = Vector2(1241, 65)
+texture = ExtResource("2_kedl6")
+
+[node name="Plx-2" type="Sprite2D" parent="Plx-4"]
+texture = ExtResource("4_2y7yr")
+metadata/_edit_lock_ = true
+
+[node name="Plx-3" type="Sprite2D" parent="Plx-4"]
+texture = ExtResource("5_b8j4t")
+metadata/_edit_lock_ = true
+
+[node name="Plx-4" type="Sprite2D" parent="Plx-4"]
+texture = ExtResource("6_c6irj")
+metadata/_edit_lock_ = true
+
+[node name="Plx-5" type="Sprite2D" parent="Plx-4"]
+texture = ExtResource("3_q46hs")
+metadata/_edit_lock_ = true
 
 [node name="TileMap" parent="." instance=ExtResource("3_v3cl8")]
-layer_0/tile_data = PackedInt32Array(327685, 65536, 12, 327696, 65536, 12, 327706, 65536, 12, 327713, 65536, 12, 262159, 262144, 16, 262180, 1310720, 14, 262164, 983040, 14, 262169, 1245184, 5, 262149, 262144, 16, 196617, 65536, 14, 131086, 65536, 14, 262154, 1441792, 7, 262160, 1835008, 7, 196624, 1835008, 7, 131088, 1835008, 7, 262157, 1769472, 7, 262150, 1769472, 7, 196631, 1245184, 5, 262167, 1245184, 5, 196633, 1245184, 5, 196635, 1245184, 5, 262171, 1245184, 5, 262175, 1507328, 7, 262178, 1507328, 7, 30, 1245184, 14, 65571, 1245184, 14, 65557, 1245184, 14, 15, 1245184, 14, 14, 1245184, 14, 65546, 1245184, 14)
+layer_0/tile_data = PackedInt32Array(327680, 524288, 11, 327681, 524288, 11, 327682, 524288, 11, 327683, 524288, 11, 327684, 524288, 11, 327685, 524288, 11, 327686, 524288, 11, 327687, 524288, 11, 327688, 524288, 11, 327689, 524288, 11, 327690, 524288, 11, 327691, 524288, 11, 327692, 524288, 11, 327693, 524288, 11, 327694, 524288, 11, 327695, 524288, 11, 327696, 524288, 11, 327697, 524288, 11, 327698, 524288, 11, 327699, 524288, 11, 327700, 524288, 11, 327701, 524288, 11, 327702, 524288, 11, 327703, 524288, 11, 327704, 524288, 11, 327705, 524288, 11, 327706, 524288, 11, 327707, 524288, 11, 327708, 524288, 11, 327709, 524288, 11, 327710, 524288, 11, 327711, 524288, 11, 327712, 524288, 11, 327713, 524288, 11, 327714, 524288, 11, 327715, 524288, 11, 327716, 524288, 11, 327717, 524288, 11, 327718, 524288, 11)
 
 [node name="Player" parent="." instance=ExtResource("3_5f3oj")]
 position = Vector2(36, 132)

@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0y4lbtiwr25y"]
+[gd_scene load_steps=5 format=3 uid="uid://b0y4lbtiwr25y"]
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://dlq2rqetbw7jr" path="res://Assets/Environment/Start/Misc/quit_button.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://8sudsbesbwfw" path="res://Assets/Environment/Start/Misc/start_button.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://db8psjn50c0to" path="res://Assets/Environment/Start/Misc/title.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cjttns4gdjud4" path="res://Assets/Environment/Start/gubat.jpg" id="4_1p7xy"]
-[ext_resource type="Texture2D" uid="uid://bhf4gfluqnvxj" path="res://Assets/Environment/Start/Misc/main background.png" id="5"]
 
 [node name="Title Screen" type="Control"]
 layout_mode = 3
@@ -14,41 +12,38 @@ pivot_offset = Vector2(194, 229)
 script = ExtResource("1")
 metadata/_edit_horizontal_guides_ = [-19.0]
 
-[node name="MainBackground" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(159, 91)
-scale = Vector2(0.651751, 0.651751)
-texture = ExtResource("5")
-
-[node name="Title" type="Sprite2D" parent="MainBackground"]
-texture_filter = 1
-position = Vector2(-4.60298, -44.4955)
-texture = ExtResource("4")
-
 [node name="Title" type="Sprite2D" parent="."]
 position = Vector2(155, 66)
-scale = Vector2(0.721154, 0.721154)
+scale = Vector2(0.0174813, 0.00675803)
 
 [node name="Gubat" type="Sprite2D" parent="."]
-position = Vector2(160, 92)
+position = Vector2(324, 184)
+scale = Vector2(1.84117, 1.84117)
+texture = ExtResource("4_1p7xy")
+
+[node name="Gubat2" type="Sprite2D" parent="."]
+position = Vector2(326, -649)
+scale = Vector2(1.84117, 1.84117)
 texture = ExtResource("4_1p7xy")
 
 [node name="StartButton" type="TextureButton" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 8.0
-offset_top = 140.0
-offset_right = 120.0
-offset_bottom = 175.0
+offset_left = 89.0
+offset_top = 244.0
+offset_right = 201.0
+offset_bottom = 279.0
+scale = Vector2(1.85163, 1.84933)
 texture_normal = ExtResource("3")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 205.0
-offset_top = 139.0
-offset_right = 317.0
-offset_bottom = 174.0
+offset_left = 364.0
+offset_top = 244.0
+offset_right = 476.0
+offset_bottom = 279.0
+scale = Vector2(1.76611, 1.738)
 texture_normal = ExtResource("2")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
