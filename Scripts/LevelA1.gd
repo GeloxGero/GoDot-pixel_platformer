@@ -3,7 +3,7 @@ var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AudioStreamPlayer2D.play()
+	MusicController.play_music()
 	
 	player = get_node("Player")
 	if(Global.two_to_one):

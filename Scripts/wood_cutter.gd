@@ -72,7 +72,8 @@ func _on_attacking_area_body_exited(body):
 
 func _on_damaging_area_body_entered(body):
 	if body.name == "Player":
-		Global.hp -= 1
+		print("Hit")
+		body.take_damage(1)
 
 
 func _on_damaging_area_body_exited(body):

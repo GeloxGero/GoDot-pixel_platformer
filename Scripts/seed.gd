@@ -15,6 +15,7 @@ func _on_seed_box_body_entered(body):
 	if body.name == "Player":
 		self.queue_free()
 		Global.player_seeds += 1
+		Global.hp += 1
 
 
 func _on_seed_box_body_exited(body):

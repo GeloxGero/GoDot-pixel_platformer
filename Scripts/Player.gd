@@ -15,10 +15,10 @@ var on_ladder : bool = false
 var jump_speed = -250 # Negative because 2D space's y-axis is down
 var gravity = 980 # The force of gravity
 
-
-
-
-func _physics_process(delta):		
+func _physics_process(delta):	
+	if Global.hp <= 0:
+		print("death")
+	
 	if(_state == States.IN_AIR):
 		if not $AnimationPlayer.current_animation == "jump": 
 			_state == States.DROP
@@ -135,5 +135,11 @@ func _on_ladder_checker_body_entered(body):
 func _on_ladder_checker_body_exited(body):
 	on_ladder = false
 
-func take_damage():
-	animation.play()
+func take_damage(damage):
+	if Global.hp == 1:
+		die()
+	Global.hp -= damage
+	
+func die():
+	#var GameOverScreen = StageManager.GG.instance()
+	#add_child(GameOverScreen)

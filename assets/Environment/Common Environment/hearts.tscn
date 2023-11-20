@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://w2vqxv1dfjdx"]
+
+[ext_resource type="Script" path="res://Scripts/hearts.gd" id="1_8i7tk"]
+[ext_resource type="Texture2D" uid="uid://dc8cv88vih03m" path="res://Assets/Environment/Misc/hearts.png" id="1_p6a7i"]
+
+[node name="Hearts" type="CanvasLayer"]
+script = ExtResource("1_8i7tk")
+
+[node name="Hearts" type="Sprite2D" parent="."]
+position = Vector2(78, 18)
+texture = ExtResource("1_p6a7i")
+vframes = 6

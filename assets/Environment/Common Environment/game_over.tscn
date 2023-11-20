@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ntguuocsplrd"]
+
+[ext_resource type="Texture2D" uid="uid://dnpkd05j81jsb" path="res://Assets/Environment/Misc/Board.png" id="1_8122s"]
+[ext_resource type="Texture2D" uid="uid://bjwh7o8ph4url" path="res://Assets/Environment/Misc/Restart.png" id="2_8dl57"]
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(318, 135)
+scale = Vector2(2.16805, 2.16805)
+texture = ExtResource("1_8122s")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 236)
+scale = Vector2(0.986214, 1)
+texture = ExtResource("2_8dl57")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://Assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
-[ext_resource type="AudioStream" uid="uid://bqk35txr232hv" path="res://Assets/Audio/BG.mp3" id="2_qvqgb"]
+[ext_resource type="PackedScene" uid="uid://w2vqxv1dfjdx" path="res://Assets/Environment/Common Environment/hearts.tscn" id="2_myemh"]
 [ext_resource type="Texture2D" uid="uid://sjv0gwdp8fq" path="res://Assets/Environment/Misc/Start/bg/plx-5.png" id="3_i5rvv"]
 [ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://Assets/Environment/Misc/Start/tile_map1.tscn" id="3_ws4dh"]
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://Assets/Environment/Misc/Start/bg/plx-2.png" id="4_5afc8"]
@@ -88,8 +88,7 @@ scale = Vector2(1.59409, 1.59409)
 script = ExtResource("1_eqk3o")
 metadata/_edit_horizontal_guides_ = [42.0]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_qvqgb")
+[node name="Hearts" parent="." instance=ExtResource("2_myemh")]
 
 [node name="Plx-1" type="Sprite2D" parent="."]
 z_index = -20
@@ -217,6 +216,8 @@ shape = SubResource("RectangleShape2D_lxkyq")
 
 [node name="Player" parent="." instance=ExtResource("5_eqgv7")]
 position = Vector2(380.154, 84.0605)
+speed = 140.0
+jump_force = 1.2
 
 [node name="Birds" type="Node2D" parent="."]
 position = Vector2(916.511, 97.2341)
@@ -234,7 +235,7 @@ visible = false
 position = Vector2(-53.9494, 52.6947)
 
 [node name="WoodCutter" parent="." instance=ExtResource("18_xtmmx")]
-position = Vector2(593.442, 87.8244)
+position = Vector2(581.523, 148.047)
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]

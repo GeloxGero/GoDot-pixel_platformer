@@ -2,6 +2,7 @@ extends CanvasLayer
 
 const Level1 = "res://Scenes/LevelA1.tscn"
 const Level2 = "res://Scenes/LevelA2.tscn"
+const GG = preload("res://Assets/Environment/Common Environment/game_over.tscn")
 
 func _ready():
 	get_node("ColorRect").hide()
