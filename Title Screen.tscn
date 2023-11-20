@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_lpbgr"]
 [ext_resource type="AudioStream" uid="uid://umqv43pau82i" path="res://Assets/Audio/MENU.mp3" id="2_1svl2"]
-[ext_resource type="Texture2D" uid="uid://8sudsbesbwfw" path="res://Assets/Environment/Misc/Start/Misc/start_button.png" id="3_cro4j"]
-[ext_resource type="Texture2D" uid="uid://dlq2rqetbw7jr" path="res://Assets/Environment/Misc/Start/Misc/quit_button.png" id="4_r880b"]
+[ext_resource type="Texture2D" uid="uid://bnfiifcn28atc" path="res://Assets/Environment/Misc/Start/play.png" id="4_i7hpv"]
+[ext_resource type="Texture2D" uid="uid://dmgy1tu3pgmfs" path="res://Assets/Environment/Misc/Start/quit.png" id="5_mqiu5"]
 [ext_resource type="Texture2D" uid="uid://bgoggavmd7jj1" path="res://Assets/Environment/Misc/Start/Title.jpg" id="6_jg04v"]
 
 [node name="Title Screen" type="Control"]
@@ -25,22 +25,22 @@ stream = ExtResource("2_1svl2")
 [node name="StartButton" type="TextureButton" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 89.0
-offset_top = 244.0
-offset_right = 201.0
-offset_bottom = 279.0
+offset_left = 124.0
+offset_top = 279.0
+offset_right = 236.0
+offset_bottom = 314.0
 scale = Vector2(1.85163, 1.84933)
-texture_normal = ExtResource("3_cro4j")
+texture_normal = ExtResource("4_i7hpv")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 364.0
-offset_top = 244.0
-offset_right = 476.0
-offset_bottom = 279.0
+offset_left = 377.0
+offset_top = 281.0
+offset_right = 489.0
+offset_bottom = 316.0
 scale = Vector2(1.76611, 1.738)
-texture_normal = ExtResource("4_r880b")
+texture_normal = ExtResource("5_mqiu5")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
