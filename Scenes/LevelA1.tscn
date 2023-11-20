@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://5x0oa87g8kqy"]
+[gd_scene load_steps=26 format=3 uid="uid://5x0oa87g8kqy"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://Assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
+[ext_resource type="AudioStream" uid="uid://bqk35txr232hv" path="res://Assets/Audio/BG.mp3" id="2_qvqgb"]
 [ext_resource type="Texture2D" uid="uid://sjv0gwdp8fq" path="res://Assets/Environment/Misc/Start/bg/plx-5.png" id="3_i5rvv"]
 [ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://Assets/Environment/Misc/Start/tile_map1.tscn" id="3_ws4dh"]
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://Assets/Environment/Misc/Start/bg/plx-2.png" id="4_5afc8"]
@@ -86,6 +87,9 @@ position = Vector2(1, 82)
 scale = Vector2(1.59409, 1.59409)
 script = ExtResource("1_eqk3o")
 metadata/_edit_horizontal_guides_ = [42.0]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_qvqgb")
 
 [node name="Plx-1" type="Sprite2D" parent="."]
 z_index = -20

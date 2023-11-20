@@ -3,6 +3,8 @@ var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AudioStreamPlayer2D.play()
+	
 	player = get_node("Player")
 	if(Global.two_to_one):
 		teleport(1900, -500)

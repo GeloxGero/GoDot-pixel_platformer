@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cceprbqsjmd4k"]
+[gd_scene load_steps=6 format=3 uid="uid://cceprbqsjmd4k"]
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_lpbgr"]
-[ext_resource type="Texture2D" uid="uid://kr3hlj87uqh0" path="res://Assets/Environment/Misc/2.png" id="2_cgygv"]
-[ext_resource type="Texture2D" path="res://Assets/Environment/Start/gubat.jpg" id="2_ddfly"]
+[ext_resource type="AudioStream" uid="uid://umqv43pau82i" path="res://Assets/Audio/MENU.mp3" id="2_1svl2"]
 [ext_resource type="Texture2D" uid="uid://8sudsbesbwfw" path="res://Assets/Environment/Misc/Start/Misc/start_button.png" id="3_cro4j"]
-[ext_resource type="Texture2D" uid="uid://biwnndhihbvka" path="res://Assets/Environment/Misc/5.png" id="3_mied4"]
 [ext_resource type="Texture2D" uid="uid://dlq2rqetbw7jr" path="res://Assets/Environment/Misc/Start/Misc/quit_button.png" id="4_r880b"]
-[ext_resource type="Texture2D" uid="uid://db8psjn50c0to" path="res://Assets/Environment/Misc/Start/Misc/title.png" id="5_f6k82"]
+[ext_resource type="Texture2D" uid="uid://bgoggavmd7jj1" path="res://Assets/Environment/Misc/Start/Title.jpg" id="6_jg04v"]
 
 [node name="Title Screen" type="Control"]
 layout_mode = 3
@@ -15,24 +13,14 @@ pivot_offset = Vector2(194, 229)
 script = ExtResource("1_lpbgr")
 metadata/_edit_horizontal_guides_ = [-19.0]
 
-[node name="2" type="Sprite2D" parent="."]
-position = Vector2(346, 190)
-scale = Vector2(1.19349, 1.18386)
-texture = ExtResource("2_cgygv")
-
-[node name="5" type="Sprite2D" parent="."]
-position = Vector2(374, 159)
-scale = Vector2(1.3881, 1.3881)
-texture = ExtResource("3_mied4")
-
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(158, 66)
-scale = Vector2(0.0174813, 0.00675803)
+position = Vector2(323.838, 185.625)
+scale = Vector2(0.91005, 0.91005)
+texture = ExtResource("6_jg04v")
 
-[node name="Gubat2" type="Sprite2D" parent="."]
-position = Vector2(326, -649)
-scale = Vector2(1.84117, 1.84117)
-texture = ExtResource("2_ddfly")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-117, -6)
+stream = ExtResource("2_1svl2")
 
 [node name="StartButton" type="TextureButton" parent="."]
 texture_filter = 1
@@ -53,10 +41,6 @@ offset_right = 476.0
 offset_bottom = 279.0
 scale = Vector2(1.76611, 1.738)
 texture_normal = ExtResource("4_r880b")
-
-[node name="Title2" type="Sprite2D" parent="."]
-position = Vector2(341, 117)
-texture = ExtResource("5_f6k82")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
