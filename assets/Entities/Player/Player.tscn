@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ihvc1sbpvo6q"]
+[gd_scene load_steps=14 format=3 uid="uid://ihvc1sbpvo6q"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_ww3em"]
 [ext_resource type="Texture2D" uid="uid://dmx04f7fx4qpt" path="res://Assets/Entities/Player/character_spriteshet.png" id="2_kvy2l"]
@@ -119,10 +119,26 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_c3xo3"]
 resource_name = "walk"
 
+[sub_resource type="Animation" id="Animation_py3jn"]
+resource_name = "damaged"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.325, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 5), Vector2i(1, 5), Vector2i(2, 5), Vector2i(3, 5)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f1jwu"]
 _data = {
 "RESET": SubResource("Animation_cav72"),
 "climb": SubResource("Animation_sm2vb"),
+"damaged": SubResource("Animation_py3jn"),
 "fall": SubResource("Animation_uo5fs"),
 "idle": SubResource("Animation_y33c4"),
 "jump": SubResource("Animation_vtph5"),
@@ -149,6 +165,7 @@ position = Vector2(2, 3)
 shape = SubResource("CapsuleShape2D_lagd1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 1)
 limit_left = 0
 limit_top = 0
 limit_right = 2000

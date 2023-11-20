@@ -134,3 +134,6 @@ func _on_ladder_checker_body_entered(body):
 
 func _on_ladder_checker_body_exited(body):
 	on_ladder = false
+
+func take_damage():
+	animation.play()

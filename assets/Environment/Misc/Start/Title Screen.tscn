@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0y4lbtiwr25y"]
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://dlq2rqetbw7jr" path="res://Assets/Environment/Start/Misc/quit_button.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://8sudsbesbwfw" path="res://Assets/Environment/Start/Misc/start_button.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://cjttns4gdjud4" path="res://Assets/Environment/Start/gubat.jpg" id="4_1p7xy"]
+[ext_resource type="Texture2D" uid="uid://dlq2rqetbw7jr" path="res://Assets/Environment/Misc/Start/Misc/quit_button.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://8sudsbesbwfw" path="res://Assets/Environment/Misc/Start/Misc/start_button.png" id="3"]
+[ext_resource type="Texture2D" path="res://Assets/Environment/Start/gubat.jpg" id="4_1p7xy"]
 
 [node name="Title Screen" type="Control"]
 layout_mode = 3

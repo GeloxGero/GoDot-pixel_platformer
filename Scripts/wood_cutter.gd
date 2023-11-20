@@ -4,41 +4,50 @@ extends CharacterBody2D
 @onready var animation = $AnimationPlayer
 var movement_speed = 30.0
 
-enum State {WALK, CHASE, IDLE, DAMAGED, DEATH}
+enum State {WALK, CHASE, IDLE, DAMAGED, DEATH, ATTACK}
 
 var attacking = false
 var _state = State.IDLE
 var speed = 30.0
 var player = null
+var flipped = false
 
 var gravity = 980 # The force of gravity
 
+var direction: Vector2 = starting_move_direction
 func _physics_process(delta):
+	if flipped:
+		$Sprite2D.flip_h = true
+	else:
+		$Sprite2D.flip_h = false
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
 	
-	if not attacking:
-		match _state:
-			State.IDLE:
-				movement_speed = 30.0
-				animation.play("idle")
-			State.CHASE:
-				movement_speed = 200.0
-				animation.play("run")
-				#velocity = direction * speed
-			State.WALK:
-				animation.play("walk")
-			State.DAMAGED:
-				animation.play("damaged")
-			State.DEATH:
-				animation.play("death")
-	
-	if attacking:
-		animation.play("attack")
 
-	var direction: Vector2 = starting_move_direction
+	match _state:
+		State.IDLE:
+			movement_speed = 30.0
+			animation.play("idle")
+		State.CHASE:
+			movement_speed = 100.0
+			animation.play("run")
+			#velocity = direction * speed
+		State.WALK:
+			animation.play("walk")
+		State.DAMAGED:
+			animation.play("damaged")
+		State.DEATH:
+			animation.play("death")
+		State.ATTACK:
+			animation.play("attack")
+
+
+	
+	
+	
+	
 	if direction:
 		velocity.x = direction.x * movement_speed	
 	else:
@@ -53,17 +62,17 @@ func _physics_process(delta):
 
 func _on_attacking_area_body_entered(body):
 	if body.name == "Player":
-		attacking = true
+		_state = State.ATTACK
 
 
 func _on_attacking_area_body_exited(body):
 	if body.name == "Player":
-		attacking = false
+			_state = State.IDLE
 	
 
 func _on_damaging_area_body_entered(body):
 	if body.name == "Player":
-		print("Damaged")
+		Global.hp -= 1
 
 
 func _on_damaging_area_body_exited(body):
@@ -72,6 +81,11 @@ func _on_damaging_area_body_exited(body):
 
 func _on_detection_area_body_entered(body):
 	if body.name == "Player":
+		if body.position < self.position:
+			flipped = false
+		else:
+			direction = (body.position - position).normalized()
+			flipped = true
 		_state = State.CHASE
 
 

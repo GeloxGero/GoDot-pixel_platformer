@@ -7,10 +7,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0nnx"]
 size = Vector2(184, 86.5)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8fno"]
-radius = 7.0
-height = 32.0
-
 [sub_resource type="Animation" id="Animation_710ik"]
 length = 0.001
 tracks/0/type = "value"
@@ -52,7 +48,6 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_itsxy"]
 resource_name = "attack"
-length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -60,10 +55,10 @@ tracks/0/path = NodePath("Sprite2D:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.175, 0.275, 0.375, 0.45),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.175, 0.275, 0.375, 0.45, 0.525),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2i(5, 5), Vector2i(4, 5), Vector2i(3, 5), Vector2i(2, 5), Vector2i(1, 5), Vector2i(0, 5)]
+"values": [Vector2i(5, 5), Vector2i(4, 5), Vector2i(3, 5), Vector2i(2, 5), Vector2i(1, 5), Vector2i(0, 5), Vector2i(5, 5)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -173,6 +168,10 @@ size = Vector2(20, 11.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef3yy"]
 size = Vector2(20, 11)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8fno"]
+radius = 7.0
+height = 32.0
+
 [node name="WoodCutter" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("2_pd36m")
@@ -185,16 +184,14 @@ position = Vector2(0, -26.75)
 scale = Vector2(1.04018, 0.989087)
 shape = SubResource("RectangleShape2D_w0nnx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 0)
-shape = SubResource("CapsuleShape2D_p8fno")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_1yrx4")
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, -15)
+scale = Vector2(2.00185, 2.00185)
 texture = ExtResource("1_rbs6w")
 hframes = 6
 vframes = 6
@@ -204,17 +201,25 @@ frame = 24
 script = ExtResource("3_el537")
 
 [node name="DamagingArea" type="Area2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(-3, -12)
+scale = Vector2(1.5773, 1.5773)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamagingArea"]
 position = Vector2(-20, 2)
 shape = SubResource("RectangleShape2D_1ixyp")
 
 [node name="AttackingArea" type="Area2D" parent="."]
+position = Vector2(-5, -12)
+scale = Vector2(1.5466, 1.5466)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackingArea"]
 position = Vector2(-19, 2)
 shape = SubResource("RectangleShape2D_ef3yy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -13)
+scale = Vector2(2.26283, 1.82921)
+shape = SubResource("CapsuleShape2D_p8fno")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
