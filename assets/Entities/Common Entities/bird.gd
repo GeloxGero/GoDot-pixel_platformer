@@ -19,6 +19,7 @@ func _physics_process(delta):
 		if rand <= 10:
 			state = States.FLYING
 	elif state == States.FLYING:
+		animation.play("fly")
 		direction = Vector2(random.randf() - 0.5, random.randf() - 0.5)
 		velocity = direction * speed
 		velocity.x = randi_range(200, 600)

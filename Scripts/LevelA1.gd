@@ -3,8 +3,6 @@ var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	print(Global.two_to_one)
 	player = get_node("Player")
 	if(Global.two_to_one):
 		teleport(1900, -500)

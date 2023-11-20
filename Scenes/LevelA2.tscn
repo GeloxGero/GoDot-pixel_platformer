@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://1bmalf5j3q3v"]
+[gd_scene load_steps=17 format=3 uid="uid://1bmalf5j3q3v"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_vl6vr"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://Assets/Environment/Start/bg/plx-1.png" id="2_kedl6"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://Assets/Environment/Start/bg/plx-2.png" id="4_2y7yr"]
 [ext_resource type="Texture2D" uid="uid://waygwibvnisi" path="res://Assets/Environment/Start/bg/plx-3.png" id="5_b8j4t"]
 [ext_resource type="Texture2D" uid="uid://chu02ygvmvtm2" path="res://Assets/Environment/Start/bg/plx-4.png" id="6_c6irj"]
+[ext_resource type="PackedScene" uid="uid://bynkc2sarakay" path="res://Assets/Environment/Common Environment/seed.tscn" id="7_bo81s"]
 [ext_resource type="PackedScene" uid="uid://bjts4rp80ikpj" path="res://Assets/Environment/Start/tile_map_ladder.tscn" id="7_rlvnl"]
 [ext_resource type="Texture2D" uid="uid://c7erqodpldp3p" path="res://Assets/Environment/Level2/water_tileset.png" id="8_floso"]
 
@@ -48,7 +49,7 @@ sources/0 = SubResource("TileSetAtlasSource_o5a5k")
 size = Vector2(9, 162)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gip2l"]
-size = Vector2(20, 161)
+size = Vector2(20, 285.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtef0"]
 size = Vector2(20, 162)
@@ -119,13 +120,15 @@ texture = ExtResource("3_q46hs")
 [node name="Plx-6" type="Sprite2D" parent="Plx-3"]
 texture = ExtResource("3_q46hs")
 
-[node name="Player" parent="." instance=ExtResource("3_5f3oj")]
-position = Vector2(37, 96)
-scale = Vector2(1.5, 1.5)
+[node name="Seed" parent="." instance=ExtResource("7_bo81s")]
+position = Vector2(274, -242)
+
+[node name="Seed2" parent="." instance=ExtResource("7_bo81s")]
+position = Vector2(1137, 112)
 
 [node name="TileMap" parent="." instance=ExtResource("3_v3cl8")]
 cell_quadrant_size = 32
-layer_0/tile_data = PackedInt32Array(327679, 327680, 11, 262144, 131072, 11, 262145, 524288, 11, 262146, 458752, 12, 262147, 720896, 12, 262148, 327680, 12, 262149, 393216, 12, 262150, 589824, 12, 262151, 131072, 12, 262152, 655360, 12, 262153, 393216, 12, 262154, 720896, 12, 262155, 196608, 12, 262156, 458752, 12, 262157, 131072, 11, 262158, 655360, 12, 262159, 196608, 12, 262160, 393216, 12, 262161, 589824, 12, 262162, 655360, 12, 262163, 655360, 12, 262164, 196608, 12, 262165, 524288, 12, 262166, 327680, 12, 262167, 131072, 11, 262168, 589824, 12, 262169, 327680, 12, 262170, 262144, 12, 262171, 196608, 12, 262172, 589824, 12, 262173, 131072, 12, 262174, 720896, 11, 262175, 524288, 12, 262176, 393216, 12, 262177, 196608, 12, 262178, 393216, 12, 262179, 393216, 12, 262180, 524288, 12, 262181, 327680, 11, 262182, 196608, 12, -327665, 65536, 14, -458741, 65536, 14, -524280, 983040, 16, 196644, 983040, 16)
+layer_0/tile_data = PackedInt32Array(327679, 327680, 11, 262144, 131072, 11, 262145, 524288, 11, 262146, 458752, 12, 262147, 720896, 12, 262148, 327680, 12, 262149, 393216, 12, 262150, 589824, 12, 262151, 131072, 12, 262152, 655360, 12, 262153, 393216, 12, 262154, 720896, 12, 262155, 196608, 12, 262156, 458752, 12, 262157, 131072, 11, 262158, 655360, 12, 262159, 196608, 12, 262160, 393216, 12, 262161, 589824, 12, 262162, 655360, 12, 262163, 655360, 12, 262164, 196608, 12, 262165, 524288, 12, 262166, 327680, 12, 262167, 131072, 11, 262168, 589824, 12, 262169, 327680, 12, 262170, 262144, 12, 262171, 196608, 12, 262172, 589824, 12, 262173, 131072, 12, 262174, 720896, 11, 262175, 524288, 12, 262176, 393216, 12, 262177, 196608, 12, 262178, 393216, 12, 262179, 393216, 12, 262180, 524288, 12, 262181, 327680, 11, 262182, 196608, 12, -327665, 65536, 14, -458741, 65536, 14)
 layer_3/name = "Platforms"
 layer_3/enabled = true
 layer_3/modulate = Color(1, 1, 1, 1)
@@ -142,6 +145,10 @@ tile_set = SubResource("TileSet_yvmpm")
 format = 2
 layer_0/tile_data = PackedInt32Array(524332, 196608, 0, 524333, 196608, 0, 524334, 196608, 0, 524335, 196608, 0, 524336, 196608, 0, 589868, 196608, 1, 589869, 196608, 1, 589870, 196608, 1, 589871, 196608, 1, 589872, 196608, 1, 589873, 196608, 1, 589874, 196608, 1, 589875, 196608, 1, 589876, 196608, 1, 589877, 196608, 1, 589878, 196608, 1, 589879, 196608, 1, 589880, 196608, 1, 589881, 196608, 1, 589882, 196608, 1, 589883, 196608, 1, 589884, 196608, 1, 524337, 196608, 0, 524338, 196608, 0, 524339, 196608, 0, 524340, 196608, 0, 524341, 196608, 0, 524342, 196608, 0, 524343, 196608, 0, 524344, 196608, 0, 524345, 196608, 0, 524346, 196608, 0, 524347, 196608, 0, 524348, 196608, 0, 524331, 65536, 2, 524330, 0, 2, 589867, 65536, 3, 524349, 0, 4, 524350, 65536, 4, 589885, 0, 5, 524312, 131072, 0, 524313, 131072, 0, 524314, 131072, 0, 524315, 131072, 0, 524316, 131072, 0, 524317, 131072, 0, 524318, 131072, 0, 524319, 65536, 2, 524320, 327680, 4, 524311, 0, 2)
 
+[node name="Player" parent="." instance=ExtResource("3_5f3oj")]
+position = Vector2(37, 96)
+scale = Vector2(1.5, 1.5)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -154,9 +161,10 @@ shape = SubResource("RectangleShape2D_wbrkr")
 
 [node name="EdgeRight" type="Area2D" parent="."]
 position = Vector2(1192, 84)
+collision_layer = 2
 
 [node name="EdgeRightA2" type="CollisionShape2D" parent="EdgeRight"]
-position = Vector2(14, -3)
+position = Vector2(14, -65.25)
 shape = SubResource("RectangleShape2D_gip2l")
 
 [node name="EdgeLeft" type="Area2D" parent="."]
