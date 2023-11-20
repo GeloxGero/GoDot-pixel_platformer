@@ -4,7 +4,7 @@ var speed: float = 100
 var gravity: float = 2000
 var direction: Vector2 = Vector2.RIGHT
 var random = RandomNumberGenerator.new()
-
+@onready var animation = $AnimationPlayer
 
 # Initialize mob state
 enum States {IDLE, FLYING}
@@ -15,21 +15,24 @@ func _physics_process(delta):
 	var rand = random.randf_range(1, 10)
 	
 	if state == States.IDLE:
-		print($AnimationPlayer)
+		animation.play("idle")
 		if rand <= 10:
 			state = States.FLYING
 	elif state == States.FLYING:
 		direction = Vector2(random.randf() - 0.5, random.randf() - 0.5)
 		velocity = direction * speed
-		if randf_range(1, 100) <= 10:
-			state = States.IDLE
-		# Attack logic
-		velocity = Vector2.ZERO
-		# After attack animation, switch back to IDLE or FLYING
-		state = States.IDLE
+		velocity.x = randi_range(200, 600)
+		gravity = -1500
+		
+		
+	velocity.y += gravity * delta
+	set_velocity(velocity)
+	set_up_direction(Vector2.UP)
+	move_and_slide()
 
 
 
-#func _on_area_2d_area_entered(area):
-#	if body is player:
-#		state = States.FLYING
+
+func _on_area_2d_area_entered(body):
+	if body.name == "Player":
+		state = States.FLYING

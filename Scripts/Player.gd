@@ -3,6 +3,7 @@ extends CharacterBody2D
 enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
 @onready var animation = $AnimationPlayer
 
+var player
 var _state : int = States.ON_GROUND
 
 var lock_x : bool = false
@@ -16,11 +17,8 @@ var gravity = 980 # The force of gravity
 
 
 
-func player():
-	pass
-	
 
-func _physics_process(delta):	
+func _physics_process(delta):		
 	if(_state == States.IN_AIR):
 		if not $AnimationPlayer.current_animation == "jump": 
 			_state == States.DROP
@@ -107,8 +105,6 @@ func _physics_process(delta):
 	direction = direction.normalized()
 
 
-	
-	print(_state)
 	# Apply horizontal movement
 	velocity.x = direction.x * speed
 	velocity.y += gravity * delta

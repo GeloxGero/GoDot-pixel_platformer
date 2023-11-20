@@ -151,7 +151,7 @@ shape = SubResource("CapsuleShape2D_lagd1")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
-limit_right = 1281
+limit_right = 2000
 limit_bottom = 187
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

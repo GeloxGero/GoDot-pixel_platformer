@@ -1,13 +1,48 @@
-[gd_scene load_steps=12 format=3 uid="uid://1bmalf5j3q3v"]
+[gd_scene load_steps=16 format=3 uid="uid://1bmalf5j3q3v"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_vl6vr"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://Assets/Environment/Start/bg/plx-1.png" id="2_kedl6"]
-[ext_resource type="PackedScene" uid="uid://ihvc1sbpvo6q" path="res://Assets/Entities/Player/Player.tscn" id="3_5f3oj"]
+[ext_resource type="PackedScene" uid="uid://ihvc1sbpvo6q" path="res://Assets/Entities/Player/player.tscn" id="3_5f3oj"]
 [ext_resource type="Texture2D" uid="uid://sjv0gwdp8fq" path="res://Assets/Environment/Start/bg/plx-5.png" id="3_q46hs"]
 [ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://Assets/Environment/Start/tile_map1.tscn" id="3_v3cl8"]
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://Assets/Environment/Start/bg/plx-2.png" id="4_2y7yr"]
 [ext_resource type="Texture2D" uid="uid://waygwibvnisi" path="res://Assets/Environment/Start/bg/plx-3.png" id="5_b8j4t"]
 [ext_resource type="Texture2D" uid="uid://chu02ygvmvtm2" path="res://Assets/Environment/Start/bg/plx-4.png" id="6_c6irj"]
+[ext_resource type="PackedScene" uid="uid://bjts4rp80ikpj" path="res://Assets/Environment/Start/tile_map_ladder.tscn" id="7_rlvnl"]
+[ext_resource type="Texture2D" uid="uid://c7erqodpldp3p" path="res://Assets/Environment/Level2/water_tileset.png" id="8_floso"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5a5k"]
+texture = ExtResource("8_floso")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+2:5/0 = 0
+4:5/0 = 0
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yvmpm"]
+sources/0 = SubResource("TileSetAtlasSource_o5a5k")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbrkr"]
 size = Vector2(9, 162)
@@ -19,94 +54,93 @@ size = Vector2(20, 161)
 size = Vector2(20, 162)
 
 [node name="LevelA2" type="Node2D"]
+position = Vector2(29, 205)
 script = ExtResource("1_vl6vr")
 metadata/_edit_horizontal_guides_ = [42.0]
+metadata/_edit_vertical_guides_ = []
 
 [node name="Plx-1" type="Sprite2D" parent="."]
-position = Vector2(100, 65)
+z_index = -20
+position = Vector2(501.854, -111.035)
+scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("2_kedl6")
 
 [node name="Plx-2" type="Sprite2D" parent="Plx-1"]
 texture = ExtResource("4_2y7yr")
-metadata/_edit_lock_ = true
 
 [node name="Plx-3" type="Sprite2D" parent="Plx-1"]
 texture = ExtResource("5_b8j4t")
-metadata/_edit_lock_ = true
 
 [node name="Plx-4" type="Sprite2D" parent="Plx-1"]
 texture = ExtResource("6_c6irj")
-metadata/_edit_lock_ = true
 
 [node name="Plx-5" type="Sprite2D" parent="Plx-1"]
 texture = ExtResource("3_q46hs")
-metadata/_edit_lock_ = true
 
 [node name="Plx-2" type="Sprite2D" parent="."]
-position = Vector2(480, 65)
+z_index = -20
+position = Vector2(1548.22, -111.035)
+scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("2_kedl6")
 
 [node name="Plx-2" type="Sprite2D" parent="Plx-2"]
 texture = ExtResource("4_2y7yr")
-metadata/_edit_lock_ = true
 
 [node name="Plx-3" type="Sprite2D" parent="Plx-2"]
 texture = ExtResource("5_b8j4t")
-metadata/_edit_lock_ = true
 
 [node name="Plx-4" type="Sprite2D" parent="Plx-2"]
 texture = ExtResource("6_c6irj")
-metadata/_edit_lock_ = true
 
 [node name="Plx-5" type="Sprite2D" parent="Plx-2"]
 texture = ExtResource("3_q46hs")
-metadata/_edit_lock_ = true
+
+[node name="Plx-6" type="Sprite2D" parent="Plx-2"]
+texture = ExtResource("3_q46hs")
 
 [node name="Plx-3" type="Sprite2D" parent="."]
-position = Vector2(864, 65)
+z_index = -20
+position = Vector2(2598.35, -111.035)
+scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("2_kedl6")
 
 [node name="Plx-2" type="Sprite2D" parent="Plx-3"]
 texture = ExtResource("4_2y7yr")
-metadata/_edit_lock_ = true
 
 [node name="Plx-3" type="Sprite2D" parent="Plx-3"]
 texture = ExtResource("5_b8j4t")
-metadata/_edit_lock_ = true
 
 [node name="Plx-4" type="Sprite2D" parent="Plx-3"]
 texture = ExtResource("6_c6irj")
-metadata/_edit_lock_ = true
 
 [node name="Plx-5" type="Sprite2D" parent="Plx-3"]
 texture = ExtResource("3_q46hs")
-metadata/_edit_lock_ = true
 
-[node name="Plx-4" type="Sprite2D" parent="."]
-position = Vector2(1241, 65)
-texture = ExtResource("2_kedl6")
-
-[node name="Plx-2" type="Sprite2D" parent="Plx-4"]
-texture = ExtResource("4_2y7yr")
-metadata/_edit_lock_ = true
-
-[node name="Plx-3" type="Sprite2D" parent="Plx-4"]
-texture = ExtResource("5_b8j4t")
-metadata/_edit_lock_ = true
-
-[node name="Plx-4" type="Sprite2D" parent="Plx-4"]
-texture = ExtResource("6_c6irj")
-metadata/_edit_lock_ = true
-
-[node name="Plx-5" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-6" type="Sprite2D" parent="Plx-3"]
 texture = ExtResource("3_q46hs")
-metadata/_edit_lock_ = true
-
-[node name="TileMap" parent="." instance=ExtResource("3_v3cl8")]
-layer_0/tile_data = PackedInt32Array(327680, 524288, 11, 327681, 524288, 11, 327682, 524288, 11, 327683, 524288, 11, 327684, 524288, 11, 327685, 524288, 11, 327686, 524288, 11, 327687, 524288, 11, 327688, 524288, 11, 327689, 524288, 11, 327690, 524288, 11, 327691, 524288, 11, 327692, 524288, 11, 327693, 524288, 11, 327694, 524288, 11, 327695, 524288, 11, 327696, 524288, 11, 327697, 524288, 11, 327698, 524288, 11, 327699, 524288, 11, 327700, 524288, 11, 327701, 524288, 11, 327702, 524288, 11, 327703, 524288, 11, 327704, 524288, 11, 327705, 524288, 11, 327706, 524288, 11, 327707, 524288, 11, 327708, 524288, 11, 327709, 524288, 11, 327710, 524288, 11, 327711, 524288, 11, 327712, 524288, 11, 327713, 524288, 11, 327714, 524288, 11, 327715, 524288, 11, 327716, 524288, 11, 327717, 524288, 11, 327718, 524288, 11)
 
 [node name="Player" parent="." instance=ExtResource("3_5f3oj")]
-position = Vector2(36, 132)
+position = Vector2(37, 96)
+scale = Vector2(1.5, 1.5)
+
+[node name="TileMap" parent="." instance=ExtResource("3_v3cl8")]
+cell_quadrant_size = 32
+layer_0/tile_data = PackedInt32Array(327679, 327680, 11, 262144, 131072, 11, 262145, 524288, 11, 262146, 458752, 12, 262147, 720896, 12, 262148, 327680, 12, 262149, 393216, 12, 262150, 589824, 12, 262151, 131072, 12, 262152, 655360, 12, 262153, 393216, 12, 262154, 720896, 12, 262155, 196608, 12, 262156, 458752, 12, 262157, 131072, 11, 262158, 655360, 12, 262159, 196608, 12, 262160, 393216, 12, 262161, 589824, 12, 262162, 655360, 12, 262163, 655360, 12, 262164, 196608, 12, 262165, 524288, 12, 262166, 327680, 12, 262167, 131072, 11, 262168, 589824, 12, 262169, 327680, 12, 262170, 262144, 12, 262171, 196608, 12, 262172, 589824, 12, 262173, 131072, 12, 262174, 720896, 11, 262175, 524288, 12, 262176, 393216, 12, 262177, 196608, 12, 262178, 393216, 12, 262179, 393216, 12, 262180, 524288, 12, 262181, 327680, 11, 262182, 196608, 12, -327665, 65536, 14, -458741, 65536, 14, -524280, 983040, 16, 196644, 983040, 16)
+layer_3/name = "Platforms"
+layer_3/enabled = true
+layer_3/modulate = Color(1, 1, 1, 1)
+layer_3/y_sort_enabled = false
+layer_3/y_sort_origin = 0
+layer_3/z_index = -2
+layer_3/tile_data = PackedInt32Array(-262125, 1048576, 8, -262124, 1048576, 8, -262123, 1048576, 8, -262122, 1048576, 8, -262121, 1048576, 8, -262120, 1048576, 8, -262119, 1048576, 8, -262118, 1048576, 8, -262117, 1048576, 8, -262126, 983040, 8)
+
+[node name="TileMap2" parent="." instance=ExtResource("7_rlvnl")]
+layer_1/tile_data = PackedInt32Array(196627, 1507328, 5, 131091, 1507328, 5, 65555, 1507328, 5, 19, 1507328, 5, -65517, 1507328, 5, -131053, 1507328, 5, -196589, 1507328, 5, -262125, 1507328, 5)
+
+[node name="TileMap3" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_yvmpm")
+format = 2
+layer_0/tile_data = PackedInt32Array(524332, 196608, 0, 524333, 196608, 0, 524334, 196608, 0, 524335, 196608, 0, 524336, 196608, 0, 589868, 196608, 1, 589869, 196608, 1, 589870, 196608, 1, 589871, 196608, 1, 589872, 196608, 1, 589873, 196608, 1, 589874, 196608, 1, 589875, 196608, 1, 589876, 196608, 1, 589877, 196608, 1, 589878, 196608, 1, 589879, 196608, 1, 589880, 196608, 1, 589881, 196608, 1, 589882, 196608, 1, 589883, 196608, 1, 589884, 196608, 1, 524337, 196608, 0, 524338, 196608, 0, 524339, 196608, 0, 524340, 196608, 0, 524341, 196608, 0, 524342, 196608, 0, 524343, 196608, 0, 524344, 196608, 0, 524345, 196608, 0, 524346, 196608, 0, 524347, 196608, 0, 524348, 196608, 0, 524331, 65536, 2, 524330, 0, 2, 589867, 65536, 3, 524349, 0, 4, 524350, 65536, 4, 589885, 0, 5, 524312, 131072, 0, 524313, 131072, 0, 524314, 131072, 0, 524315, 131072, 0, 524316, 131072, 0, 524317, 131072, 0, 524318, 131072, 0, 524319, 65536, 2, 524320, 327680, 4, 524311, 0, 2)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

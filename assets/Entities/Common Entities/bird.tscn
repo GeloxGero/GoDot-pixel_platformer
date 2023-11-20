@@ -110,9 +110,11 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c7jvq"]
-radius = 53.0848
+radius = 9.0
 
 [node name="Bird" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_cd17b")
 
 [node name="Sprite" type="Sprite2D" parent="."]
