@@ -141,5 +141,4 @@ func take_damage(damage):
 	Global.hp -= damage
 	
 func die():
-	#var GameOverScreen = StageManager.GG.instance()
-	#add_child(GameOverScreen)
+	get_tree().change_scene_to_file(StageManager.game_over)

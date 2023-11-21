@@ -216,8 +216,6 @@ shape = SubResource("RectangleShape2D_lxkyq")
 
 [node name="Player" parent="." instance=ExtResource("5_eqgv7")]
 position = Vector2(380.154, 84.0605)
-speed = 140.0
-jump_force = 1.2
 
 [node name="Birds" type="Node2D" parent="."]
 position = Vector2(916.511, 97.2341)

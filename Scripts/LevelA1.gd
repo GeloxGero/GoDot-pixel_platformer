@@ -1,6 +1,8 @@
 extends Node2D
 var player
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	MusicController.play_music()
@@ -13,7 +15,7 @@ func _on_edge_right_body_entered(body):
 	if body.name == "Player":
 		get_tree().change_scene_to_file(StageManager.Level2)
 		
-	
+
 
 func _on_edge_right_body_exited(body):
 	if body.has_method("layer"):
