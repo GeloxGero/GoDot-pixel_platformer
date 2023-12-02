@@ -1,7 +1,12 @@
 extends CharacterBody2D
 
 @export var starting_move_direction : Vector2 = Vector2.LEFT
+
+@export var attack_left_position : Vector2
+@export var attack_right_position : Vector2
 @onready var animation = $AnimationPlayer
+
+
 var movement_speed = 30.0
 
 enum State {WALK, CHASE, IDLE, DAMAGED, DEATH, ATTACK}
@@ -16,10 +21,17 @@ var gravity = 980 # The force of gravity
 
 var direction: Vector2 = starting_move_direction
 func _physics_process(delta):
+	
+	#flip sprite and area2Ds
 	if flipped:
 		$Sprite2D.flip_h = true
+		$AttackingArea/AttackingDetect.position = attack_right_position
+		$DamagingArea/AttackingCollide.position = attack_right_position
 	else:
 		$Sprite2D.flip_h = false
+		$AttackingArea/AttackingDetect.position = attack_left_position
+		$DamagingArea/AttackingCollide.position = attack_left_position
+	
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta

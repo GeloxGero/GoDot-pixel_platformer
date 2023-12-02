@@ -4,9 +4,6 @@
 [ext_resource type="Script" path="res://Scripts/wood_cutter.gd" id="2_pd36m"]
 [ext_resource type="Script" path="res://Scripts/Damageable.gd" id="3_el537"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0nnx"]
-size = Vector2(184, 86.5)
-
 [sub_resource type="Animation" id="Animation_itsxy"]
 resource_name = "attack"
 tracks/0/type = "value"
@@ -28,7 +25,7 @@ tracks/1/path = NodePath("DamagingArea:monitoring")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.025, 0.35, 0.475),
+"times": PackedFloat32Array(0.025, 0.3, 0.475),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -122,11 +119,14 @@ _data = {
 "walk": SubResource("Animation_3pfxg")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0nnx"]
+size = Vector2(184, 86.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixyp"]
 size = Vector2(20, 11.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef3yy"]
-size = Vector2(20, 11)
+size = Vector2(19.3395, 11)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8fno"]
 radius = 7.0
@@ -135,14 +135,8 @@ height = 32.0
 [node name="WoodCutter" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("2_pd36m")
-
-[node name="DetectionArea" type="Area2D" parent="."]
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(0, -26.75)
-scale = Vector2(1.04018, 0.989087)
-shape = SubResource("RectangleShape2D_w0nnx")
+attack_left_position = Vector2(-83, 14)
+attack_right_position = Vector2(-27, 14)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -160,23 +154,29 @@ frame = 35
 [node name="Damageable" type="Node" parent="."]
 script = ExtResource("3_el537")
 
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(0, -26.75)
+scale = Vector2(1.04018, 0.989087)
+shape = SubResource("RectangleShape2D_w0nnx")
+
 [node name="DamagingArea" type="Area2D" parent="."]
-position = Vector2(-3, -12)
-scale = Vector2(1.5773, 1.5773)
+position = Vector2(55, -24)
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DamagingArea"]
-position = Vector2(-16.4839, 2.53598)
-scale = Vector2(0.852646, 0.852646)
+[node name="AttackingCollide" type="CollisionShape2D" parent="DamagingArea"]
+position = Vector2(-83, 14)
+scale = Vector2(1.56, 1.92)
 shape = SubResource("RectangleShape2D_1ixyp")
 
 [node name="AttackingArea" type="Area2D" parent="."]
-position = Vector2(-5, -12)
-scale = Vector2(1.5466, 1.5466)
+position = Vector2(55, -24)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackingArea"]
-position = Vector2(-16.1645, 2.58632)
-scale = Vector2(0.9, 0.9)
+[node name="AttackingDetect" type="CollisionShape2D" parent="AttackingArea"]
+position = Vector2(-83, 14)
+scale = Vector2(1.56, 1.92)
 shape = SubResource("RectangleShape2D_ef3yy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
