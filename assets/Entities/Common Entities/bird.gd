@@ -31,7 +31,9 @@ func _physics_process(delta):
 
 
 
-
-func _on_area_2d_area_entered(body):
+func _on_area_2d_body_entered(body):
+	print(body)
 	if body.name == "Player":
 		state = States.FLYING
+	
+

@@ -68,7 +68,6 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		
-	print($DamagingArea.monitoring)
 	if not can_attack:
 		velocity.x = 0
 	move_and_slide()

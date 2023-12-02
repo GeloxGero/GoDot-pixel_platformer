@@ -60,7 +60,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hdkot"]
-radius = 11.0
+radius = 26.1725
 
 [node name="Crow" type="CharacterBody2D"]
 collision_layer = 0
@@ -87,3 +87,5 @@ collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_hdkot")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
