@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://5x0oa87g8kqy"]
+[gd_scene load_steps=27 format=3 uid="uid://5x0oa87g8kqy"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://Assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://8qxglkybl3bu" path="res://Assets/Entities/Common Entities/crow.tscn" id="15_t1s4y"]
 [ext_resource type="PackedScene" uid="uid://cfl3uvu86an6y" path="res://Assets/Entities/Common Entities/EngBird.tscn" id="16_sthk8"]
 [ext_resource type="PackedScene" uid="uid://leaokftbf25j" path="res://Assets/Entities/Enemy/wood_cutter.tscn" id="18_xtmmx"]
+[ext_resource type="PackedScene" uid="uid://5ii0pieomnpv" path="res://Assets/Entities/Player/projectile.tscn" id="20_tiobw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hvgme"]
 texture = ExtResource("7_pfhv4")
@@ -237,6 +238,9 @@ position = Vector2(602.923, 252.295)
 
 [node name="Crow" parent="." instance=ExtResource("15_t1s4y")]
 position = Vector2(482, 238)
+
+[node name="Projectile" parent="." instance=ExtResource("20_tiobw")]
+position = Vector2(1065, 67)
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]

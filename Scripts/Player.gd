@@ -8,6 +8,7 @@ enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
 # Member variables
 @export var speed: float = 140
 @export var jump_force: float = 1.2
+@export var projectile: PackedScene
 
 var player
 var _state : int = States.ON_GROUND
@@ -35,6 +36,8 @@ func _physics_process(delta):
 	
 	# per click
 
+	if Input.is_action_just_pressed("Shoot"):
+		shoot()
 	var down = Input.is_action_just_pressed('down')
 	var jump = Input.is_action_just_pressed('jump')
 	var direction = Vector2()
@@ -144,6 +147,13 @@ func take_damage(damage):
 	if Global.hp == 1:
 		die()
 	Global.hp -= damage
+	
+func shoot():
+	print("Shooting")
+	print(owner.get_child_count())
+	var boko = projectile.instantiate()
+	add_child(boko)
+	
 	
 func die():
 	get_tree().change_scene_to_file(StageManager.game_over)
