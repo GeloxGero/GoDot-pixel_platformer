@@ -4,8 +4,10 @@ extends CharacterBody2D
 
 @export var can_attack : bool
 
+@export var health_points : int = 20
 @export var attack_left_position : Vector2
 @export var attack_right_position : Vector2
+
 @onready var animation = $AnimationPlayer
 
 
@@ -102,9 +104,10 @@ func _on_damaging_area_body_exited(body):
 func _on_detection_area_body_entered(body):
 	if body.name == "Player":
 		if body.position < self.position:
+			direction = Vector2.LEFT
 			flipped = false
 		else:
-			direction = (body.position - position).normalized()
+			direction =  Vector2.RIGHT
 			flipped = true
 		_state = State.CHASE
 
@@ -112,3 +115,11 @@ func _on_detection_area_body_entered(body):
 func _on_detection_area_body_exited(body):
 	if body.name == "Player":
 		_state = State.IDLE
+
+
+func _on_self_damage_body_entered(body):
+	print(body)
+
+
+func _on_self_damage_body_exited(body):
+	print(body)

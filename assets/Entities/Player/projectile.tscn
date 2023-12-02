@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1h1ig"]
 size = Vector2(19, 19)
 
-[node name="Area2D" type="Area2D"]
+[node name="Boko" type="Area2D"]
 z_index = 12
 script = ExtResource("1_o78cl")
 

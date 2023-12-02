@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://leaokftbf25j"]
+[gd_scene load_steps=17 format=3 uid="uid://leaokftbf25j"]
 
 [ext_resource type="Texture2D" uid="uid://1teq21s8dv7g" path="res://Assets/Entities/Enemy/woodcutter.png" id="1_rbs6w"]
 [ext_resource type="Script" path="res://Scripts/wood_cutter.gd" id="2_pd36m"]
@@ -147,6 +147,10 @@ _data = {
 "walk": SubResource("Animation_3pfxg")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8fno"]
+radius = 7.0
+height = 32.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0nnx"]
 size = Vector2(184, 86.5)
 
@@ -156,9 +160,9 @@ size = Vector2(20, 11.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef3yy"]
 size = Vector2(19.3395, 11)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8fno"]
-radius = 7.0
-height = 32.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkox5"]
+radius = 11.0
+height = 42.0
 
 [node name="WoodCutter" type="CharacterBody2D"]
 collision_mask = 3
@@ -180,10 +184,16 @@ hframes = 6
 vframes = 6
 frame = 35
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -13)
+scale = Vector2(1.53107, 1.29121)
+shape = SubResource("CapsuleShape2D_p8fno")
+
 [node name="Damageable" type="Node" parent="."]
 script = ExtResource("3_el537")
 
 [node name="DetectionArea" type="Area2D" parent="."]
+scale = Vector2(1, 0.52)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
@@ -202,16 +212,18 @@ shape = SubResource("RectangleShape2D_1ixyp")
 
 [node name="AttackingArea" type="Area2D" parent="."]
 position = Vector2(55, -24)
+scale = Vector2(1.0621, 1.01412)
 
 [node name="AttackingDetect" type="CollisionShape2D" parent="AttackingArea"]
 position = Vector2(-83, 14)
 scale = Vector2(1.56, 1.92)
 shape = SubResource("RectangleShape2D_ef3yy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="SelfDamage" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelfDamage"]
 position = Vector2(0, -13)
-scale = Vector2(1.53107, 1.29121)
-shape = SubResource("CapsuleShape2D_p8fno")
+shape = SubResource("CapsuleShape2D_jkox5")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
@@ -219,3 +231,5 @@ shape = SubResource("CapsuleShape2D_p8fno")
 [connection signal="body_exited" from="DamagingArea" to="." method="_on_damaging_area_body_exited"]
 [connection signal="body_entered" from="AttackingArea" to="." method="_on_attacking_area_body_entered"]
 [connection signal="body_exited" from="AttackingArea" to="." method="_on_attacking_area_body_exited"]
+[connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
+[connection signal="body_exited" from="SelfDamage" to="." method="_on_self_damage_body_exited"]

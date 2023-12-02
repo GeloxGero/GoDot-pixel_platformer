@@ -152,7 +152,8 @@ func shoot():
 	print("Shooting")
 	print(owner.get_child_count())
 	var boko = projectile.instantiate()
-	add_child(boko)
+	owner.add_child(boko)
+	boko.position = position
 	
 	
 func die():
