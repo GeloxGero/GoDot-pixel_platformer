@@ -12,12 +12,10 @@ var state: States = States.IDLE
 
 # Handle movement
 func _physics_process(delta):
-	var rand = random.randf_range(1, 10)
+	var rand = random.randf_range(1, 1000)
 	
 	if state == States.IDLE:
 		animation.play("idle")
-		if rand <= 10:
-			state = States.FLYING
 	elif state == States.FLYING:
 		animation.play("fly")
 		direction = Vector2(random.randf() - 0.5, random.randf() - 0.5)

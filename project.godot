@@ -18,8 +18,8 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Scripts/global.gd"
-StageManager="*res://StageManager.tscn"
 MusicController="*res://Assets/Audio/MusicController.tscn"
+StageManager="*res://StageManager.gd"
 
 [display]
 

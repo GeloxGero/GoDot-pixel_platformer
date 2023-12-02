@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://leaokftbf25j"]
+[gd_scene load_steps=16 format=3 uid="uid://leaokftbf25j"]
 
 [ext_resource type="Texture2D" uid="uid://1teq21s8dv7g" path="res://Assets/Entities/Enemy/woodcutter.png" id="1_rbs6w"]
 [ext_resource type="Script" path="res://Scripts/wood_cutter.gd" id="2_pd36m"]
@@ -25,10 +25,22 @@ tracks/1/path = NodePath("DamagingArea:monitoring")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.025, 0.3, 0.475),
+"times": PackedFloat32Array(0, 0.3, 0.475),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:can_attack")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_c1yvp"]
@@ -109,8 +121,24 @@ tracks/0/keys = {
 "values": [6, 7, 8, 9, 10, 11]
 }
 
+[sub_resource type="Animation" id="Animation_nyxg1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:can_attack")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1yrx4"]
 _data = {
+"RESET": SubResource("Animation_nyxg1"),
 "attack": SubResource("Animation_itsxy"),
 "damaged": SubResource("Animation_c1yvp"),
 "death": SubResource("Animation_d35sf"),
@@ -135,6 +163,7 @@ height = 32.0
 [node name="WoodCutter" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("2_pd36m")
+can_attack = true
 attack_left_position = Vector2(-83, 14)
 attack_right_position = Vector2(-27, 14)
 

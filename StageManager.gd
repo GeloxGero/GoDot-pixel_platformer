@@ -5,8 +5,6 @@ const Level2 = "res://Scenes/LevelA2.tscn"
 const game_over = "res://Assets/Environment/Common Environment/game_over.tscn"
 const GG = preload("res://Assets/Environment/Common Environment/game_over.tscn")
 
-func _ready():
-	get_node("ColorRect").hide()
 
 func changeStage(stage_path, x, y):
 	get_node("anim").play("transin")

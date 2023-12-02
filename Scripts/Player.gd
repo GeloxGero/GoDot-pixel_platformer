@@ -1,7 +1,13 @@
 extends CharacterBody2D
 
+var previous_scene_position : Vector2
+
 enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
+@export var player_position : Vector2
 @onready var animation = $AnimationPlayer
+# Member variables
+@export var speed: float = 140
+@export var jump_force: float = 1.2
 
 var player
 var _state : int = States.ON_GROUND
@@ -9,13 +15,12 @@ var _state : int = States.ON_GROUND
 var lock_x : bool = false
 var lock_jump: bool = false
 var on_ladder : bool = false
-# Member variables
-@export var speed: float = 140
-@export var jump_force: float = 1.2
+
 var jump_speed = -250 # Negative because 2D space's y-axis is down
 var gravity = 980 # The force of gravity
 
 func _physics_process(delta):	
+	player_position = position
 	if Global.hp <= 0:
 		print("death")
 	

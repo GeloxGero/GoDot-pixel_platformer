@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var starting_move_direction : Vector2 = Vector2.LEFT
 
+@export var can_attack : bool
+
 @export var attack_left_position : Vector2
 @export var attack_right_position : Vector2
 @onready var animation = $AnimationPlayer
@@ -53,7 +55,8 @@ func _physics_process(delta):
 		State.DEATH:
 			animation.play("death")
 		State.ATTACK:
-			animation.play("attack")
+			if can_attack:
+				animation.play("attack")
 
 
 	
@@ -65,6 +68,9 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		
+	print($DamagingArea.monitoring)
+	if not can_attack:
+		velocity.x = 0
 	move_and_slide()
 
 
@@ -79,6 +85,8 @@ func _on_attacking_area_body_entered(body):
 
 func _on_attacking_area_body_exited(body):
 	if body.name == "Player":
+			can_attack = true
+			$DamagingArea.monitoring = false
 			_state = State.IDLE
 	
 

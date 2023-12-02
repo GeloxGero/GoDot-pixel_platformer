@@ -151,8 +151,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(524332, 196608, 0, 524333, 196608, 0, 524334, 196608, 0, 589868, 196608, 1, 589869, 196608, 1, 589870, 196608, 1, 524331, 65536, 2, 524330, 0, 2, 589867, 65536, 3, 524312, 131072, 0, 524313, 131072, 0, 524314, 131072, 0, 524315, 131072, 0, 524316, 131072, 0, 524317, 131072, 0, 524318, 131072, 0, 524319, 65536, 2, 524320, 327680, 4, 524311, 0, 2, 524358, 131072, 0, 524359, 131072, 0, 524360, 131072, 0, 524361, 131072, 0, 524362, 131072, 0, 524363, 131072, 0, 524364, 131072, 0, 524365, 131072, 0, 524366, 131072, 0, 524367, 131072, 0, 589894, 196608, 1, 589895, 196608, 1, 589896, 196608, 1, 589897, 196608, 1, 589898, 196608, 1, 589899, 196608, 1, 589900, 196608, 1, 589901, 196608, 1, 589902, 196608, 1, 589903, 196608, 1, 524357, 327680, 2, 589893, 327680, 3, 524356, 262144, 2, 524369, 196608, 4, 589904, 0, 5, 524368, 0, 4)
 
 [node name="Player" parent="." instance=ExtResource("3_5f3oj")]
-position = Vector2(37, 96)
-scale = Vector2(1.5, 1.5)
+position = Vector2(33, 114)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -176,6 +175,7 @@ shape = SubResource("RectangleShape2D_vtef0")
 
 [node name="WoodCutter" parent="." instance=ExtResource("13_j3571")]
 position = Vector2(874, 121)
+can_attack = true
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]
