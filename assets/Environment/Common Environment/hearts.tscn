@@ -11,9 +11,38 @@ position = Vector2(78, 18)
 texture = ExtResource("1_p6a7i")
 vframes = 6
 
-[node name="Button" type="Button" parent="."]
+[node name="PauseButton" type="Button" parent="."]
 offset_left = 608.0
 offset_top = 12.0
 offset_right = 616.0
 offset_bottom = 20.0
 scale = Vector2(2.16495, 2.16495)
+
+[node name="PauseUI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 42.0
+offset_bottom = 44.0
+
+[node name="ColorRect" type="ColorRect" parent="PauseUI"]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 12.0
+offset_right = 273.0
+offset_bottom = 52.0
+scale = Vector2(3.45628, 3.45628)
+color = Color(0.223529, 0.223529, 0.223529, 1)
+
+[node name="PlayButton" type="Button" parent="PauseUI"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 96.0
+offset_right = 323.0
+offset_bottom = 127.0
+text = "Play"
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PauseUI/PlayButton" to="." method="_on_play_button_pressed"]

@@ -26,7 +26,6 @@ limit_y_down = 117
 metadata/_edit_horizontal_guides_ = [42.0]
 
 [node name="Hearts" parent="." instance=ExtResource("2_myemh")]
-visible = false
 
 [node name="Plx-1" type="Sprite2D" parent="."]
 z_index = -20

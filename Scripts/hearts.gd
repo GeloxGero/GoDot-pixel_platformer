@@ -15,3 +15,15 @@ func _process(delta):
 		$Hearts.set_frame(4)
 	if Global.hp == 0:
 		$Hearts.set_frame(5)
+
+func _on_pause_button_pressed():
+	get_owner().get_tree().paused = true
+	get_node("PauseUI").visible = true
+
+
+
+
+func _on_play_button_pressed():
+	print("Play")
+	get_owner().get_tree().paused = false
+	get_node("PauseUI").visible = false
