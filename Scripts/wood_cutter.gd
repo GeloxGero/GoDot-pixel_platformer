@@ -117,9 +117,4 @@ func _on_detection_area_body_exited(body):
 		_state = State.IDLE
 
 
-func _on_self_damage_body_entered(body):
-	print(body)
 
-
-func _on_self_damage_body_exited(body):
-	print(body)

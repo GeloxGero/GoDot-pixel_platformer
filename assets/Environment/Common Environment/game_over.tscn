@@ -5,10 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://bjwh7o8ph4url" path="res://Assets/Environment/Misc/Restart.png" id="2_8dl57"]
 
 [node name="GameOver" type="CanvasLayer"]
-process_mode = 2
+process_mode = 3
 script = ExtResource("1_b5l2g")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 2
 offset_left = 2.0
 offset_top = 3.0
 offset_right = 675.0
@@ -21,11 +22,10 @@ scale = Vector2(2.16805, 2.16805)
 texture = ExtResource("1_8122s")
 
 [node name="Button" type="Button" parent="."]
-process_mode = 2
-offset_left = 251.0
-offset_top = 217.0
-offset_right = 387.0
-offset_bottom = 257.0
+offset_left = 250.0
+offset_top = 215.0
+offset_right = 386.0
+offset_bottom = 255.0
 icon = ExtResource("2_8dl57")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -3,10 +3,17 @@
 [ext_resource type="Script" path="res://Scripts/hearts.gd" id="1_8i7tk"]
 [ext_resource type="Texture2D" uid="uid://dc8cv88vih03m" path="res://Assets/Environment/Misc/hearts.png" id="1_p6a7i"]
 
-[node name="Hearts" type="CanvasLayer"]
+[node name="UI" type="CanvasLayer"]
 script = ExtResource("1_8i7tk")
 
 [node name="Hearts" type="Sprite2D" parent="."]
 position = Vector2(78, 18)
 texture = ExtResource("1_p6a7i")
 vframes = 6
+
+[node name="Button" type="Button" parent="."]
+offset_left = 608.0
+offset_top = 12.0
+offset_right = 616.0
+offset_bottom = 20.0
+scale = Vector2(2.16495, 2.16495)
