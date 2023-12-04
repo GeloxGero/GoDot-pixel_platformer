@@ -62,6 +62,7 @@ func _physics_process(delta):
 		States.DROP:
 			animation.play("fall")
 		States.CLIMB:
+			jumpval = 2
 			down = Input.is_action_pressed('down')
 			velocity.y = 0
 			gravity = 0
