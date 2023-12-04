@@ -13,9 +13,10 @@ enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
 var player
 var _state : int = States.ON_GROUND
 
+var jumpval : int = 2
 var lock_x : bool = false
-var lock_jump: bool = false
 var on_ladder : bool = false
+
 
 var jump_speed = -250 # Negative because 2D space's y-axis is down
 var gravity = 980 # The force of gravity
@@ -56,10 +57,9 @@ func _physics_process(delta):
 	
 	match _state:
 		States.ON_GROUND:
+			jumpval = 2
 			lock_x = false
-			lock_jump = false
 		States.DROP:
-			lock_jump = true
 			animation.play("fall")
 		States.CLIMB:
 			down = Input.is_action_pressed('down')
@@ -68,20 +68,16 @@ func _physics_process(delta):
 			if not on_ladder:
 				_state = States.DROP
 				gravity = 980
-		States.DROP:
-			lock_jump = true
-		States.IN_AIR:
-			lock_jump = true
 	
-	if(jump and not lock_jump):
+	if(jump):
 		if on_ladder:
 			_state = States.DROP
 			gravity = 980
-		else:
+		elif jumpval > 0:
+			jumpval -= 1
 			animation.play("jump")
 			velocity.y = jump_speed * jump_force
 			_state = States.IN_AIR
-		
 	elif(up):
 		if on_ladder:
 			if _state == States.CLIMB:

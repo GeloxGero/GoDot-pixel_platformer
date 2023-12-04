@@ -151,6 +151,7 @@ _data = {
 size = Vector2(5, 26)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 21
 collision_mask = 54
 script = ExtResource("1_ww3em")
 projectile = ExtResource("2_ibg8e")
@@ -172,7 +173,6 @@ limit_left = 0
 limit_top = 0
 limit_right = 2000
 limit_bottom = 187
-drag_top_margin = 0.47
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

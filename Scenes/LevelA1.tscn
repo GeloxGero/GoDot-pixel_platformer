@@ -168,7 +168,7 @@ layer_3/tile_data = PackedInt32Array(-196592, 196609, 2, -196590, 131073, 2, -19
 
 [node name="Player" parent="." instance=ExtResource("5_eqgv7")]
 texture_filter = 1
-position = Vector2(580, -316)
+position = Vector2(96, -48)
 
 [node name="WoodCutter" parent="." instance=ExtResource("18_xtmmx")]
 position = Vector2(664, -194)
