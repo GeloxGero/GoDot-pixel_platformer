@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cceprbqsjmd4k"]
 
 [ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_lpbgr"]
-[ext_resource type="AudioStream" uid="uid://umqv43pau82i" path="res://Assets/Audio/MENU.mp3" id="2_1svl2"]
-[ext_resource type="Texture2D" uid="uid://bnfiifcn28atc" path="res://Assets/Environment/Misc/Start/play.png" id="4_i7hpv"]
-[ext_resource type="Texture2D" uid="uid://dmgy1tu3pgmfs" path="res://Assets/Environment/Misc/Start/quit.png" id="5_mqiu5"]
-[ext_resource type="Texture2D" uid="uid://bgoggavmd7jj1" path="res://Assets/Environment/Misc/Start/Title.jpg" id="6_jg04v"]
+[ext_resource type="AudioStream" uid="uid://umqv43pau82i" path="res://assets/Audio/MENU.mp3" id="2_1svl2"]
+[ext_resource type="Texture2D" uid="uid://bnfiifcn28atc" path="res://assets/Environment/Misc/Start/play.png" id="4_i7hpv"]
+[ext_resource type="Texture2D" uid="uid://dmgy1tu3pgmfs" path="res://assets/Environment/Misc/Start/quit.png" id="5_mqiu5"]
+[ext_resource type="Texture2D" uid="uid://bgoggavmd7jj1" path="res://assets/Environment/Misc/Start/Title.jpg" id="6_jg04v"]
 
 [node name="Title Screen" type="Control"]
 layout_mode = 3

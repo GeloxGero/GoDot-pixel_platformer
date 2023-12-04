@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://5ii0pieomnpv"]
 
 [ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_o78cl"]
-[ext_resource type="Texture2D" uid="uid://dhxtad1e0ud78" path="res://Assets/Entities/Player/bokoo.png" id="2_rl47r"]
+[ext_resource type="Texture2D" uid="uid://dhxtad1e0ud78" path="res://assets/Entities/Player/bokoo.png" id="2_rl47r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1h1ig"]
 size = Vector2(19, 19)
@@ -19,3 +19,5 @@ texture = ExtResource("2_rl47r")
 position = Vector2(-2.98023e-08, -2.98023e-08)
 scale = Vector2(1, 0.903588)
 shape = SubResource("RectangleShape2D_1h1ig")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

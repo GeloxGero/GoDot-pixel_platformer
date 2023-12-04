@@ -26,13 +26,10 @@ func _physics_process(delta):
 	if Global.TIMER <= 60:
 		Global.TIMER += 1
 	else:
-		print(position)
 		Global.TIMER -= 60
 	
 	
 	player_position = position
-	if Global.hp <= 0:
-		print("death")
 	
 	if(_state == States.IN_AIR):
 		if not $AnimationPlayer.current_animation == "jump": 
@@ -154,8 +151,6 @@ func take_damage(damage):
 	Global.hp -= damage
 	
 func shoot():
-	print("Shooting")
-	print(owner.get_child_count())
 	var boko = projectile.instantiate()
 	owner.add_child(boko)
 	boko.position = position

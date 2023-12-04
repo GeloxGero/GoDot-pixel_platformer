@@ -11,3 +11,8 @@ func _ready():
 func _process(delta):
 	position += transform.x * speed
 	
+
+
+func _on_body_entered(body):
+	if body.name == "WoodCutter":
+		body.take_damage(20)

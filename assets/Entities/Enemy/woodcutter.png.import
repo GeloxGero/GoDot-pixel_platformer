@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1teq21s8dv7g"
-path="res://.godot/imported/woodcutter.png-34b6deda1d37db2149881cedf8e5c709.ctex"
+path="res://.godot/imported/woodcutter.png-7146a27acb0e7c3155f64f11185d026b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Entities/Enemy/woodcutter.png"
-dest_files=["res://.godot/imported/woodcutter.png-34b6deda1d37db2149881cedf8e5c709.ctex"]
+source_file="res://assets/Entities/Enemy/woodcutter.png"
+dest_files=["res://.godot/imported/woodcutter.png-7146a27acb0e7c3155f64f11185d026b.ctex"]
 
 [params]
 

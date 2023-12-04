@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhxtad1e0ud78"
-path="res://.godot/imported/bokoo.png-91ddbac2b3dd73e96ea5c934294537f7.ctex"
+path="res://.godot/imported/bokoo.png-ff49ede50a160d980b62e6467e93ae00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Entities/Player/bokoo.png"
-dest_files=["res://.godot/imported/bokoo.png-91ddbac2b3dd73e96ea5c934294537f7.ctex"]
+source_file="res://assets/Entities/Player/bokoo.png"
+dest_files=["res://.godot/imported/bokoo.png-ff49ede50a160d980b62e6467e93ae00.ctex"]
 
 [params]
 

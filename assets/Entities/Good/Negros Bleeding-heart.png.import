@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhmbdc1h4i68m"
-path="res://.godot/imported/Negros Bleeding-heart.png-76bfc025c043bf0fe844b6a30ca09fea.ctex"
+path="res://.godot/imported/Negros Bleeding-heart.png-21509da553f84b61ef5ae21053a68928.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Entities/Good/Negros Bleeding-heart.png"
-dest_files=["res://.godot/imported/Negros Bleeding-heart.png-76bfc025c043bf0fe844b6a30ca09fea.ctex"]
+source_file="res://assets/Entities/Good/Negros Bleeding-heart.png"
+dest_files=["res://.godot/imported/Negros Bleeding-heart.png-21509da553f84b61ef5ae21053a68928.ctex"]
 
 [params]
 

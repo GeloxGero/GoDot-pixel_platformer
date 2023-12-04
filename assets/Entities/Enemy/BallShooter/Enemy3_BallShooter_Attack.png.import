@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb1px2idsl2r8"
-path="res://.godot/imported/Enemy3_BallShooter_Attack.png-a544fbb9e2b0577db2f18c684ad68fc5.ctex"
+path="res://.godot/imported/Enemy3_BallShooter_Attack.png-12305dee9ca98f8bf4ee9db172a8d245.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Entities/Enemy/BallShooter/Enemy3_BallShooter_Attack.png"
-dest_files=["res://.godot/imported/Enemy3_BallShooter_Attack.png-a544fbb9e2b0577db2f18c684ad68fc5.ctex"]
+source_file="res://assets/Entities/Enemy/BallShooter/Enemy3_BallShooter_Attack.png"
+dest_files=["res://.godot/imported/Enemy3_BallShooter_Attack.png-12305dee9ca98f8bf4ee9db172a8d245.ctex"]
 
 [params]
 

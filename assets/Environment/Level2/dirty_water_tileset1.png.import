@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bymng8aoeudko"
-path="res://.godot/imported/dirty_water_tileset1.png-e9b341376e68c2fb9f771b62dff7b088.ctex"
+path="res://.godot/imported/dirty_water_tileset1.png-db5f4f77ff8acb7f4e34365ed58eb342.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/Level2/dirty_water_tileset1.png"
-dest_files=["res://.godot/imported/dirty_water_tileset1.png-e9b341376e68c2fb9f771b62dff7b088.ctex"]
+source_file="res://assets/Environment/Level2/dirty_water_tileset1.png"
+dest_files=["res://.godot/imported/dirty_water_tileset1.png-db5f4f77ff8acb7f4e34365ed58eb342.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwo6clkb0kgix"
-path="res://.godot/imported/EngBird.png-0b7dc3c2fa5a8dae4c58fa2c9f515dd6.ctex"
+path="res://.godot/imported/EngBird.png-444f25367ff77755ca44b868ca6adffa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Entities/Common Entities/EngBird.png"
-dest_files=["res://.godot/imported/EngBird.png-0b7dc3c2fa5a8dae4c58fa2c9f515dd6.ctex"]
+source_file="res://assets/Entities/Common Entities/EngBird.png"
+dest_files=["res://.godot/imported/EngBird.png-444f25367ff77755ca44b868ca6adffa.ctex"]
 
 [params]
 

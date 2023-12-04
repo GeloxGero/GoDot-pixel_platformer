@@ -11,6 +11,7 @@ extends CharacterBody2D
 @onready var animation = $AnimationPlayer
 
 
+var hitpoints = 100
 var movement_speed = 30.0
 
 enum State {WALK, CHASE, IDLE, DAMAGED, DEATH, ATTACK}
@@ -24,7 +25,10 @@ var flipped = false
 var gravity = 980 # The force of gravity
 
 var direction: Vector2 = starting_move_direction
+
 func _physics_process(delta):
+	check_death()
+	
 	
 	#flip sprite and area2Ds
 	if flipped:
@@ -51,17 +55,19 @@ func _physics_process(delta):
 			animation.play("run")
 			#velocity = direction * speed
 		State.WALK:
+			movement_speed = 30.0
 			animation.play("walk")
 		State.DAMAGED:
+			movement_speed = 0
 			animation.play("damaged")
 		State.DEATH:
+			movement_speed = 0
 			animation.play("death")
 		State.ATTACK:
 			if can_attack:
 				animation.play("attack")
 
 
-	
 	
 	
 	
@@ -77,6 +83,13 @@ func _physics_process(delta):
 
 
 
+func take_damage(damage):
+	hitpoints -= damage
+	_state = State.DAMAGED
+
+func check_death():
+	if hitpoints <= 0:
+		_state = State.DEATH
 
 
 func _on_attacking_area_body_entered(body):
@@ -116,5 +129,10 @@ func _on_detection_area_body_exited(body):
 	if body.name == "Player":
 		_state = State.IDLE
 
-
-
+func _on_animation_player_animation_finished(anim_name):
+	print(anim_name)
+	if anim_name == "death":
+		self.queue_free()
+	elif anim_name == "damaged":
+		_state = State.IDLE
+		print(hitpoints)

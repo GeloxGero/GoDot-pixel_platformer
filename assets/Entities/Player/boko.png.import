@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbhi1fpfx6kpn"
-path="res://.godot/imported/boko.png-a4797333f2a4e0343a1abb9d878d9bc9.ctex"
+path="res://.godot/imported/boko.png-50fbaca5d8fbec6cb2b258d0953f41d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Entities/Player/boko.png"
-dest_files=["res://.godot/imported/boko.png-a4797333f2a4e0343a1abb9d878d9bc9.ctex"]
+source_file="res://assets/Entities/Player/boko.png"
+dest_files=["res://.godot/imported/boko.png-50fbaca5d8fbec6cb2b258d0953f41d7.ctex"]
 
 [params]
 
