@@ -26,6 +26,7 @@ func _physics_process(delta):
 	if Global.TIMER <= 60:
 		Global.TIMER += 1
 	else:
+		print(position)
 		Global.TIMER -= 60
 	
 	

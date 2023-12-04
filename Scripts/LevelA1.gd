@@ -12,7 +12,7 @@ func _ready():
 	
 	player = get_node("Player")
 	if(Global.two_to_one):
-		teleport(1259, 330.248)
+		teleport(3329.34, -15.54873)
 		
 	var camera = get_node("Player/Camera2D")
 	camera.limit_left = limit_x_left
