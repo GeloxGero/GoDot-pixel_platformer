@@ -9,11 +9,11 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#MusicController.play_music()
-	
+
 	player = get_node("Player")
 	if(Global.two_to_one):
 		teleport(3329.34, -15.54873)
-		
+
 	var camera = get_node("Player/Camera2D")
 	camera.limit_left = limit_x_left
 	camera.limit_right = limit_x_right
@@ -32,3 +32,8 @@ func _on_edge_right_body_exited(body):
 
 func teleport(x, y):
 	player.global_position = Vector2(x, y)
+
+
+func _on_area_2d_body_entered(body:Node2D) -> void:
+	if body.name == 'Player':
+		player.die()
