@@ -21,8 +21,8 @@ position = Vector2(0, 82)
 script = ExtResource("1_eqk3o")
 limit_x_left = 13
 limit_x_right = 3351
-limit_y_up = -315
-limit_y_down = 117
+limit_y_up = -200
+limit_y_down = 500
 metadata/_edit_horizontal_guides_ = [42.0]
 
 [node name="Hearts" parent="." instance=ExtResource("2_myemh")]
@@ -167,7 +167,8 @@ layer_0/tile_data = PackedInt32Array(524289, 1310721, 2, 524290, 1310721, 2, 458
 layer_3/tile_data = PackedInt32Array(-196592, 196609, 2, -196590, 131073, 2, -196589, 1, 2, -196588, 131073, 2, -131053, 720897, 1, -131052, 720897, 1, -131054, 720897, 1, -131056, 720897, 1)
 
 [node name="Player" parent="." instance=ExtResource("5_eqgv7")]
-position = Vector2(93, -51)
+texture_filter = 1
+position = Vector2(580, -316)
 
 [node name="WoodCutter" parent="." instance=ExtResource("18_xtmmx")]
 position = Vector2(664, -194)

@@ -20,7 +20,14 @@ var on_ladder : bool = false
 var jump_speed = -250 # Negative because 2D space's y-axis is down
 var gravity = 980 # The force of gravity
 
+
 func _physics_process(delta):	
+	if Global.TIMER <= 60:
+		Global.TIMER += 1
+	else:
+		Global.TIMER -= 60
+	
+	
 	player_position = position
 	if Global.hp <= 0:
 		print("death")

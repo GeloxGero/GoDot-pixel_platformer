@@ -22,9 +22,6 @@ func _on_pause_button_pressed():
 	get_tree().paused = true
 	$PauseUI.show()
 
-
-
-
 func _on_play_button_pressed():
 	get_tree().paused = false
 	$PauseUI.hide()

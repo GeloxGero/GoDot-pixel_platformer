@@ -1,6 +1,6 @@
 extends Node
 
-
+var TIMER = 0
 
 var player_seeds = 0
 var tree_seeds = 0

@@ -172,6 +172,7 @@ limit_left = 0
 limit_top = 0
 limit_right = 2000
 limit_bottom = 187
+drag_top_margin = 0.47
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
