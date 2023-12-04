@@ -1,7 +1,9 @@
 extends CanvasLayer
 
+func _ready():
+	$PauseUI.hide()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	if Global.hp == 5:
 		$Hearts.set_frame(0)
@@ -17,13 +19,12 @@ func _process(delta):
 		$Hearts.set_frame(5)
 
 func _on_pause_button_pressed():
-	get_owner().get_tree().paused = true
-	get_node("PauseUI").visible = true
+	get_tree().paused = true
+	$PauseUI.show()
 
 
 
 
 func _on_play_button_pressed():
-	print("Play")
-	get_owner().get_tree().paused = false
-	get_node("PauseUI").visible = false
+	get_tree().paused = false
+	$PauseUI.hide()
