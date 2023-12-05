@@ -14,7 +14,6 @@ func _on_area_2d_area_entered(body):
 func _on_seed_box_body_entered(body):
 	if body.name == "Player":
 		self.queue_free()
-		Global.player_seeds += 1
 		Global.hp += 1
 
 

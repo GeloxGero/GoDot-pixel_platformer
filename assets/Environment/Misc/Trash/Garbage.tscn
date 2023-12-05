@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://sqs2stw52fga" path="res://assets/Environment/Misc/waste.Garbage_NEW.png" id="2_eel7j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ic7if"]
+resource_local_to_scene = true
 atlas = ExtResource("2_eel7j")
 region = Rect2(240, 216, 16, 24)
 

@@ -50,6 +50,7 @@ func _physics_process(delta):
 	# per click
 
 	if Input.is_action_just_pressed("Shoot"):
+		print(Global.random.randi())
 		shoot()
 	if Input.is_action_just_pressed("Temp"):
 		print(position)
@@ -142,17 +143,6 @@ func _physics_process(delta):
 	set_up_direction(Vector2.UP)
 	move_and_slide()
 
-
-	print(Global.trash)
-
-	# Keep the character within the screen bounds
-	
-	#var screen_size = get_viewport_rect().size
-	#if position.x < 0:
-		#position.x = 0
-	#if position.x > screen_size.x:
-		#position.x = screen_size.x
-
 func _on_ladder_checker_body_entered(body):
 	if body.name == "TileMap2":
 		on_ladder = true
@@ -178,7 +168,6 @@ func shoot():
 		
 	
 func throw():
-	print(inventory.size())
 	if inventory.size() == 0 or not inventory:
 		return
 	

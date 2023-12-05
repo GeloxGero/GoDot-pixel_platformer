@@ -11,7 +11,6 @@ var to_add = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.random.randomize()
 	var rand = Global.random.randi_range(1, 10)
 	
 	if rand == 1:

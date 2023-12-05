@@ -17,8 +17,6 @@ func _process(_delta):
 	if Global.TIMER == snap:
 		max_time -= 1
 	
-	print(max_time)
-	
 	
 	if direction == Vector2.LEFT:
 		self.position -= transform.x * speed
