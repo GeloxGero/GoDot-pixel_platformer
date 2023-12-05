@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcimojxn5f3ry"
-path="res://.godot/imported/4.png-42261790315e9417099cec4714911aa8.ctex"
+uid="uid://cbhi1fpfx6kpn"
+path="res://.godot/imported/boko.png-77bc5dce24fecb5b12fc39c621a82a81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Environment/Misc/4.png"
-dest_files=["res://.godot/imported/4.png-42261790315e9417099cec4714911aa8.ctex"]
+source_file="res://assets/Entities/Player/Projectiles/boko.png"
+dest_files=["res://.godot/imported/boko.png-77bc5dce24fecb5b12fc39c621a82a81.ctex"]
 
 [params]
 

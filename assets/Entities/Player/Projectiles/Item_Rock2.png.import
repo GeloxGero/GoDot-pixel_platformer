@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjwh7o8ph4url"
-path="res://.godot/imported/Restart.png-f5a58815d1742b4fc908ffdb791b9b01.ctex"
+uid="uid://biuvb0uet1u4s"
+path="res://.godot/imported/Item_Rock2.png-cf02a37de3695315677e17401931f937.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Environment/Misc/Restart.png"
-dest_files=["res://.godot/imported/Restart.png-f5a58815d1742b4fc908ffdb791b9b01.ctex"]
+source_file="res://assets/Entities/Player/Projectiles/Item_Rock2.png"
+dest_files=["res://.godot/imported/Item_Rock2.png-cf02a37de3695315677e17401931f937.ctex"]
 
 [params]
 

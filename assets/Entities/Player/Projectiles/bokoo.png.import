@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnpkd05j81jsb"
-path="res://.godot/imported/Board.png-39a280e646e7fd2a993ca59f6ca9811d.ctex"
+uid="uid://dhxtad1e0ud78"
+path="res://.godot/imported/bokoo.png-4cb0c677950707b99b8fb69b8fb7b7b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Environment/Misc/Board.png"
-dest_files=["res://.godot/imported/Board.png-39a280e646e7fd2a993ca59f6ca9811d.ctex"]
+source_file="res://assets/Entities/Player/Projectiles/bokoo.png"
+dest_files=["res://.godot/imported/bokoo.png-4cb0c677950707b99b8fb69b8fb7b7b9.ctex"]
 
 [params]
 
