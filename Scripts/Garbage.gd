@@ -1,6 +1,5 @@
 extends Area2D
 
-var rng = RandomNumberGenerator.new()
 var snap = 0
 var thrown = false
 var direction
@@ -12,11 +11,8 @@ var to_add = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	rng.seed = hash("Godot")
-	rng.randomize()
-	rng.state = 100
-
-	var rand = rng.randi_range(1, 10)
+	Global.random.randomize()
+	var rand = Global.random.randi_range(1, 10)
 	
 	if rand == 1:
 		$Sprite2D.texture.region = Rect2(128,216,32,24)

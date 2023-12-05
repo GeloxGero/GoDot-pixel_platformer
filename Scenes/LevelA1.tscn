@@ -26,7 +26,7 @@ script = ExtResource("1_eqk3o")
 limit_x_left = 13
 limit_x_right = 3351
 limit_y_up = -200
-limit_y_down = 500
+limit_y_down = 300
 metadata/_edit_horizontal_guides_ = [42.0]
 
 [node name="Plx-1" type="Sprite2D" parent="."]
