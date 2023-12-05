@@ -4,8 +4,6 @@ var y_offset = -82
 
 var inventory = []
 
-var char_name = "Player"
-
 var previous_scene_position : Vector2
 
 
@@ -185,12 +183,9 @@ func throw():
 		return
 	
 	var garbage = inventory.pop_back()
-	
-	print(owner)
-	print(garbage.owner)
-	garbage.get_owner().remove_child(garbage)
+	self.remove_child(garbage)
 	owner.add_child(garbage)
-	garbage.position = Vector2(position.x, position.y - y_offset)
+	garbage.position = Vector2(position.x, position.y)
 	
 	if flipped:
 		garbage.throw(Vector2.LEFT)
@@ -198,10 +193,13 @@ func throw():
 		garbage.throw(Vector2.RIGHT)
 
 func store_item(item: Area2D):
+	
 	inventory.append(item)
 	Global.trash = inventory.size()
+	print(inventory.size())
 
-
+func mc():
+	pass
 
 func die():
 	get_tree().change_scene_to_file(StageManager.game_over)

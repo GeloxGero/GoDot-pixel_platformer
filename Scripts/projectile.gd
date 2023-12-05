@@ -33,6 +33,6 @@ func set_direction(vector: Vector2):
 
 
 func _on_body_entered(body):
-	if body.char_name == "Enemy":
+	if body.has_method("enemy"):
 		body.take_damage(20)
 		self.queue_free()

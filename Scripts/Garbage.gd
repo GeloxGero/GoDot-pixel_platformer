@@ -8,6 +8,8 @@ var speed = 2.2
 var time_limit = 2
 var monitoring_player = true
 
+var to_add = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.seed = hash("Godot")
@@ -41,7 +43,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if thrown:
-		if time_limit <= 0 : thrown = false
+		if time_limit <= 0 : 
+			thrown = false
+			set_deferred("monitoring", true)
+			time_limit = 2
 	
 		if snap == Global.TIMER:
 			time_limit -= 1
@@ -51,11 +56,6 @@ func _process(delta):
 			self.position -= transform.x * speed
 		else:
 			self.position += transform.x * speed
-	
-	
-
-
-
 
 func throw(vector: Vector2):
 	self.show()
@@ -63,20 +63,15 @@ func throw(vector: Vector2):
 	direction = vector
 	thrown = true
 	
-
-func move():
-	pass
-
 func _on_body_entered(body):
-	if body.char_name == "Player" and monitoring_player:
-		print("Garbage")
-		print(get_owner())
-		get_owner().remove_child(self)
+	if body.has_method("mc") and monitoring_player and self.get_parent() != body:
+		set_deferred("monitoring", false)
+		call_deferred("reparent", body)
 		body.store_item(self)
 		self.hide()
 
-
-
-
 func _on_body_exited(body):
-	pass # Replace with function body.
+	pass
+
+func garbage():
+	pass

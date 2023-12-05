@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://5x0oa87g8kqy"]
+[gd_scene load_steps=17 format=3 uid="uid://5x0oa87g8kqy"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d22ghrgq2xulb" path="res://assets/Environment/Misc/Start/ladder_top.tscn" id="7_1nlrx"]
 [ext_resource type="PackedScene" uid="uid://bjts4rp80ikpj" path="res://assets/Environment/Misc/Start/tile_map_ladder.tscn" id="8_j6107"]
 [ext_resource type="PackedScene" uid="uid://cyp7qpsfeer5m" path="res://assets/Environment/Misc/Trash/Garbage.tscn" id="13_f52ft"]
+[ext_resource type="PackedScene" uid="uid://cqnb47ywotbur" path="res://assets/Environment/Common Environment/garbage_can.tscn" id="14_qyknm"]
 [ext_resource type="PackedScene" uid="uid://leaokftbf25j" path="res://assets/Entities/Enemy/wood_cutter.tscn" id="18_xtmmx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxkyq"]
@@ -206,6 +207,9 @@ position = Vector2(336, 35)
 
 [node name="Garbage4" parent="Garbage" instance=ExtResource("13_f52ft")]
 position = Vector2(537, 5)
+
+[node name="GarbageCan" parent="." instance=ExtResource("14_qyknm")]
+position = Vector2(57, -49)
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]

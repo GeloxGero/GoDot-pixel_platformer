@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-var char_name = "Enemy"
-
 @export var starting_move_direction : Vector2 = Vector2.LEFT
 
 @export var can_attack : bool
@@ -135,3 +133,6 @@ func _on_animation_player_animation_finished(anim_name):
 		self.queue_free()
 	elif anim_name == "damaged":
 		_state = State.IDLE
+
+func enemy():
+	pass
