@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://w2vqxv1dfjdx"]
+[gd_scene load_steps=14 format=3 uid="uid://w2vqxv1dfjdx"]
 
 [ext_resource type="Script" path="res://Scripts/hearts.gd" id="1_poyse"]
 [ext_resource type="Texture2D" uid="uid://sqs2stw52fga" path="res://assets/Environment/Misc/waste.Garbage_NEW.png" id="2_pgsoi"]
@@ -24,6 +24,22 @@ region = Rect2(352, 640, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_21sxe"]
 atlas = ExtResource("4_74vva")
 region = Rect2(384, 640, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hihh3"]
+atlas = ExtResource("4_74vva")
+region = Rect2(1072, 688, 192, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_giqq2"]
+atlas = ExtResource("4_74vva")
+region = Rect2(448, 832, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qnde"]
+atlas = ExtResource("4_74vva")
+region = Rect2(384, 640, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyjic"]
+atlas = ExtResource("4_74vva")
+region = Rect2(288, 640, 32, 32)
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_poyse")
@@ -53,6 +69,7 @@ texture_normal = SubResource("AtlasTexture_2gfy0")
 
 [node name="PauseUI" type="Control" parent="."]
 process_mode = 2
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = -232.0
@@ -62,10 +79,10 @@ offset_bottom = 27.0
 scale = Vector2(1.486, 1.43399)
 
 [node name="ColorRect" type="ColorRect" parent="PauseUI"]
-offset_left = 156.124
-offset_top = 9.0656
-offset_right = 800.124
-offset_bottom = 359.066
+offset_left = 156.0
+offset_top = 9.0
+offset_right = 599.0
+offset_bottom = 359.0
 color = Color(0, 0, 0, 0.643137)
 
 [node name="Sprite2D" type="Sprite2D" parent="PauseUI"]
@@ -87,6 +104,36 @@ offset_top = 104.603
 offset_right = 433.001
 offset_bottom = 144.603
 texture_normal = SubResource("AtlasTexture_21sxe")
+
+[node name="GameOverUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="GameOverUI"]
+position = Vector2(335, 82)
+texture = SubResource("AtlasTexture_hihh3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GameOverUI"]
+position = Vector2(336, 166)
+texture = SubResource("AtlasTexture_giqq2")
+
+[node name="RestartButton" type="TextureButton" parent="GameOverUI"]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 158.0
+offset_right = 342.0
+offset_bottom = 198.0
+texture_normal = SubResource("AtlasTexture_7qnde")
+
+[node name="HomeButton" type="TextureButton" parent="GameOverUI"]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 158.0
+offset_right = 376.0
+offset_bottom = 198.0
+texture_normal = SubResource("AtlasTexture_kyjic")
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="PauseUI/PlayButton" to="." method="_on_play_button_pressed"]
