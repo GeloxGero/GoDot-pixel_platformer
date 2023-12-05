@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var y_offset = -82
+
 var inventory = []
 
 var char_name = "Player"
@@ -51,6 +53,10 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("Shoot"):
 		shoot()
+	if Input.is_action_just_pressed("Temp"):
+		print(position)
+	if Input.is_action_just_pressed("throw"):
+		throw()
 	var down = Input.is_action_just_pressed('down')
 	var jump = Input.is_action_just_pressed('jump')
 	var direction = Vector2()
@@ -114,6 +120,7 @@ func _physics_process(delta):
 			animation.play("run")
 		$Sprite2D.flip_h = true
 		direction.x -= 1
+
 	else:
 		if _state == States.ON_GROUND:
 			animation.play("idle")
@@ -149,13 +156,11 @@ func _physics_process(delta):
 		#position.x = screen_size.x
 
 func _on_ladder_checker_body_entered(body):
-	print(body)
 	if body.name == "TileMap2":
 		on_ladder = true
 	
 
 func _on_ladder_checker_body_exited(body):
-	print(body)
 	if body.name == "TileMap2":
 		on_ladder = false
 
@@ -172,10 +177,22 @@ func shoot():
 		boko.set_direction(Vector2.LEFT) 
 	else:
 		boko.set_direction(Vector2.RIGHT)
+func throw():
+	print(inventory.size())
+	if inventory.size() == 0 or not inventory:
+		return
 	
+	var garbage = inventory.pop_back()
+	
+	get_owner().add_child(garbage)
+	garbage.position = Vector2(position.x, position.y - y_offset)
+	
+	garbage.show()
+
 func store_item(item: Area2D):
 	inventory.append(item)
-	print(inventory)
+
+
 
 func die():
 	get_tree().change_scene_to_file(StageManager.game_over)

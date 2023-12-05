@@ -1,6 +1,9 @@
 extends Area2D
 
 var rng = RandomNumberGenerator.new()
+var snap = 0
+var thrown = false
+var direction
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,7 +43,13 @@ func _process(delta):
 
 
 
+func throw(vector: Vector2):
+	direction = vector
+	thrown = true
+	
 
+func move():
+	pass
 
 func _on_body_entered(body):
 	if body.char_name == "Player":
