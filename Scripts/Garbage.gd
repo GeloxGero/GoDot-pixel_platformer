@@ -1,14 +1,17 @@
 extends Area2D
 
-var rng = RandomNumberGenerator.new()
+var snap = 0
+var thrown = false
+var direction
+var speed = 2.2
+var time_limit = 2
+var monitoring_player = true
+
+var to_add = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	rng.seed = hash("Godot")
-	rng.randomize()
-	rng.state = 100
-
-	var rand = rng.randi_range(1, 10)
+	var rand = Global.random.randi_range(1, 10)
 	
 	if rand == 1:
 		$Sprite2D.texture.region = Rect2(128,216,32,24)
@@ -33,19 +36,37 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _process(_delta):
+	if thrown:
+		if time_limit <= 0 : 
+			thrown = false
+			set_deferred("monitoring", true)
+			time_limit = 2
 	
+		if snap == Global.TIMER:
+			time_limit -= 1
+			
+			
+		if direction == Vector2.LEFT:
+			self.position -= transform.x * speed
+		else:
+			self.position += transform.x * speed
 
-
-
-
-
-
+func throw(vector: Vector2):
+	self.show()
+	snap = Global.TIMER - 1
+	direction = vector
+	thrown = true
+	
 func _on_body_entered(body):
-	if body.char_name == "Player":
-		get_owner().remove_child(self)
+	if body.has_method("mc") and monitoring_player and self.get_parent() != body:
+		set_deferred("monitoring", false)
+		call_deferred("reparent", body)
 		body.store_item(self)
 		self.hide()
 
+func _on_body_exited(_body):
+	pass
 
+func garbage():
+	pass

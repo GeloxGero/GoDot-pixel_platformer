@@ -8,6 +8,9 @@ var player
 
 var y_offset = -82
 # Called when the node enters the scene tree for the first time.
+
+var Garbage = preload("res://assets/Environment/Misc/Trash/Garbage.tscn")
+
 func _ready():
 	#MusicController.play_music()
 
@@ -21,6 +24,7 @@ func _ready():
 	camera.limit_right = limit_x_right
 	camera.limit_top = limit_y_up
 	camera.limit_bottom = limit_y_down
+	
 
 func _on_edge_right_body_entered(body):
 	if body.name == "Player":

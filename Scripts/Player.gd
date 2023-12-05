@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-var inventory = []
+var y_offset = -82
 
-var char_name = "Player"
+var inventory = []
 
 var previous_scene_position : Vector2
 
@@ -50,7 +50,12 @@ func _physics_process(delta):
 	# per click
 
 	if Input.is_action_just_pressed("Shoot"):
+		print(Global.random.randi())
 		shoot()
+	if Input.is_action_just_pressed("Temp"):
+		print(position)
+	if Input.is_action_just_pressed("throw"):
+		throw()
 	var down = Input.is_action_just_pressed('down')
 	var jump = Input.is_action_just_pressed('jump')
 	var direction = Vector2()
@@ -114,6 +119,7 @@ func _physics_process(delta):
 			animation.play("run")
 		$Sprite2D.flip_h = true
 		direction.x -= 1
+
 	else:
 		if _state == States.ON_GROUND:
 			animation.play("idle")
@@ -137,25 +143,12 @@ func _physics_process(delta):
 	set_up_direction(Vector2.UP)
 	move_and_slide()
 
-
-
-
-	# Keep the character within the screen bounds
-	
-	#var screen_size = get_viewport_rect().size
-	#if position.x < 0:
-		#position.x = 0
-	#if position.x > screen_size.x:
-		#position.x = screen_size.x
-
 func _on_ladder_checker_body_entered(body):
-	print(body)
 	if body.name == "TileMap2":
 		on_ladder = true
 	
 
 func _on_ladder_checker_body_exited(body):
-	print(body)
 	if body.name == "TileMap2":
 		on_ladder = false
 
@@ -172,10 +165,35 @@ func shoot():
 		boko.set_direction(Vector2.LEFT) 
 	else:
 		boko.set_direction(Vector2.RIGHT)
+		
 	
+func throw():
+	if inventory.size() == 0 or not inventory:
+		return
+	
+	var garbage = inventory.pop_back()
+	self.remove_child(garbage)
+	owner.add_child(garbage)
+	garbage.position = Vector2(position.x, position.y)
+	
+	if flipped:
+		garbage.throw(Vector2.LEFT)
+	else:
+		garbage.throw(Vector2.RIGHT)
+	
+	Global.trash = inventory.size()
+
+
 func store_item(item: Area2D):
 	inventory.append(item)
-	print(inventory)
+	Global.trash = inventory.size()
+
+func clear_inventory():
+	inventory = []
+	Global.trash = inventory.size()
+
+func mc():
+	pass
 
 func die():
 	get_tree().change_scene_to_file(StageManager.game_over)

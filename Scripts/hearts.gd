@@ -4,19 +4,26 @@ func _ready():
 	$PauseUI.hide()
 
 
-func _process(delta):
+func _process(_delta):
 	if Global.hp == 5:
 		$Hearts.set_frame(0)
-	if Global.hp == 4:
+	elif Global.hp == 4:
 		$Hearts.set_frame(1)
-	if Global.hp == 3:
+	elif Global.hp == 3:
 		$Hearts.set_frame(2)
-	if Global.hp == 2:
+	elif Global.hp == 2:
 		$Hearts.set_frame(3)
-	if Global.hp == 1:
+	elif Global.hp == 1:
 		$Hearts.set_frame(4)
-	if Global.hp == 0:
+	elif Global.hp == 0:
 		$Hearts.set_frame(5)
+	
+	
+	if Global.trash == 0:
+		$Trash/Label.text = ""
+	else:
+		$Trash/Label.text = str(Global.trash)
+
 
 func _on_pause_button_pressed():
 	get_tree().paused = true

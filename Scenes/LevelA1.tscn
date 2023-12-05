@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
-[ext_resource type="PackedScene" uid="uid://w2vqxv1dfjdx" path="res://assets/Environment/Common Environment/hearts.tscn" id="2_myemh"]
 [ext_resource type="Texture2D" uid="uid://sjv0gwdp8fq" path="res://assets/Environment/Misc/Start/bg/plx-5.png" id="3_i5rvv"]
 [ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://assets/Environment/Misc/Start/tile_map1.tscn" id="3_ws4dh"]
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://assets/Environment/Misc/Start/bg/plx-2.png" id="4_5afc8"]
@@ -12,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d22ghrgq2xulb" path="res://assets/Environment/Misc/Start/ladder_top.tscn" id="7_1nlrx"]
 [ext_resource type="PackedScene" uid="uid://bjts4rp80ikpj" path="res://assets/Environment/Misc/Start/tile_map_ladder.tscn" id="8_j6107"]
 [ext_resource type="PackedScene" uid="uid://cyp7qpsfeer5m" path="res://assets/Environment/Misc/Trash/Garbage.tscn" id="13_f52ft"]
+[ext_resource type="PackedScene" uid="uid://cqnb47ywotbur" path="res://assets/Environment/Common Environment/garbage_can.tscn" id="14_qyknm"]
 [ext_resource type="PackedScene" uid="uid://leaokftbf25j" path="res://assets/Entities/Enemy/wood_cutter.tscn" id="18_xtmmx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxkyq"]
@@ -26,10 +26,8 @@ script = ExtResource("1_eqk3o")
 limit_x_left = 13
 limit_x_right = 3351
 limit_y_up = -200
-limit_y_down = 500
+limit_y_down = 300
 metadata/_edit_horizontal_guides_ = [42.0]
-
-[node name="UI" parent="." instance=ExtResource("2_myemh")]
 
 [node name="Plx-1" type="Sprite2D" parent="."]
 z_index = -20
@@ -206,6 +204,9 @@ position = Vector2(336, 35)
 
 [node name="Garbage4" parent="Garbage" instance=ExtResource("13_f52ft")]
 position = Vector2(537, 5)
+
+[node name="GarbageCan" parent="." instance=ExtResource("14_qyknm")]
+position = Vector2(57, -49)
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]

@@ -11,13 +11,11 @@ func _ready():
 	snap = Global.TIMER - 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if max_time == 0:
 		self.queue_free()
 	if Global.TIMER == snap:
 		max_time -= 1
-	
-	print(max_time)
 	
 	
 	if direction == Vector2.LEFT:
@@ -33,6 +31,6 @@ func set_direction(vector: Vector2):
 
 
 func _on_body_entered(body):
-	if body.char_name == "Enemy":
+	if body.has_method("enemy"):
 		body.take_damage(20)
 		self.queue_free()
