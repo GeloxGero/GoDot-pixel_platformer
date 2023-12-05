@@ -106,10 +106,18 @@ offset_bottom = 144.603
 texture_normal = SubResource("AtlasTexture_21sxe")
 
 [node name="GameOverUI" type="Control" parent="."]
+process_mode = 2
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI"]
+offset_top = 1.0
+offset_right = 652.0
+offset_bottom = 424.0
+color = Color(0, 0, 0, 0.85098)
 
 [node name="Sprite2D" type="Sprite2D" parent="GameOverUI"]
 position = Vector2(335, 82)
@@ -137,3 +145,5 @@ texture_normal = SubResource("AtlasTexture_kyjic")
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="PauseUI/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="GameOverUI/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="GameOverUI/HomeButton" to="." method="_on_home_button_pressed"]

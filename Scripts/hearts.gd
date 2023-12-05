@@ -32,3 +32,20 @@ func _on_pause_button_pressed():
 func _on_play_button_pressed():
 	get_tree().paused = false
 	$PauseUI.hide()
+
+func _on_restart_button_pressed():
+	Global.reset()
+	$GameOverUI.hide()
+	get_tree().paused = false
+	StageManager.restart()
+
+
+func _on_home_button_pressed():
+	pass # Replace with function body.
+
+
+func game_over():
+	get_tree().paused = true
+	$GameOverUI.show()
+
+

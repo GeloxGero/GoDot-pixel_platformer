@@ -4,8 +4,7 @@ extends CanvasLayer
 
 const Level1 = "res://Scenes/LevelA1.tscn"
 const Level2 = "res://Scenes/LevelA2.tscn"
-const game_over = "res://Assets/Environment/Common Environment/game_over.tscn"
-const GG = preload("res://Assets/Environment/Common Environment/game_over.tscn")
+const Level3 = "res://Scenes/LevelA3.tcsn"
 
 
 func changeStage(stage_path, x, y):
@@ -19,5 +18,6 @@ func changeStage(stage_path, x, y):
 	get_node("ColorRect").hide()
 	
 	
-
+func restart():
+	get_tree().change_scene_to_file("res://Scenes/LevelA1.tscn")
 

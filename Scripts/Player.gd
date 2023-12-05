@@ -50,7 +50,6 @@ func _physics_process(delta):
 	# per click
 
 	if Input.is_action_just_pressed("Shoot"):
-		print(Global.random.randi())
 		shoot()
 	if Input.is_action_just_pressed("Temp"):
 		print(position)
@@ -196,4 +195,4 @@ func mc():
 	pass
 
 func die():
-	get_tree().change_scene_to_file(StageManager.game_over)
+	$UI.game_over()
