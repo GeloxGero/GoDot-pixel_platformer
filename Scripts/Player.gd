@@ -1,6 +1,12 @@
 extends CharacterBody2D
 
+var inventory = []
+
+var char_name = "Player"
+
 var previous_scene_position : Vector2
+
+
 
 enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
 @export var player_position : Vector2
@@ -11,6 +17,7 @@ enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
 @export var projectile: PackedScene
 
 var player
+var flipped = false
 var _state : int = States.ON_GROUND
 
 var jumpval : int = 2
@@ -96,11 +103,13 @@ func _physics_process(delta):
 		if _state == States.ON_GROUND:
 			_state = States.CROUCH
 	elif(right and not lock_x):
+		flipped = false
 		if _state == States.ON_GROUND:
 			animation.play("run")
 		$Sprite2D.flip_h = false
 		direction.x += 1
 	elif(left and not lock_x):
+		flipped = true
 		if _state == States.ON_GROUND:
 			animation.play("run")
 		$Sprite2D.flip_h = true
@@ -140,10 +149,15 @@ func _physics_process(delta):
 		#position.x = screen_size.x
 
 func _on_ladder_checker_body_entered(body):
-	on_ladder = true
+	print(body)
+	if body.name == "TileMap2":
+		on_ladder = true
+	
 
 func _on_ladder_checker_body_exited(body):
-	on_ladder = false
+	print(body)
+	if body.name == "TileMap2":
+		on_ladder = false
 
 func take_damage(damage):
 	if Global.hp == 1:
@@ -154,7 +168,14 @@ func shoot():
 	var boko = projectile.instantiate()
 	owner.add_child(boko)
 	boko.position = position
+	if flipped: 
+		boko.set_direction(Vector2.LEFT) 
+	else:
+		boko.set_direction(Vector2.RIGHT)
 	
-	
+func store_item(item: Area2D):
+	inventory.append(item)
+	print(inventory)
+
 func die():
 	get_tree().change_scene_to_file(StageManager.game_over)

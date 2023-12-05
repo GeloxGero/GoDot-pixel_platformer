@@ -12,3 +12,8 @@ var hp = 5
 var lvl1seed = true
 var lvl2seed1 = true
 var lvl2seed2 = true
+
+
+func reset():
+	hp = 5
+	two_to_one = false

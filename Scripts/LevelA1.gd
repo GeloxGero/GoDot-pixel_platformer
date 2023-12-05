@@ -6,14 +6,16 @@ var player
 @export var limit_y_up : int
 @export var limit_y_down : int
 
+var y_offset = -82
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#MusicController.play_music()
 
 	player = get_node("Player")
+	
 	if(Global.two_to_one):
-		teleport(3329.34, -15.54873)
-
+		teleport(3329.34, -15 - y_offset)
+	
 	var camera = get_node("Player/Camera2D")
 	camera.limit_left = limit_x_left
 	camera.limit_right = limit_x_right

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var char_name = "Enemy"
+
 @export var starting_move_direction : Vector2 = Vector2.LEFT
 
 @export var can_attack : bool
@@ -82,7 +84,6 @@ func _physics_process(delta):
 
 
 
-
 func take_damage(damage):
 	hitpoints -= damage
 	_state = State.DAMAGED
@@ -130,9 +131,7 @@ func _on_detection_area_body_exited(body):
 		_state = State.IDLE
 
 func _on_animation_player_animation_finished(anim_name):
-	print(anim_name)
 	if anim_name == "death":
 		self.queue_free()
 	elif anim_name == "damaged":
 		_state = State.IDLE
-		print(hitpoints)
