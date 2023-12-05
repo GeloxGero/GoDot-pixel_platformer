@@ -109,7 +109,7 @@ func _on_damaging_area_body_entered(body):
 		body.take_damage(1)
 
 
-func _on_damaging_area_body_exited(body):
+func _on_damaging_area_body_exited(_body):
 	pass # Replace with function body.
 
 

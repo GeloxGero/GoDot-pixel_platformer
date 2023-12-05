@@ -4,7 +4,7 @@ func _ready():
 	$PauseUI.hide()
 
 
-func _process(delta):
+func _process(_delta):
 	if Global.hp == 5:
 		$Hearts.set_frame(0)
 	elif Global.hp == 4:
@@ -18,7 +18,10 @@ func _process(delta):
 	elif Global.hp == 0:
 		$Hearts.set_frame(5)
 	
-	if Global.trash != 0:
+	
+	if Global.trash == 0:
+		$Trash/Label.text = ""
+	else:
 		$Trash/Label.text = str(Global.trash)
 
 

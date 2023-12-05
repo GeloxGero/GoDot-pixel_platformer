@@ -41,7 +41,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if thrown:
 		if time_limit <= 0 : 
 			thrown = false
@@ -70,7 +70,7 @@ func _on_body_entered(body):
 		body.store_item(self)
 		self.hide()
 
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	pass
 
 func garbage():

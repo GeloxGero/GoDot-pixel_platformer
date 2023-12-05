@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://5x0oa87g8kqy"]
+[gd_scene load_steps=16 format=3 uid="uid://5x0oa87g8kqy"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
-[ext_resource type="PackedScene" uid="uid://w2vqxv1dfjdx" path="res://assets/Environment/Common Environment/hearts.tscn" id="2_myemh"]
 [ext_resource type="Texture2D" uid="uid://sjv0gwdp8fq" path="res://assets/Environment/Misc/Start/bg/plx-5.png" id="3_i5rvv"]
 [ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://assets/Environment/Misc/Start/tile_map1.tscn" id="3_ws4dh"]
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://assets/Environment/Misc/Start/bg/plx-2.png" id="4_5afc8"]
@@ -29,8 +28,6 @@ limit_x_right = 3351
 limit_y_up = -200
 limit_y_down = 500
 metadata/_edit_horizontal_guides_ = [42.0]
-
-[node name="UI" parent="." instance=ExtResource("2_myemh")]
 
 [node name="Plx-1" type="Sprite2D" parent="."]
 z_index = -20

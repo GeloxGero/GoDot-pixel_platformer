@@ -143,7 +143,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-
+	print(Global.trash)
 
 	# Keep the character within the screen bounds
 	
@@ -191,12 +191,17 @@ func throw():
 		garbage.throw(Vector2.LEFT)
 	else:
 		garbage.throw(Vector2.RIGHT)
+	
+	Global.trash = inventory.size()
+
 
 func store_item(item: Area2D):
-	
 	inventory.append(item)
 	Global.trash = inventory.size()
-	print(inventory.size())
+
+func clear_inventory():
+	inventory = []
+	Global.trash = inventory.size()
 
 func mc():
 	pass
