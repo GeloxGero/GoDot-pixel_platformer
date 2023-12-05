@@ -1,18 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://w2vqxv1dfjdx"]
+[gd_scene load_steps=10 format=3 uid="uid://w2vqxv1dfjdx"]
 
 [ext_resource type="Script" path="res://Scripts/hearts.gd" id="1_poyse"]
 [ext_resource type="Texture2D" uid="uid://sqs2stw52fga" path="res://assets/Environment/Misc/waste.Garbage_NEW.png" id="2_pgsoi"]
 [ext_resource type="Texture2D" uid="uid://dc8cv88vih03m" path="res://assets/Environment/Misc/hearts.png" id="3_j2g4s"]
+[ext_resource type="Texture2D" uid="uid://b4t1mlhy4qgco" path="res://assets/Environment/Common Environment/Wooden GUI.png" id="4_74vva"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d3aj2"]
 atlas = ExtResource("2_pgsoi")
 region = Rect2(256, 736, 24, 24)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gfy0"]
+atlas = ExtResource("4_74vva")
+region = Rect2(288, 832, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1udht"]
+atlas = ExtResource("4_74vva")
+region = Rect2(416, 976, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4wi0"]
+atlas = ExtResource("4_74vva")
+region = Rect2(352, 640, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21sxe"]
+atlas = ExtResource("4_74vva")
+region = Rect2(384, 640, 32, 32)
+
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_poyse")
 
+[node name="Hearts" type="Sprite2D" parent="."]
+position = Vector2(78, 18)
+texture = ExtResource("3_j2g4s")
+vframes = 6
+
 [node name="Trash" type="Sprite2D" parent="."]
-position = Vector2(618, 47)
+position = Vector2(617, 53)
 texture = SubResource("AtlasTexture_d3aj2")
 
 [node name="Label" type="Label" parent="Trash"]
@@ -21,43 +43,50 @@ offset_top = -15.0
 offset_right = -9.0
 offset_bottom = 8.0
 
-[node name="Hearts" type="Sprite2D" parent="."]
-position = Vector2(78, 18)
-texture = ExtResource("3_j2g4s")
-vframes = 6
-
-[node name="PauseButton" type="Button" parent="."]
-offset_left = 608.0
-offset_top = 12.0
-offset_right = 616.0
-offset_bottom = 20.0
-scale = Vector2(2.16495, 2.16495)
+[node name="PauseButton" type="TextureButton" parent="."]
+offset_left = 603.0
+offset_top = 9.0
+offset_right = 635.0
+offset_bottom = 41.0
+scale = Vector2(0.846292, 0.846292)
+texture_normal = SubResource("AtlasTexture_2gfy0")
 
 [node name="PauseUI" type="Control" parent="."]
 process_mode = 2
 layout_mode = 3
 anchors_preset = 0
-offset_left = 2.0
-offset_top = 4.0
-offset_right = 42.0
-offset_bottom = 44.0
+offset_left = -232.0
+offset_top = -13.0
+offset_right = -192.0
+offset_bottom = 27.0
+scale = Vector2(1.486, 1.43399)
 
 [node name="ColorRect" type="ColorRect" parent="PauseUI"]
-layout_mode = 0
-offset_left = 233.0
-offset_top = 12.0
-offset_right = 273.0
-offset_bottom = 52.0
-scale = Vector2(3.45628, 3.45628)
-color = Color(0.223529, 0.223529, 0.223529, 1)
+offset_left = 156.124
+offset_top = 9.0656
+offset_right = 800.124
+offset_bottom = 359.066
+color = Color(0, 0, 0, 0.643137)
 
-[node name="PlayButton" type="Button" parent="PauseUI"]
+[node name="Sprite2D" type="Sprite2D" parent="PauseUI"]
+position = Vector2(360.876, 96.6786)
+texture = SubResource("AtlasTexture_1udht")
+
+[node name="PlayButton" type="TextureButton" parent="PauseUI"]
 layout_mode = 0
-offset_left = 282.0
-offset_top = 96.0
-offset_right = 323.0
-offset_bottom = 127.0
-text = "Play"
+offset_left = 393.001
+offset_top = 56.4857
+offset_right = 433.001
+offset_bottom = 96.4857
+texture_normal = SubResource("AtlasTexture_u4wi0")
+
+[node name="RestartButton" type="TextureButton" parent="PauseUI"]
+layout_mode = 0
+offset_left = 393.001
+offset_top = 104.603
+offset_right = 433.001
+offset_bottom = 144.603
+texture_normal = SubResource("AtlasTexture_21sxe")
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="PauseUI/PlayButton" to="." method="_on_play_button_pressed"]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://lrxevnbb8ntr"]
+[gd_scene load_steps=23 format=3 uid="uid://7vb20e8tc1wr"]
 
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="1_kdpcf"]
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_onv1c"]
-[ext_resource type="PackedScene" uid="uid://w2vqxv1dfjdx" path="res://assets/Environment/Common Environment/hearts.tscn" id="2_44n2g"]
+[ext_resource type="PackedScene" uid="uid://w2vqxv1dfjdx" path="res://assets/Environment/Common Environment/UI.tscn" id="2_44n2g"]
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://assets/Environment/Misc/Start/bg/plx-2.png" id="2_mvj7d"]
 [ext_resource type="Texture2D" uid="uid://waygwibvnisi" path="res://assets/Environment/Misc/Start/bg/plx-3.png" id="3_38bps"]
 [ext_resource type="PackedScene" uid="uid://ihvc1sbpvo6q" path="res://assets/Entities/Player/Player.tscn" id="3_f33n1"]
@@ -603,19 +603,15 @@ scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("1_kdpcf")
 
 [node name="Plx-2" type="Sprite2D" parent="Plx-5"]
-scale = Vector2(1, 1)
 texture = ExtResource("2_mvj7d")
 
 [node name="Plx-3" type="Sprite2D" parent="Plx-5"]
-scale = Vector2(1, 1)
 texture = ExtResource("3_38bps")
 
 [node name="Plx-4" type="Sprite2D" parent="Plx-5"]
-scale = Vector2(1, 1)
 texture = ExtResource("4_eyalj")
 
 [node name="Plx-5" type="Sprite2D" parent="Plx-5"]
-scale = Vector2(1, 1)
 texture = ExtResource("5_qfhv7")
 
 [node name="TileMap" parent="." instance=ExtResource("7_2gtr4")]

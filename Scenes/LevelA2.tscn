@@ -1,7 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://1bmalf5j3q3v"]
+[gd_scene load_steps=19 format=3 uid="uid://1bmalf5j3q3v"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_vl6vr"]
-[ext_resource type="PackedScene" uid="uid://w2vqxv1dfjdx" path="res://assets/Environment/Common Environment/UI.tscn" id="2_4nf1d"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_kedl6"]
 [ext_resource type="PackedScene" uid="uid://ihvc1sbpvo6q" path="res://assets/Entities/Player/Player.tscn" id="3_5f3oj"]
 [ext_resource type="Texture2D" uid="uid://sjv0gwdp8fq" path="res://assets/Environment/Misc/Start/bg/plx-5.png" id="3_q46hs"]
@@ -95,9 +94,6 @@ position = Vector2(29, 205)
 script = ExtResource("1_vl6vr")
 metadata/_edit_horizontal_guides_ = [42.0]
 metadata/_edit_vertical_guides_ = []
-
-[node name="Hearts" parent="." instance=ExtResource("2_4nf1d")]
-visible = false
 
 [node name="Plx-1" type="Sprite2D" parent="."]
 z_index = -20
