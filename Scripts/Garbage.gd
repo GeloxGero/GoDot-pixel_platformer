@@ -4,6 +4,9 @@ var rng = RandomNumberGenerator.new()
 var snap = 0
 var thrown = false
 var direction
+var speed = 2.2
+var time_limit = 2
+var monitoring_player = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,13 +40,26 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if thrown:
+		if time_limit <= 0 : thrown = false
+	
+		if snap == Global.TIMER:
+			time_limit -= 1
+			
+			
+		if direction == Vector2.LEFT:
+			self.position -= transform.x * speed
+		else:
+			self.position += transform.x * speed
+	
 	
 
 
 
 
 func throw(vector: Vector2):
+	self.show()
+	snap = Global.TIMER - 1
 	direction = vector
 	thrown = true
 	
@@ -52,9 +68,15 @@ func move():
 	pass
 
 func _on_body_entered(body):
-	if body.char_name == "Player":
+	if body.char_name == "Player" and monitoring_player:
+		print("Garbage")
+		print(get_owner())
 		get_owner().remove_child(self)
 		body.store_item(self)
 		self.hide()
 
 
+
+
+func _on_body_exited(body):
+	pass # Replace with function body.

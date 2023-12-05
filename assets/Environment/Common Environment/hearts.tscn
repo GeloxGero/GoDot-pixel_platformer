@@ -1,10 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://w2vqxv1dfjdx"]
+[gd_scene load_steps=5 format=3 uid="uid://w2vqxv1dfjdx"]
 
 [ext_resource type="Script" path="res://Scripts/hearts.gd" id="1_8i7tk"]
-[ext_resource type="Texture2D" uid="uid://dc8cv88vih03m" path="res://Assets/Environment/Misc/hearts.png" id="1_p6a7i"]
+[ext_resource type="Texture2D" uid="uid://dc8cv88vih03m" path="res://assets/Environment/Misc/hearts.png" id="1_p6a7i"]
+[ext_resource type="Texture2D" uid="uid://sqs2stw52fga" path="res://assets/Environment/Misc/waste.Garbage_NEW.png" id="2_273k7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3aj2"]
+atlas = ExtResource("2_273k7")
+region = Rect2(256, 736, 24, 24)
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_8i7tk")
+
+[node name="Trash" type="Sprite2D" parent="."]
+position = Vector2(618, 47)
+texture = SubResource("AtlasTexture_d3aj2")
+
+[node name="Label" type="Label" parent="Trash"]
+offset_left = -46.0
+offset_top = -15.0
+offset_right = -9.0
+offset_bottom = 8.0
 
 [node name="Hearts" type="Sprite2D" parent="."]
 position = Vector2(78, 18)

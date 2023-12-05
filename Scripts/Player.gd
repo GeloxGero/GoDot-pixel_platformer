@@ -177,6 +177,8 @@ func shoot():
 		boko.set_direction(Vector2.LEFT) 
 	else:
 		boko.set_direction(Vector2.RIGHT)
+		
+	
 func throw():
 	print(inventory.size())
 	if inventory.size() == 0 or not inventory:
@@ -184,13 +186,20 @@ func throw():
 	
 	var garbage = inventory.pop_back()
 	
-	get_owner().add_child(garbage)
+	print(owner)
+	print(garbage.owner)
+	garbage.get_owner().remove_child(garbage)
+	owner.add_child(garbage)
 	garbage.position = Vector2(position.x, position.y - y_offset)
 	
-	garbage.show()
+	if flipped:
+		garbage.throw(Vector2.LEFT)
+	else:
+		garbage.throw(Vector2.RIGHT)
 
 func store_item(item: Area2D):
 	inventory.append(item)
+	Global.trash = inventory.size()
 
 
 
