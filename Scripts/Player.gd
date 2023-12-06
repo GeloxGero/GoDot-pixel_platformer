@@ -40,7 +40,7 @@ func _physics_process(delta):
 	
 	if(_state == States.IN_AIR):
 		if not $AnimationPlayer.current_animation == "jump": 
-			_state == States.DROP
+			_state = States.DROP
 
 	# continuous click
 	var up = Input.is_action_pressed('up')

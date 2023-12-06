@@ -21,6 +21,7 @@ Global="*res://Scripts/global.gd"
 MusicController="*res://Assets/Audio/MusicController.tscn"
 StageManager="*res://StageManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Persist="*res://persist.gd"
 
 [display]
 

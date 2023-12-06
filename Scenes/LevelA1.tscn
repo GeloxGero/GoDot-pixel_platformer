@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://5x0oa87g8kqy"]
+[gd_scene load_steps=15 format=3 uid="uid://5x0oa87g8kqy"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bjts4rp80ikpj" path="res://assets/Environment/Misc/Start/tile_map_ladder.tscn" id="8_j6107"]
 [ext_resource type="PackedScene" uid="uid://cyp7qpsfeer5m" path="res://assets/Environment/Misc/Trash/Garbage.tscn" id="13_f52ft"]
 [ext_resource type="PackedScene" uid="uid://cqnb47ywotbur" path="res://assets/Environment/Common Environment/garbage_can.tscn" id="14_qyknm"]
-[ext_resource type="PackedScene" uid="uid://leaokftbf25j" path="res://assets/Entities/Enemy/wood_cutter.tscn" id="18_xtmmx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxkyq"]
 size = Vector2(20, 500)
@@ -173,15 +172,6 @@ layer_3/tile_data = PackedInt32Array(-196592, 196609, 2, -196590, 131073, 2, -19
 [node name="Player" parent="." instance=ExtResource("5_eqgv7")]
 texture_filter = 1
 position = Vector2(96, -48)
-
-[node name="WoodCutter" parent="." instance=ExtResource("18_xtmmx")]
-position = Vector2(664, -194)
-
-[node name="WoodCutter2" parent="." instance=ExtResource("18_xtmmx")]
-position = Vector2(903, -164)
-
-[node name="WoodCutter3" parent="." instance=ExtResource("18_xtmmx")]
-position = Vector2(1563, -97)
 
 [node name="DeathZone" type="Area2D" parent="."]
 
