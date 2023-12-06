@@ -191,5 +191,6 @@ collision_mask = 8
 position = Vector2(2, 3)
 shape = SubResource("RectangleShape2D_utjnt")
 
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="LadderChecker" to="." method="_on_ladder_checker_body_entered"]
 [connection signal="body_exited" from="LadderChecker" to="." method="_on_ladder_checker_body_exited"]

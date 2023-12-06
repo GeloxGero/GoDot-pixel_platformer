@@ -7,15 +7,15 @@ const Level2 = "res://Scenes/LevelA2.tscn"
 const Level3 = "res://Scenes/LevelA3.tcsn"
 
 
-func changeStage(stage_path, x, y):
-	get_node("anim").play("transin")
-	await get_node("anim").animation_finished
+func changeStage(stage_path):
+#	get_node("anim").play("transin")
+#	await get_node("anim").animation_finished
 	
 	get_tree().change_scene_to_file(stage_path)
 	
-	get_node("anim").play("transout")
-	await get_node("anim").animation_finished
-	get_node("ColorRect").hide()
+#	get_node("anim").play("transout")
+#	await get_node("anim").animation_finished
+#	get_node("ColorRect").hide()
 	
 	
 func restart():

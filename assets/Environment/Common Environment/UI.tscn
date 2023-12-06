@@ -79,6 +79,7 @@ offset_bottom = 27.0
 scale = Vector2(1.486, 1.43399)
 
 [node name="ColorRect" type="ColorRect" parent="PauseUI"]
+layout_mode = 0
 offset_left = 156.0
 offset_top = 9.0
 offset_right = 599.0
@@ -97,7 +98,7 @@ offset_right = 433.001
 offset_bottom = 96.4857
 texture_normal = SubResource("AtlasTexture_u4wi0")
 
-[node name="RestartButton" type="TextureButton" parent="PauseUI"]
+[node name="PRestartButton" type="TextureButton" parent="PauseUI"]
 layout_mode = 0
 offset_left = 393.001
 offset_top = 104.603
@@ -114,6 +115,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="GameOverUI"]
+layout_mode = 0
 offset_top = 1.0
 offset_right = 652.0
 offset_bottom = 424.0
@@ -127,7 +129,7 @@ texture = SubResource("AtlasTexture_hihh3")
 position = Vector2(336, 166)
 texture = SubResource("AtlasTexture_giqq2")
 
-[node name="RestartButton" type="TextureButton" parent="GameOverUI"]
+[node name="GRestartButton" type="TextureButton" parent="GameOverUI"]
 layout_mode = 0
 offset_left = 302.0
 offset_top = 158.0
@@ -145,5 +147,6 @@ texture_normal = SubResource("AtlasTexture_kyjic")
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="PauseUI/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="GameOverUI/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PauseUI/PRestartButton" to="." method="_on_p_restart_button_pressed"]
+[connection signal="pressed" from="GameOverUI/GRestartButton" to="." method="_on_g_restart_button_pressed"]
 [connection signal="pressed" from="GameOverUI/HomeButton" to="." method="_on_home_button_pressed"]

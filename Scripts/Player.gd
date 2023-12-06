@@ -8,7 +8,7 @@ var previous_scene_position : Vector2
 
 
 
-enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM}
+enum States {ON_GROUND, IN_AIR, CLIMB, DROP, CROUCH, SWIM, DAMAGED}
 @export var player_position : Vector2
 @onready var animation = $AnimationPlayer
 # Member variables
@@ -62,7 +62,8 @@ func _physics_process(delta):
 	var on_floor = is_on_floor()
 	
 	if on_floor and _state != States.CROUCH and _state != States.CLIMB:
-		_state = States.ON_GROUND
+		if not _state == States.DAMAGED:
+			_state = States.ON_GROUND
 	
 	match _state:
 		States.ON_GROUND:
@@ -78,6 +79,8 @@ func _physics_process(delta):
 			if not on_ladder:
 				_state = States.DROP
 				gravity = 980
+		States.DAMAGED:
+			animation.play("damaged")
 	
 	if(jump):
 		if on_ladder:
@@ -150,11 +153,12 @@ func _on_ladder_checker_body_entered(body):
 func _on_ladder_checker_body_exited(body):
 	if body.name == "TileMap2":
 		on_ladder = false
+		
 
-func take_damage(damage):
-	if Global.hp == 1:
-		die()
-	Global.hp -= damage
+func move():
+	pass
+	
+
 	
 func shoot():
 	var boko = projectile.instantiate()
@@ -165,6 +169,8 @@ func shoot():
 	else:
 		boko.set_direction(Vector2.RIGHT)
 		
+	
+
 	
 func throw():
 	if inventory.size() == 0 or not inventory:
@@ -196,3 +202,15 @@ func mc():
 
 func die():
 	$UI.game_over()
+
+func take_damage(damage):
+	_state = States.DAMAGED
+	if Global.hp == 1:
+		die()
+	Global.hp -= damage
+	
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "damaged":
+		_state = States.ON_GROUND
+
