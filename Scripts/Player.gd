@@ -28,8 +28,11 @@ var on_ladder : bool = false
 var jump_speed = -250 # Negative because 2D space's y-axis is down
 var gravity = 980 # The force of gravity
 
+var interact : bool = false
 
 func _physics_process(delta):	
+	
+	
 	if Global.TIMER <= 60:
 		Global.TIMER += 1
 	else:
@@ -47,8 +50,9 @@ func _physics_process(delta):
 	var right = Input.is_action_pressed('right')
 	var left = Input.is_action_pressed('left')
 	
+	
 	# per click
-
+	interact = Input.is_action_just_pressed("Interact")
 	if Input.is_action_just_pressed("Shoot"):
 		shoot()
 	if Input.is_action_just_pressed("Temp"):

@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://7vb20e8tc1wr"]
+[gd_scene load_steps=18 format=3 uid="uid://7vb20e8tc1wr"]
 
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="1_kdpcf"]
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_onv1c"]
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://assets/Environment/Misc/Start/bg/plx-2.png" id="2_mvj7d"]
+[ext_resource type="PackedScene" uid="uid://8kqu50gtq1w2" path="res://assets/Environment/Misc/switch.tscn" id="2_sbucs"]
 [ext_resource type="Texture2D" uid="uid://waygwibvnisi" path="res://assets/Environment/Misc/Start/bg/plx-3.png" id="3_38bps"]
 [ext_resource type="PackedScene" uid="uid://ihvc1sbpvo6q" path="res://assets/Entities/Player/Player.tscn" id="3_f33n1"]
 [ext_resource type="Texture2D" uid="uid://chu02ygvmvtm2" path="res://assets/Environment/Misc/Start/bg/plx-4.png" id="4_eyalj"]
@@ -10,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://assets/Environment/Misc/Start/tile_map1.tscn" id="7_2gtr4"]
 [ext_resource type="Texture2D" uid="uid://cnw3tx21w3cy7" path="res://assets/Environment/Level3/Factory Objects all.png" id="9_vc3go"]
 [ext_resource type="Texture2D" uid="uid://b70podauug000" path="res://assets/Environment/Level3/Tileset.png" id="10_lqhn6"]
-[ext_resource type="Texture2D" uid="uid://c7erqodpldp3p" path="res://assets/Environment/Level2/water_tileset.png" id="10_oe1q2"]
-[ext_resource type="Texture2D" uid="uid://brcxdck8iufk0" path="res://assets/Environment/Level2/dirty_water_tileset2.png" id="11_aoqf8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kc06n"]
 texture = ExtResource("9_vc3go")
@@ -1406,73 +1405,6 @@ physics_layer_0/collision_mask = 33
 sources/0 = SubResource("TileSetAtlasSource_kc06n")
 sources/1 = SubResource("TileSetAtlasSource_0a8u0")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5a5k"]
-texture = ExtResource("10_oe1q2")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-1:3/0 = 0
-3:3/0 = 0
-5:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-0:5/0 = 0
-2:5/0 = 0
-4:5/0 = 0
-4:0/size_in_atlas = Vector2i(2, 2)
-4:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ii223"]
-texture = ExtResource("11_aoqf8")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-1:3/0 = 0
-3:3/0 = 0
-5:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-0:5/0 = 0
-2:5/0 = 0
-4:5/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_yvmpm"]
-sources/0 = SubResource("TileSetAtlasSource_o5a5k")
-sources/1 = SubResource("TileSetAtlasSource_ii223")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbrkr"]
 size = Vector2(23.5, 162)
 
@@ -1494,7 +1426,31 @@ metadata/_edit_vertical_guides_ = []
 
 [node name="Switches" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Switches"]
+[node name="Switch" parent="Switches" instance=ExtResource("2_sbucs")]
+
+[node name="Switch2" parent="Switches" instance=ExtResource("2_sbucs")]
+position = Vector2(64, -194)
+
+[node name="Switch3" parent="Switches" instance=ExtResource("2_sbucs")]
+position = Vector2(368, -210)
+
+[node name="Switch4" parent="Switches" instance=ExtResource("2_sbucs")]
+position = Vector2(513, -2)
+
+[node name="Switch5" parent="Switches" instance=ExtResource("2_sbucs")]
+position = Vector2(833, -146)
+
+[node name="Switch6" parent="Switches" instance=ExtResource("2_sbucs")]
+position = Vector2(848, -2)
+
+[node name="Switch7" parent="Switches" instance=ExtResource("2_sbucs")]
+position = Vector2(1088, -2)
+
+[node name="Switch8" parent="Switches" instance=ExtResource("2_sbucs")]
+position = Vector2(1600, -1)
+
+[node name="Switch9" parent="Switches" instance=ExtResource("2_sbucs")]
+position = Vector2(2096, -98)
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -1624,10 +1580,6 @@ layer_3/y_sort_enabled = false
 layer_3/y_sort_origin = 0
 layer_3/z_index = 3
 layer_3/tile_data = PackedInt32Array(393240, 983040, 11, 458776, 983040, 12, 393241, 1048576, 11, 458777, 1048576, 12, -458705, 983040, 11, -393169, 983040, 12, -458704, 1048576, 11, -393168, 1048576, 12, 393272, 983040, 11, 458808, 983040, 12, 393273, 1048576, 11, 458809, 1048576, 12, -393188, 983040, 11, -327652, 983040, 12, -393187, 1048576, 11, -327651, 1048576, 12, 393293, 983040, 11, 458829, 983040, 12, 393294, 1048576, 11, 458830, 1048576, 12, 393308, 983040, 11, 458844, 983040, 12, 393309, 1048576, 11, 458845, 1048576, 12, -196532, 983040, 11, -130996, 983040, 12, -196531, 1048576, 11, -130995, 1048576, 12, 393340, 983040, 11, 458876, 983040, 12, 393341, 1048576, 11, 458877, 1048576, 12, 155, 983040, 11, 65691, 983040, 12, 156, 1048576, 11, 65692, 1048576, 12)
-
-[node name="Water" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_yvmpm")
-format = 2
 
 [node name="Player" parent="." instance=ExtResource("3_f33n1")]
 position = Vector2(200, 108)
