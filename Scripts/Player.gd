@@ -145,15 +145,6 @@ func _physics_process(delta):
 	set_up_direction(Vector2.UP)
 	move_and_slide()
 
-func _on_ladder_checker_body_entered(body):
-	if body.name == "TileMap2":
-		on_ladder = true
-	
-
-func _on_ladder_checker_body_exited(body):
-	if body.name == "TileMap2":
-		on_ladder = false
-		
 
 func move():
 	pass
@@ -214,3 +205,14 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "damaged":
 		_state = States.ON_GROUND
 
+
+func _on_ladder_checker_body_entered(body):
+	print(body)
+	if body.name == "TileMap2":
+		on_ladder = true
+	
+
+func _on_ladder_checker_body_exited(body):
+	if body.name == "TileMap2":
+		on_ladder = false
+		

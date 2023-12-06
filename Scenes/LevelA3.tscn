@@ -1,8 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://7vb20e8tc1wr"]
+[gd_scene load_steps=22 format=3 uid="uid://7vb20e8tc1wr"]
 
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="1_kdpcf"]
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_onv1c"]
-[ext_resource type="PackedScene" uid="uid://w2vqxv1dfjdx" path="res://assets/Environment/Common Environment/UI.tscn" id="2_44n2g"]
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://assets/Environment/Misc/Start/bg/plx-2.png" id="2_mvj7d"]
 [ext_resource type="Texture2D" uid="uid://waygwibvnisi" path="res://assets/Environment/Misc/Start/bg/plx-3.png" id="3_38bps"]
 [ext_resource type="PackedScene" uid="uid://ihvc1sbpvo6q" path="res://assets/Entities/Player/Player.tscn" id="3_f33n1"]
@@ -509,109 +508,112 @@ size = Vector2(20, 285.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtef0"]
 size = Vector2(20, 162)
 
-[node name="LevelA2" type="Node2D"]
-position = Vector2(29, 205)
+[node name="LevelA3" type="Node2D"]
+position = Vector2(0, -1)
 script = ExtResource("1_onv1c")
+limit_x_left = 110
+limit_x_right = 3200
+limit_y_up = -380
+limit_y_down = 244
 metadata/_edit_horizontal_guides_ = [42.0]
 metadata/_edit_vertical_guides_ = []
 
-[node name="Hearts" parent="." instance=ExtResource("2_44n2g")]
-visible = false
+[node name="Background" type="Node2D" parent="."]
 
-[node name="Plx-1" type="Sprite2D" parent="."]
+[node name="Plx-1" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(501.854, -111.035)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("1_kdpcf")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-1"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-1"]
 texture = ExtResource("2_mvj7d")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-1"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-1"]
 texture = ExtResource("3_38bps")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-1"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-1"]
 texture = ExtResource("4_eyalj")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-1"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-1"]
 texture = ExtResource("5_qfhv7")
 
-[node name="Plx-2" type="Sprite2D" parent="."]
+[node name="Plx-2" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(1548.22, -111.035)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("1_kdpcf")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("2_mvj7d")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("3_38bps")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("4_eyalj")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("5_qfhv7")
 
-[node name="Plx-6" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-6" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("5_qfhv7")
 
-[node name="Plx-3" type="Sprite2D" parent="."]
+[node name="Plx-3" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(2598.35, -111.035)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("1_kdpcf")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("2_mvj7d")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("3_38bps")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("4_eyalj")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("5_qfhv7")
 
-[node name="Plx-6" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-6" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("5_qfhv7")
 
-[node name="Plx-4" type="Sprite2D" parent="."]
+[node name="Plx-4" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(2598.35, -111.035)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("1_kdpcf")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-4"]
 texture = ExtResource("2_mvj7d")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-4"]
 texture = ExtResource("3_38bps")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-4"]
 texture = ExtResource("4_eyalj")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-4"]
 texture = ExtResource("5_qfhv7")
 
-[node name="Plx-5" type="Sprite2D" parent="."]
+[node name="Plx-5" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(3658.4, -111.035)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("1_kdpcf")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-5"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-5"]
 texture = ExtResource("2_mvj7d")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-5"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-5"]
 texture = ExtResource("3_38bps")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-5"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-5"]
 texture = ExtResource("4_eyalj")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-5"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-5"]
 texture = ExtResource("5_qfhv7")
 
 [node name="TileMap" parent="." instance=ExtResource("7_2gtr4")]
@@ -650,7 +652,7 @@ tile_set = SubResource("TileSet_yvmpm")
 format = 2
 
 [node name="Player" parent="." instance=ExtResource("3_f33n1")]
-position = Vector2(33, 114)
+position = Vector2(2459, -380)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

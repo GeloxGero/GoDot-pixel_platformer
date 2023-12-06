@@ -29,106 +29,108 @@ limit_y_up = -200
 limit_y_down = 300
 metadata/_edit_horizontal_guides_ = [42.0]
 
-[node name="Plx-1" type="Sprite2D" parent="."]
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Plx-1" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(520.854, -20.7872)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("2_12vgc")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-1"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-1"]
 texture = ExtResource("4_5afc8")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-1"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-1"]
 texture = ExtResource("5_hr66n")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-1"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-1"]
 texture = ExtResource("6_5rv8o")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-1"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-1"]
 texture = ExtResource("3_i5rvv")
 
-[node name="Plx-2" type="Sprite2D" parent="."]
+[node name="Plx-2" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(1567.22, -20.7872)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("2_12vgc")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("4_5afc8")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("5_hr66n")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("6_5rv8o")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("3_i5rvv")
 
-[node name="Plx-6" type="Sprite2D" parent="Plx-2"]
+[node name="Plx-6" type="Sprite2D" parent="Background/Plx-2"]
 texture = ExtResource("3_i5rvv")
 
-[node name="Plx-3" type="Sprite2D" parent="."]
+[node name="Plx-3" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(2617.35, -20.7872)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("2_12vgc")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("4_5afc8")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("5_hr66n")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("6_5rv8o")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("3_i5rvv")
 
-[node name="Plx-6" type="Sprite2D" parent="Plx-3"]
+[node name="Plx-6" type="Sprite2D" parent="Background/Plx-3"]
 texture = ExtResource("3_i5rvv")
 
-[node name="Plx-4" type="Sprite2D" parent="."]
+[node name="Plx-4" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(2617.35, -20.7872)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("2_12vgc")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-4"]
 texture = ExtResource("4_5afc8")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-4"]
 texture = ExtResource("5_hr66n")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-4"]
 texture = ExtResource("6_5rv8o")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-4"]
 texture = ExtResource("3_i5rvv")
 
-[node name="Plx-6" type="Sprite2D" parent="Plx-4"]
+[node name="Plx-6" type="Sprite2D" parent="Background/Plx-4"]
 texture = ExtResource("3_i5rvv")
 
-[node name="Plx-5" type="Sprite2D" parent="."]
+[node name="Plx-5" type="Sprite2D" parent="Background"]
 z_index = -20
 position = Vector2(3677, -20.787)
 scale = Vector2(2.76123, 2.76123)
 texture = ExtResource("2_12vgc")
 
-[node name="Plx-2" type="Sprite2D" parent="Plx-5"]
+[node name="Plx-2" type="Sprite2D" parent="Background/Plx-5"]
 texture = ExtResource("4_5afc8")
 
-[node name="Plx-3" type="Sprite2D" parent="Plx-5"]
+[node name="Plx-3" type="Sprite2D" parent="Background/Plx-5"]
 texture = ExtResource("5_hr66n")
 
-[node name="Plx-4" type="Sprite2D" parent="Plx-5"]
+[node name="Plx-4" type="Sprite2D" parent="Background/Plx-5"]
 texture = ExtResource("6_5rv8o")
 
-[node name="Plx-5" type="Sprite2D" parent="Plx-5"]
+[node name="Plx-5" type="Sprite2D" parent="Background/Plx-5"]
 texture = ExtResource("3_i5rvv")
 
-[node name="Plx-6" type="Sprite2D" parent="Plx-5"]
+[node name="Plx-6" type="Sprite2D" parent="Background/Plx-5"]
 texture = ExtResource("3_i5rvv")
 
 [node name="Trapdoor" type="Node2D" parent="."]
