@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://leaokftbf25j"]
 
-[ext_resource type="Texture2D" uid="uid://1teq21s8dv7g" path="res://assets/Entities/Enemy/woodcutter.png" id="1_rbs6w"]
-[ext_resource type="Script" path="res://Scripts/wood_cutter.gd" id="2_pd36m"]
-[ext_resource type="Script" path="res://Scripts/Damageable.gd" id="3_el537"]
+[ext_resource type="Script" path="res://Scripts/wood_cutter.gd" id="1_6txvm"]
+[ext_resource type="Texture2D" uid="uid://1teq21s8dv7g" path="res://assets/Entities/Enemy/Woodcutter/woodcutter.png" id="2_rojqd"]
+[ext_resource type="Script" path="res://Scripts/Damageable.gd" id="3_64gmo"]
 
 [sub_resource type="Animation" id="Animation_nyxg1"]
 length = 0.001
@@ -166,7 +166,7 @@ height = 42.0
 
 [node name="WoodCutter" type="CharacterBody2D"]
 collision_mask = 2
-script = ExtResource("2_pd36m")
+script = ExtResource("1_6txvm")
 can_attack = true
 attack_left_position = Vector2(-83, 14)
 attack_right_position = Vector2(-27, 14)
@@ -179,7 +179,7 @@ libraries = {
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -12)
 scale = Vector2(1.24902, 1.24902)
-texture = ExtResource("1_rbs6w")
+texture = ExtResource("2_rojqd")
 hframes = 6
 vframes = 6
 frame = 35
@@ -190,7 +190,7 @@ scale = Vector2(1.53107, 1.29121)
 shape = SubResource("CapsuleShape2D_p8fno")
 
 [node name="Damageable" type="Node" parent="."]
-script = ExtResource("3_el537")
+script = ExtResource("3_64gmo")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 scale = Vector2(1, 0.52)

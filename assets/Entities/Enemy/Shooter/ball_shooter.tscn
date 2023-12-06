@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bf3clf2c0ulrc"]
 
-[ext_resource type="Texture2D" uid="uid://dk3eyrsasp8j7" path="res://assets/Entities/Enemy/Shooter.png" id="1_5veg4"]
+[ext_resource type="Texture2D" uid="uid://dk3eyrsasp8j7" path="res://assets/Entities/Enemy/Shooter/Shooter.png" id="1_senbc"]
 
 [sub_resource type="Animation" id="Animation_r8rng"]
 resource_name = "idle"
@@ -120,7 +120,7 @@ height = 32.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-31, -31)
-texture = ExtResource("1_5veg4")
+texture = ExtResource("1_senbc")
 centered = false
 hframes = 4
 vframes = 5

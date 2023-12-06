@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ko2kh6kudnh"
-path="res://.godot/imported/Guard_pic.png-0aef55c95606514fe051beef036ea6df.ctex"
+uid="uid://cyf5eq6upbbj0"
+path="res://.godot/imported/Woodcutter_All_PIC.png-2f79e59ee7acd5921ff68e401e777a58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Entities/Enemy/Guards/Guard_pic.png"
-dest_files=["res://.godot/imported/Guard_pic.png-0aef55c95606514fe051beef036ea6df.ctex"]
+source_file="res://assets/Entities/Enemy/Woodcutter/Woodcutter_All_PIC.png"
+dest_files=["res://.godot/imported/Woodcutter_All_PIC.png-2f79e59ee7acd5921ff68e401e777a58.ctex"]
 
 [params]
 
