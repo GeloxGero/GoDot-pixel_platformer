@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1rgr5rkrocka"
-path="res://.godot/imported/Enemy3_BallShooter_Hurt.png-05e75a36c1b32d7fef651871a512a1f2.ctex"
+uid="uid://dk3eyrsasp8j7"
+path="res://.godot/imported/Shooter.png-9c2be26a671bdab8b17d1b0807faeb89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Entities/Enemy/BallShooter/Enemy3_BallShooter_Hurt.png"
-dest_files=["res://.godot/imported/Enemy3_BallShooter_Hurt.png-05e75a36c1b32d7fef651871a512a1f2.ctex"]
+source_file="res://assets/Entities/Enemy/Shooter.png"
+dest_files=["res://.godot/imported/Shooter.png-9c2be26a671bdab8b17d1b0807faeb89.ctex"]
 
 [params]
 
