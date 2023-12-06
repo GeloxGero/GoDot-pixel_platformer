@@ -12,6 +12,7 @@ region = Rect2(240, 216, 16, 24)
 size = Vector2(15, 24)
 
 [node name="Garbage" type="Area2D"]
+collision_mask = 3
 script = ExtResource("1_jb2i4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
