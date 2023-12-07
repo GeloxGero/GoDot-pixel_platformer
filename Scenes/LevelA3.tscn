@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://7vb20e8tc1wr"]
+[gd_scene load_steps=19 format=3 uid="uid://7vb20e8tc1wr"]
 
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="1_kdpcf"]
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_onv1c"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://assets/Environment/Misc/Start/tile_map1.tscn" id="7_2gtr4"]
 [ext_resource type="Texture2D" uid="uid://cnw3tx21w3cy7" path="res://assets/Environment/Level3/Factory Objects all.png" id="9_vc3go"]
 [ext_resource type="Texture2D" uid="uid://b70podauug000" path="res://assets/Environment/Level3/Tileset.png" id="10_lqhn6"]
+[ext_resource type="PackedScene" uid="uid://bf3clf2c0ulrc" path="res://assets/Entities/Enemy/Shooter/ball_shooter.tscn" id="12_lfbap"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kc06n"]
 texture = ExtResource("9_vc3go")
@@ -1334,6 +1335,7 @@ size = Vector2(20, 285.5)
 size = Vector2(20, 162)
 
 [node name="LevelA3" type="Node2D"]
+z_index = 19
 position = Vector2(0, -1)
 script = ExtResource("1_onv1c")
 limit_x_left = 110
@@ -1522,6 +1524,36 @@ shape = SubResource("RectangleShape2D_gip2l")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EdgeLeft"]
 position = Vector2(6, 82)
 shape = SubResource("RectangleShape2D_vtef0")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="BallShooter" parent="Enemies" instance=ExtResource("12_lfbap")]
+position = Vector2(645, 111)
+
+[node name="BallShooter2" parent="Enemies" instance=ExtResource("12_lfbap")]
+z_index = 2
+position = Vector2(748, -97)
+
+[node name="BallShooter3" parent="Enemies" instance=ExtResource("12_lfbap")]
+position = Vector2(1204, -32)
+
+[node name="BallShooter4" parent="Enemies" instance=ExtResource("12_lfbap")]
+position = Vector2(1070, 111)
+
+[node name="BallShooter5" parent="Enemies" instance=ExtResource("12_lfbap")]
+position = Vector2(1442, 96)
+
+[node name="BallShooter6" parent="Enemies" instance=ExtResource("12_lfbap")]
+position = Vector2(2099, 112)
+
+[node name="BallShooter7" parent="Enemies" instance=ExtResource("12_lfbap")]
+position = Vector2(2414, 15)
+
+[node name="BallShooter8" parent="Enemies" instance=ExtResource("12_lfbap")]
+position = Vector2(2582, 15)
+
+[node name="BallShooter9" parent="Enemies" instance=ExtResource("12_lfbap")]
+position = Vector2(2967, 2)
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]
