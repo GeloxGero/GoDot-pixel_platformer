@@ -35,7 +35,18 @@ func inst(node: PackedScene, position: Vector2):
 	add_child(object)
 	object.position = position
 
+func update_player():
+		data.player = {
+		"position_y" = position.y,
+		"position_x" = position.x
+	}
+
 func _ready():
+	var img = get_viewport().get_texture()
+	img.save_png("user://screenshot.png")
+	
+	
+	
 	print("asfas")
 	if !Persist.Scene1:
 		_initial_data()
@@ -45,7 +56,7 @@ func _ready():
 		inst(Garbage, Vector2(179, 70))
 		inst(Garbage, Vector2(336, 35))
 		inst(Garbage, Vector2(537, 5))
-		print(data)
+
 	else:
 		$Player.position = Vector2(data.player.position_x, data.player.position_y - y_offset)
 	
