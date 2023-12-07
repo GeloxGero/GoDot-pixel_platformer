@@ -9,7 +9,7 @@ var y_offset = -82
 # Called when the node enters the scene tree for the first time.
 
 var Garbage = preload("res://assets/Environment/Misc/Trash/Garbage.tscn")
-var Enemy = preload("res://assets/Entities/Enemy/wood_cutter.tscn")
+var Enemy = preload("res://assets/Entities/Enemy/Woodcutter/wood_cutter.tscn")
 
 var data
 
@@ -36,6 +36,7 @@ func inst(node: PackedScene, position: Vector2):
 	object.position = position
 
 func _ready():
+	print("asfas")
 	if !Persist.Scene1:
 		_initial_data()
 		inst(Enemy, Vector2(664, -194))

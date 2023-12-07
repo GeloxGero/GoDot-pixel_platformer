@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c7erqodpldp3p" path="res://assets/Environment/Level2/water_tileset.png" id="8_floso"]
 [ext_resource type="Texture2D" uid="uid://cjrdekkhiyy6s" path="res://assets/Environment/Misc/Start/tilemap.png" id="9_20uqx"]
 [ext_resource type="Texture2D" uid="uid://brcxdck8iufk0" path="res://assets/Environment/Level2/dirty_water_tileset2.png" id="11_nrs5a"]
-[ext_resource type="PackedScene" uid="uid://leaokftbf25j" path="res://assets/Entities/Enemy/wood_cutter.tscn" id="13_j3571"]
+[ext_resource type="PackedScene" uid="uid://leaokftbf25j" path="res://assets/Entities/Enemy/Woodcutter/wood_cutter.tscn" id="13_j3571"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_opans"]
 texture = ExtResource("9_20uqx")

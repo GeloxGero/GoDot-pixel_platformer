@@ -1,13 +1,9 @@
 extends Node2D
 
-var inc = 0
-
-
 @export var limit_x_left : int
 @export var limit_x_right : int
 @export var limit_y_up : int
 @export var limit_y_down : int
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,9 +14,10 @@ func _ready():
 	camera.limit_top = limit_y_up
 	camera.limit_bottom = limit_y_down
 
+
 func _on_edge_left_body_entered(body):
-	if body.name == "Player":
-		get_tree().change_scene_to_file(StageManager.Level1)
+	if body.has_method("mc"):
+		get_tree().change_scene_to_file(StageManager.Level2)
 
 
 func _on_edge_left_body_exited(body):
@@ -31,7 +28,7 @@ func _on_edge_left_body_exited(body):
 func _on_edge_right_body_entered(body):
 	print(body.has_method("mc"))
 	if body.has_method("mc"):
-		get_tree().change_scene_to_file(StageManager.Level3)
+		get_tree().change_scene_to_file(StageManager.Level1)
 
 
 func _on_edge_right_body_exited(body):
