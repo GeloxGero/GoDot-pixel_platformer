@@ -92,7 +92,10 @@ func _physics_process(delta):
 
 	
 	
-	
+	velocity = dir * speed * 5
+	move_and_slide()
+
+func temp():
 	if direction:
 		velocity.x = direction.x * movement_speed	
 	else:
@@ -100,8 +103,7 @@ func _physics_process(delta):
 		
 	if not can_attack:
 		velocity.x = 0
-	move_and_slide()
-
+		
 func jump():
 	jumped = true
 

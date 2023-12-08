@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var sprite = $Sprite2D
 @onready var wallchecker = $WallChecker
 @onready var playerchecker = $PlayerChecker
+@onready var timer = $Timer
 
 @export var projectile: PackedScene
 
@@ -10,6 +11,7 @@ enum State {WALK, CHASE, IDLE, DAMAGED, DEATH, ATTACK}
 var player
 var flipped
 var direction
+var can_shoot = true
 
 func _physics_process(delta):
 	check_death()
@@ -27,8 +29,10 @@ func _physics_process(delta):
 		wallchecker.rotation_degrees = -90
 		playerchecker.rotation_degrees = -90
 	
-	if playerchecker.is_colliding():
+	if playerchecker.is_colliding() and can_shoot:
 		shoot()
+		can_shoot = false
+		timer.start(1)
 	
 
 
@@ -65,3 +69,7 @@ func _on_area_2d_body_entered(body):
 func _on_area_2d_body_exited(body):
 	if body.has_method("mc"):
 		player = null
+
+
+func _on_timer_timeout():
+	can_shoot = true
