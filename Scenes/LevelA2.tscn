@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://1bmalf5j3q3v"]
+[gd_scene load_steps=26 format=3 uid="uid://1bmalf5j3q3v"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_vl6vr"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_kedl6"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://cjrdekkhiyy6s" path="res://assets/Environment/Misc/Start/tilemap.png" id="9_20uqx"]
 [ext_resource type="Texture2D" uid="uid://brcxdck8iufk0" path="res://assets/Environment/Level2/dirty_water_tileset2.png" id="11_nrs5a"]
 [ext_resource type="PackedScene" uid="uid://leaokftbf25j" path="res://assets/Entities/Enemy/Woodcutter/wood_cutter.tscn" id="13_j3571"]
+[ext_resource type="PackedScene" uid="uid://cqnb47ywotbur" path="res://assets/Environment/Common Environment/garbage_can.tscn" id="16_kwww4"]
+[ext_resource type="PackedScene" uid="uid://cyp7qpsfeer5m" path="res://assets/Environment/Misc/Trash/Garbage.tscn" id="17_j7k8b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_opans"]
 texture = ExtResource("9_20uqx")
@@ -1433,6 +1435,56 @@ shape = SubResource("RectangleShape2D_gip2l")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EdgeLeft"]
 position = Vector2(6, 82)
 shape = SubResource("RectangleShape2D_vtef0")
+
+[node name="GarbageCan" parent="." instance=ExtResource("16_kwww4")]
+position = Vector2(39, 112)
+
+[node name="Garbage" type="Node2D" parent="."]
+
+[node name="Garbage" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(353, 25)
+
+[node name="Garbage2" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(392, 117)
+
+[node name="Garbage3" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(300, 131)
+
+[node name="Garbage4" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(153, -35)
+
+[node name="Garbage5" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(144, 115)
+
+[node name="Garbage6" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(596, 117)
+
+[node name="Garbage7" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(683, 8)
+
+[node name="Garbage8" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(424, -51)
+
+[node name="Garbage9" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(565, -28)
+
+[node name="Garbage10" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(1044, 53)
+
+[node name="Garbage11" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(645, 150)
+
+[node name="Garbage12" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(719, 145)
+
+[node name="Garbage13" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(1520, -69)
+
+[node name="Garbage14" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(1041, 42)
+
+[node name="Garbage2" parent="." instance=ExtResource("17_j7k8b")]
+position = Vector2(47, -90)
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]

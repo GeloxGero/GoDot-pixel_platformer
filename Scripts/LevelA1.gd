@@ -27,11 +27,6 @@ func inst(node: PackedScene, position: Vector2):
 			"position_y" = position.y,
 			"position_x" = position.x
 		})
-	elif object.has_method("garbage"):
-		data.garbage.append({
-			"position_y" = position.y,
-			"position_x" = position.x
-		})
 	add_child(object)
 	object.position = position
 
@@ -46,11 +41,8 @@ func _ready():
 	if !Persist.Scene1:
 		_initial_data()
 		inst(Enemy, Vector2(664, -194))
-		inst(Enemy, Vector2(903, -164))
-		inst(Enemy, Vector2(1563, -97))
-		inst(Garbage, Vector2(179, 70))
-		inst(Garbage, Vector2(336, 35))
-		inst(Garbage, Vector2(537, 5))
+		#inst(Enemy, Vector2(903, -164))
+		#inst(Enemy, Vector2(1563, -97))
 		update_player()
 	else:
 		data = Persist.Scene1
