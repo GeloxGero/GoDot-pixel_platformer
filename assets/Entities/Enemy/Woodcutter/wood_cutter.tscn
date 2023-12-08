@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://leaokftbf25j"]
+[gd_scene load_steps=16 format=3 uid="uid://leaokftbf25j"]
 
 [ext_resource type="Script" path="res://Scripts/wood_cutter.gd" id="1_6txvm"]
 [ext_resource type="Texture2D" uid="uid://1teq21s8dv7g" path="res://assets/Entities/Enemy/Woodcutter/woodcutter.png" id="2_rojqd"]
-[ext_resource type="Script" path="res://Scripts/Damageable.gd" id="3_64gmo"]
 
 [sub_resource type="Animation" id="Animation_nyxg1"]
 length = 0.001
@@ -189,9 +188,6 @@ position = Vector2(0, -13)
 scale = Vector2(1.53107, 1.29121)
 shape = SubResource("CapsuleShape2D_p8fno")
 
-[node name="Damageable" type="Node" parent="."]
-script = ExtResource("3_64gmo")
-
 [node name="DetectionArea" type="Area2D" parent="."]
 scale = Vector2(1, 0.52)
 collision_layer = 0
@@ -225,6 +221,12 @@ shape = SubResource("RectangleShape2D_ef3yy")
 position = Vector2(0, -13)
 shape = SubResource("CapsuleShape2D_jkox5")
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
@@ -232,3 +234,4 @@ shape = SubResource("CapsuleShape2D_jkox5")
 [connection signal="body_exited" from="DamagingArea" to="." method="_on_damaging_area_body_exited"]
 [connection signal="body_entered" from="AttackingArea" to="." method="_on_attacking_area_body_entered"]
 [connection signal="body_exited" from="AttackingArea" to="." method="_on_attacking_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

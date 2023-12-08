@@ -7,8 +7,10 @@ extends CharacterBody2D
 @export var health_points : int = 20
 @export var attack_left_position : Vector2
 @export var attack_right_position : Vector2
+@export var player: Node2D
 
 @onready var animation = $AnimationPlayer
+@onready var nav_agent = $NavigationAgent2D
 
 
 var hitpoints = 100
@@ -19,15 +21,27 @@ enum State {WALK, CHASE, IDLE, DAMAGED, DEATH, ATTACK}
 var attacking = false
 var _state = State.IDLE
 var speed = 30.0
-var player = null
 var flipped = false
 
 var gravity = 980 # The force of gravity
 
 var direction: Vector2 = starting_move_direction
 
+func _ready():
+	player = get_parent().get_node("Player")
+
+
+func makepath() -> void:
+	nav_agent.target_position = player.position
+	
+
+
 func _physics_process(delta):
 	check_death()
+	
+	var dir = to_local(nav_agent.get_next_path_position()).normalized()
+	
+	
 	
 	
 	#flip sprite and area2Ds
@@ -135,4 +149,10 @@ func _on_animation_player_animation_finished(anim_name):
 
 func enemy():
 	pass
+	
+	
 
+
+
+func _on_timer_timeout():
+	makepath()
