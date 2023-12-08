@@ -114,7 +114,6 @@ func check_death():
 		_state = State.DEATH
 
 func _on_attacking_area_body_entered(body):
-	print(body)
 	if body.name == "Player":
 		_state = State.ATTACK
 
