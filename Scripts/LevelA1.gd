@@ -27,11 +27,6 @@ func inst(node: PackedScene, position: Vector2):
 			"position_y" = position.y,
 			"position_x" = position.x
 		})
-	elif object.has_method("garbage"):
-		data.garbage.append({
-			"position_y" = position.y,
-			"position_x" = position.x
-		})
 	add_child(object)
 	object.position = position
 
@@ -48,15 +43,12 @@ func _ready():
 		inst(Enemy, Vector2(664, -194))
 		inst(Enemy, Vector2(903, -164))
 		inst(Enemy, Vector2(1563, -97))
-		inst(Garbage, Vector2(179, 70))
-		inst(Garbage, Vector2(336, 35))
-		inst(Garbage, Vector2(537, 5))
 		update_player()
 	else:
 		data = Persist.Scene1
 		$Player.position = Vector2(data.player.position_x, data.player.position_y)
 	
-	
+	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/initial.dialogue"), "level1")
 	#MusicController.play_music()
 
 	

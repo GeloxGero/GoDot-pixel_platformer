@@ -10,6 +10,9 @@ extends CharacterBody2D
 
 @onready var animation = $AnimationPlayer
 @onready var nav_agent = $NavigationAgent2D
+@onready var wall_check = $RayCast2D
+@onready var attack_detect = $AttackingArea/AttackingDetect
+@onready var attack_collide = $DamagingArea/AttackingCollide
 
 
 var hitpoints = 100
@@ -23,7 +26,7 @@ var speed = 30.0
 var flipped = false
 
 var gravity = 980 # The force of gravity
-
+var jumped : bool = false
 var direction: Vector2 = starting_move_direction
 
 var player
@@ -35,9 +38,13 @@ func makepath(player: Node2D) -> void:
 
 func _physics_process(delta):
 	check_death()
-	
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	
+	if wall_check.is_colliding() and player:
+		jump()
+	
+	if jumped:
+		velocity.y = -300
 	
 	if player:
 		direction = check_direction(player)
@@ -45,18 +52,20 @@ func _physics_process(delta):
 	#flip sprite and area2Ds
 	if flipped:
 		$Sprite2D.flip_h = true
-		$AttackingArea/AttackingDetect.position = attack_right_position
-		$DamagingArea/AttackingCollide.position = attack_right_position
+		attack_detect.position = attack_right_position
+		attack_collide.position = attack_right_position
+		wall_check.rotation_degrees = -90
 	else:
 		$Sprite2D.flip_h = false
-		$AttackingArea/AttackingDetect.position = attack_left_position
-		$DamagingArea/AttackingCollide.position = attack_left_position
-	
-	print($AttackingArea/AttackingDetect.position)
+		attack_detect.position = attack_left_position
+		attack_collide.position = attack_left_position
+		wall_check.rotation_degrees = 90
 
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		jumped = false
 	
+
 	
 
 	match _state:
@@ -93,7 +102,8 @@ func _physics_process(delta):
 		velocity.x = 0
 	move_and_slide()
 
-
+func jump():
+	jumped = true
 
 func take_damage(damage):
 	hitpoints -= damage
@@ -104,7 +114,6 @@ func check_death():
 		_state = State.DEATH
 
 func _on_attacking_area_body_entered(body):
-	print(body)
 	if body.name == "Player":
 		_state = State.ATTACK
 
