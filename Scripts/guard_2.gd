@@ -13,6 +13,10 @@ var flipped
 var direction
 var can_shoot = true
 
+func _ready():
+	print(sprite)
+	print(timer)
+
 func _physics_process(delta):
 	check_death()
 	if player:
@@ -61,6 +65,7 @@ func check_direction(player : CharacterBody2D) -> Vector2:
 		flipped = true
 		return Vector2.RIGHT
 
+
 func _on_area_2d_body_entered(body):
 	if body.has_method("mc"):
 		player = body
@@ -72,4 +77,5 @@ func _on_area_2d_body_exited(body):
 
 
 func _on_timer_timeout():
+	print("ASFASF")
 	can_shoot = true
