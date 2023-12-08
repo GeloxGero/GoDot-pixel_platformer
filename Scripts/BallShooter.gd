@@ -12,7 +12,6 @@ enum STATE { HIT, ALIVE, SHOOT, DEAD }
 var health := 100
 var currState := STATE.ALIVE
 
-<<<<<<< HEAD
 class TurretProjectile extends Area2D:
 	@onready var sprite := Sprite2D.new()
 	@onready var collision := CollisionShape2D.new()
@@ -46,9 +45,7 @@ class TurretProjectile extends Area2D:
 		if body.has_method("mc"):
 			body.take_damage(1)
 			self.queue_free()
-
-=======
->>>>>>> bd8dd73 (asfas)
+			
 func _ready():
 	random.randomize()
 	timer.set_wait_time(random.randf_range(0.5, 1.5))
@@ -64,10 +61,6 @@ func _process(_delta: float) -> void:
 		STATE.DEAD:
 			animation.play("death")
 
-<<<<<<< HEAD
-=======
-
->>>>>>> bd8dd73 (asfas)
 # Spawns a projectile at the marker's position.
 func shoot():
 	var bullet = projectile.instantiate()
