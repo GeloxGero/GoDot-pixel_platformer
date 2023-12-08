@@ -90,7 +90,6 @@ func check_death():
 	if hitpoints <= 0:
 		_state = State.DEATH
 
-
 func _on_attacking_area_body_entered(body):
 	if body.name == "Player":
 		_state = State.ATTACK
@@ -136,3 +135,4 @@ func _on_animation_player_animation_finished(anim_name):
 
 func enemy():
 	pass
+

@@ -36,9 +36,10 @@ func inst(node: PackedScene, position: Vector2):
 	object.position = position
 
 func update_player():
-		data.player = {
-		"position_y" = position.y,
-		"position_x" = position.x
+	var player = $Player
+	data.player = {
+		"position_y" = player.position.y,
+		"position_x" = player.position.x
 	}
 
 func _ready():	
@@ -50,9 +51,11 @@ func _ready():
 		inst(Garbage, Vector2(179, 70))
 		inst(Garbage, Vector2(336, 35))
 		inst(Garbage, Vector2(537, 5))
-
+		update_player()
 	else:
-		$Player.position = Vector2(data.player.position_x, data.player.position_y - y_offset)
+		data = Persist.Scene1
+		$Player.position = Vector2(data.player.position_x - 50, data.player.position_y)
+	
 	
 	#MusicController.play_music()
 
@@ -67,6 +70,7 @@ func _ready():
 
 func _on_edge_right_body_entered(body):
 	if body.name == "Player":
+		update_player()
 		Persist.update_data(data, "Scene1")
 		get_tree().change_scene_to_file(StageManager.Level2)
 

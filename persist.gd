@@ -22,20 +22,21 @@ func _process(delta):
 
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
-	if Scene1:
-		file.store_var(Scene1)
-	if Scene2:
-		file.store_var(Scene2)
-	if Scene3:
-		file.store_var(Scene3)
-	if Player:
-		file.store_var(Player)
-	if Globals:
-		file.store_var(Globals)
+	file.store_var(Scene1)
+	file.store_var(Scene2)
+	file.store_var(Scene3)
+	file.store_var(Player)
+	file.store_var(Globals)
 	#file.store_var()
 
 func load_data():
-	pass
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path, FileAccess.READ)
+		Scene1 = file.get_var(Scene1)
+		Scene2 = file.get_var(Scene2)
+		Scene3 = file.get_var(Scene3)
+		Player = file.get_var(Player)
+		Globals = file.get_var(Globals)
 
 func update_data(data: Dictionary, res: String):
 	match res:

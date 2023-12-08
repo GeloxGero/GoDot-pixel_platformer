@@ -211,7 +211,6 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func _on_ladder_checker_body_entered(body):
-	print(body)
 	if body.name == "TileMap2":
 		on_ladder = true
 	
