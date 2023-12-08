@@ -1376,14 +1376,21 @@ scale = Vector2(0.609089, 1.01182)
 position = Vector2(1482.08, 237.519)
 scale = Vector2(0.609089, 1.01182)
 
-[node name="Seed" parent="." instance=ExtResource("7_bo81s")]
+[node name="Seeds" type="Node2D" parent="."]
+
+[node name="Seed" parent="Seeds" instance=ExtResource("7_bo81s")]
 position = Vector2(567, 115)
 
-[node name="Seed3" parent="." instance=ExtResource("7_bo81s")]
+[node name="Seed3" parent="Seeds" instance=ExtResource("7_bo81s")]
 position = Vector2(102, -42)
 
-[node name="Seed2" parent="." instance=ExtResource("7_bo81s")]
+[node name="Seed2" parent="Seeds" instance=ExtResource("7_bo81s")]
 position = Vector2(1145, -48)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="WoodCutter" parent="Enemies" instance=ExtResource("13_j3571")]
+position = Vector2(874, 121)
 
 [node name="Blank" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_qae1i")
@@ -1426,9 +1433,6 @@ shape = SubResource("RectangleShape2D_gip2l")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EdgeLeft"]
 position = Vector2(6, 82)
 shape = SubResource("RectangleShape2D_vtef0")
-
-[node name="WoodCutter" parent="." instance=ExtResource("13_j3571")]
-position = Vector2(874, 121)
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]
