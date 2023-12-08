@@ -22,10 +22,9 @@ func set_direction(vector: Vector2):
 func _on_body_entered(body):
 	if body.name == "TileMap":
 		self.queue_free()
-	if body.has_method("enemy"):
-		if body._state != body.State.DEATH:
-			body.take_damage(20)
-			self.queue_free()
+	if body.has_method("mc"):
+		body.take_damage(1)
+		self.queue_free()
 
 	if body.has_method("turret"):
 		body.take_damage(20)

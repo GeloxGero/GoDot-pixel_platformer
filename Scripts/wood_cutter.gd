@@ -35,9 +35,14 @@ func makepath(player: Node2D) -> void:
 	nav_agent.target_position.x = player.position.x
 	nav_agent.target_position.y = player.position.y + 85
 
+func _ready():
+	print(to_local(nav_agent.get_next_path_position()))
+	print(to_local(nav_agent.get_next_path_position()).normalized())
+
 
 func _physics_process(delta):
 	check_death()
+	
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	
 	if wall_check.is_colliding() and player:

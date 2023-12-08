@@ -25,7 +25,7 @@ class TurretProjectile extends Area2D:
 	func _process(_delta: float) -> void:
 		self.position -= transform.x * speed
 
-	func _on_Area2D_area_entered(area: Area2D) -> void:
+	func _on_Area2D_body_entered(area: Area2D) -> void:
 		if area.is_in_group("player"):
 			area.take_damage(10)
 
