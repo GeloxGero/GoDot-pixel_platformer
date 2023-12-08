@@ -4,7 +4,7 @@ var random = RandomNumberGenerator.new()
 var speed : float = 4
 var direction: Vector2
 var max_time = 2
-var snap 
+var snap
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,14 +16,14 @@ func _process(_delta):
 		self.queue_free()
 	if Global.TIMER == snap:
 		max_time -= 1
-	
-	
+
+
 	if direction == Vector2.LEFT:
 		self.position -= transform.x * speed
 	else:
 		self.position += transform.x * speed
 
-	
+
 
 
 func set_direction(vector: Vector2):
@@ -37,4 +37,9 @@ func _on_body_entered(body):
 		if body._state != body.State.DEATH:
 			body.take_damage(20)
 			self.queue_free()
-		
+
+	if body.has_method("turret"):
+		body.take_damage(20)
+
+func playerProjectile():
+	pass
