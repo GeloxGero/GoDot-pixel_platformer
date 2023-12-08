@@ -7,7 +7,6 @@ extends CharacterBody2D
 @export var health_points : int = 20
 @export var attack_left_position : Vector2
 @export var attack_right_position : Vector2
-@export var player: Node2D
 
 @onready var animation = $AnimationPlayer
 @onready var nav_agent = $NavigationAgent2D
@@ -27,13 +26,11 @@ var gravity = 980 # The force of gravity
 
 var direction: Vector2 = starting_move_direction
 
-func _ready():
-	player = get_parent().get_node("Player")
+var player
 
-
-func makepath() -> void:
-	nav_agent.target_position = player.position
-	
+func makepath(player: Node2D) -> void:
+	nav_agent.target_position.x = player.position.x
+	nav_agent.target_position.y = player.position.y + 85
 
 
 func _physics_process(delta):
@@ -42,7 +39,8 @@ func _physics_process(delta):
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	
 	
-	
+	if player:
+		direction = check_direction(player)
 	
 	#flip sprite and area2Ds
 	if flipped:
@@ -54,7 +52,8 @@ func _physics_process(delta):
 		$AttackingArea/AttackingDetect.position = attack_left_position
 		$DamagingArea/AttackingCollide.position = attack_left_position
 	
-	
+	print($AttackingArea/AttackingDetect.position)
+
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
@@ -105,6 +104,7 @@ func check_death():
 		_state = State.DEATH
 
 func _on_attacking_area_body_entered(body):
+	print(body)
 	if body.name == "Player":
 		_state = State.ATTACK
 
@@ -128,17 +128,12 @@ func _on_damaging_area_body_exited(_body):
 
 func _on_detection_area_body_entered(body):
 	if body.name == "Player":
-		if body.position < self.position:
-			direction = Vector2.LEFT
-			flipped = false
-		else:
-			direction =  Vector2.RIGHT
-			flipped = true
+		player = body
 		_state = State.CHASE
-
 
 func _on_detection_area_body_exited(body):
 	if body.name == "Player":
+		player = null
 		_state = State.IDLE
 
 func _on_animation_player_animation_finished(anim_name):
@@ -152,7 +147,17 @@ func enemy():
 	
 	
 
-
+func check_direction(player : CharacterBody2D) -> Vector2:
+	if player.position < self.position:
+		flipped = false
+		return Vector2.LEFT
+	else:
+		flipped = true
+		return Vector2.RIGHT
 
 func _on_timer_timeout():
-	makepath()
+	if player:
+		makepath(player)
+	else:
+		pass
+	

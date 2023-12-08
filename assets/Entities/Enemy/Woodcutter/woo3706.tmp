@@ -154,10 +154,10 @@ height = 32.0
 size = Vector2(184, 86.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixyp"]
-size = Vector2(67.7019, 11.5)
+size = Vector2(20, 11.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef3yy"]
-size = Vector2(68.445, 11)
+size = Vector2(19.3395, 11)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkox5"]
 radius = 11.0
@@ -167,8 +167,8 @@ height = 42.0
 collision_mask = 2
 script = ExtResource("1_6txvm")
 can_attack = true
-attack_left_position = Vector2(-30, -11)
-attack_right_position = Vector2(31, -11)
+attack_left_position = Vector2(-83, 14)
+attack_right_position = Vector2(-27, 14)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -198,16 +198,21 @@ scale = Vector2(1.04018, 0.989087)
 shape = SubResource("RectangleShape2D_w0nnx")
 
 [node name="DamagingArea" type="Area2D" parent="."]
+position = Vector2(55, -24)
 monitoring = false
 
 [node name="AttackingCollide" type="CollisionShape2D" parent="DamagingArea"]
-position = Vector2(-30, -11)
+position = Vector2(-83, 14)
+scale = Vector2(1.56, 1.92)
 shape = SubResource("RectangleShape2D_1ixyp")
 
 [node name="AttackingArea" type="Area2D" parent="."]
+position = Vector2(55, -24)
+scale = Vector2(1.0621, 1.01412)
 
 [node name="AttackingDetect" type="CollisionShape2D" parent="AttackingArea"]
-position = Vector2(-30, -11)
+position = Vector2(-83, 14)
+scale = Vector2(1.56, 1.92)
 shape = SubResource("RectangleShape2D_ef3yy")
 
 [node name="SelfDamage" type="Area2D" parent="."]
