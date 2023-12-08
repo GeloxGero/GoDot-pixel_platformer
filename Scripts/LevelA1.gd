@@ -41,8 +41,8 @@ func _ready():
 	if !Persist.Scene1:
 		_initial_data()
 		inst(Enemy, Vector2(664, -194))
-		#inst(Enemy, Vector2(903, -164))
-		#inst(Enemy, Vector2(1563, -97))
+		inst(Enemy, Vector2(903, -164))
+		inst(Enemy, Vector2(1563, -97))
 		update_player()
 	else:
 		data = Persist.Scene1
