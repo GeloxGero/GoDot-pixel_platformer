@@ -48,6 +48,7 @@ func game_over():
 
 func restart():
 	Global.reset()
+	Persist.reset()
 	$GameOverUI.hide()
 	get_tree().paused = false
 	StageManager.restart()
