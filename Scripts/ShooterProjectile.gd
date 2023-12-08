@@ -31,17 +31,11 @@ func set_direction(vector: Vector2):
 
 
 func _on_body_entered(body):
-	print(body)
 	if body.name == "TileMap":
 		self.queue_free()
-	if body.name == "FactoryTile":
-		self.queue_free()
-	if body.has_method("enemy"):
-		body.take_damage(20)
+	if body.has_method("mc"):
+		body.take_damage(1)
 		self.queue_free()
 
-	if body.has_method("turret"):
-		body.take_damage(20)
-
-func playerProjectile():
+func turret_projectile():
 	pass

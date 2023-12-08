@@ -218,4 +218,4 @@ func _on_ladder_checker_body_entered(body):
 func _on_ladder_checker_body_exited(body):
 	if body.name == "TileMap2":
 		on_ladder = false
-		
+	

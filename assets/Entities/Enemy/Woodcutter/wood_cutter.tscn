@@ -151,7 +151,7 @@ radius = 7.0
 height = 32.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0nnx"]
-size = Vector2(184, 86.5)
+size = Vector2(310.231, 189.247)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixyp"]
 size = Vector2(67.7019, 11.5)
@@ -164,6 +164,7 @@ radius = 11.0
 height = 42.0
 
 [node name="WoodCutter" type="CharacterBody2D"]
+collision_layer = 64
 collision_mask = 2
 script = ExtResource("1_6txvm")
 can_attack = true
@@ -193,7 +194,7 @@ scale = Vector2(1, 0.52)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(0, -26.75)
+position = Vector2(0, -80.7692)
 scale = Vector2(1.04018, 0.989087)
 shape = SubResource("RectangleShape2D_w0nnx")
 

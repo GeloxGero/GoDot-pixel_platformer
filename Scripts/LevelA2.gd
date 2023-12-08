@@ -1,8 +1,5 @@
 extends Node2D
 
-var inc = 0
-
-
 @export var limit_x_left : int
 @export var limit_x_right : int
 @export var limit_y_up : int

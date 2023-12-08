@@ -97,7 +97,7 @@ func _physics_process(delta):
 
 	
 	
-	velocity = dir * speed * 5
+	velocity.x = dir.x * speed * 5
 	move_and_slide()
 
 func temp():
@@ -176,4 +176,3 @@ func _on_timer_timeout():
 		makepath(player)
 	else:
 		pass
-	

@@ -5,11 +5,14 @@ extends CharacterBody2D
 @onready var random := RandomNumberGenerator.new()
 @onready var marker := $Marker2D # get the Marker2D node
 
+@export var projectile : PackedScene
+
 enum STATE { HIT, ALIVE, SHOOT, DEAD }
 
 var health := 100
 var currState := STATE.ALIVE
 
+<<<<<<< HEAD
 class TurretProjectile extends Area2D:
 	@onready var sprite := Sprite2D.new()
 	@onready var collision := CollisionShape2D.new()
@@ -44,11 +47,11 @@ class TurretProjectile extends Area2D:
 			body.take_damage(1)
 			self.queue_free()
 
+=======
+>>>>>>> bd8dd73 (asfas)
 func _ready():
 	random.randomize()
 	timer.set_wait_time(random.randf_range(0.5, 1.5))
-
-	add_child(timer)
 
 func _process(_delta: float) -> void:
 	match (currState):
@@ -61,12 +64,18 @@ func _process(_delta: float) -> void:
 		STATE.DEAD:
 			animation.play("death")
 
-# Spawns a projectile at the marker's position.
-func spawn_projectile():
-	var projectile := TurretProjectile.new()
-	projectile.global_position = marker.global_position
+<<<<<<< HEAD
+=======
 
-	get_parent().add_child(projectile)
+>>>>>>> bd8dd73 (asfas)
+# Spawns a projectile at the marker's position.
+func shoot():
+	var bullet = projectile.instantiate()
+	owner.add_child(bullet)
+	bullet.position = position
+
+	bullet.set_direction(Vector2.LEFT) 
+
 
 # Take damage function in taking damage of turret
 func take_damage(damage: int) -> void:
@@ -83,14 +92,21 @@ func turret():
 # Function connections
 
 func _on_timer_timeout() -> void:
+	if currState == STATE.DEAD:
+		self.queue_free()
 	currState = STATE.SHOOT
-
-	spawn_projectile()
+	shoot()
 	timer.set_wait_time(random.randf_range(1.0, 3.5))
 
 
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	print("Animation finished: ", anim_name)
+
+
+func enemy():
+	pass
+
+
+func _on_animation_player_animation_finished(anim_name):
+	print(anim_name)
 	if anim_name == "death":
 		self.queue_free()
 
@@ -99,3 +115,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 
 	if anim_name == "shoot":
 		currState = STATE.ALIVE
+
+
+func _on_animation_player_animation_started(anim_name):
+	pass
