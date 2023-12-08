@@ -19,7 +19,7 @@ func _initial_data():
 		"garbage": [],
 		"enemy": [],
 	}
-	
+
 func inst(node: PackedScene, position: Vector2):
 	var object = node.instantiate()
 	if object.has_method("enemy"):
@@ -54,7 +54,7 @@ func _ready():
 		update_player()
 	else:
 		data = Persist.Scene1
-		$Player.position = Vector2(data.player.position_x - 50, data.player.position_y)
+		$Player.position = Vector2(data.player.position_x, data.player.position_y)
 	
 	
 	#MusicController.play_music()
@@ -71,6 +71,7 @@ func _ready():
 func _on_edge_right_body_entered(body):
 	if body.name == "Player":
 		update_player()
+		data.player.position_x -= 50
 		Persist.update_data(data, "Scene1")
 		get_tree().change_scene_to_file(StageManager.Level2)
 

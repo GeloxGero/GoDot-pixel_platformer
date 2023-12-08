@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xr7ujei1eopd"
-path="res://.godot/imported/Visayan Warty Pig_NPC.png-a1b3ad7c1add8c5f05a6e76125daff7c.ctex"
+uid="uid://bb4pgb4kmlav4"
+path="res://.godot/imported/VisayanWartyPig.png-167936bc514ecaf6374df4dadb920d72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Entities/Good/Visayan Warty Pig/Visayan Warty Pig_NPC.png"
-dest_files=["res://.godot/imported/Visayan Warty Pig_NPC.png-a1b3ad7c1add8c5f05a6e76125daff7c.ctex"]
+source_file="res://assets/Entities/Good/Visayan Warty Pig/VisayanWartyPig.png"
+dest_files=["res://.godot/imported/VisayanWartyPig.png-167936bc514ecaf6374df4dadb920d72.ctex"]
 
 [params]
 
