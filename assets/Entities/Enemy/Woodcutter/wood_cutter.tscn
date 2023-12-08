@@ -146,21 +146,22 @@ _data = {
 "walk": SubResource("Animation_3pfxg")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0l56x"]
-size = Vector2(15.6753, 30.9617)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8fno"]
+radius = 7.0
+height = 32.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0nnx"]
 size = Vector2(184, 86.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixyp"]
-size = Vector2(41.8509, 11.5)
+size = Vector2(67.7019, 11.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef3yy"]
-size = Vector2(42.2225, 11)
+size = Vector2(68.445, 11)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkox5"]
 radius = 11.0
-height = 40.0
+height = 42.0
 
 [node name="WoodCutter" type="CharacterBody2D"]
 collision_mask = 2
@@ -183,9 +184,9 @@ vframes = 6
 frame = 35
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -12.011)
+position = Vector2(0, -13)
 scale = Vector2(1.53107, 1.29121)
-shape = SubResource("RectangleShape2D_0l56x")
+shape = SubResource("CapsuleShape2D_p8fno")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 scale = Vector2(1, 0.52)
@@ -200,19 +201,19 @@ shape = SubResource("RectangleShape2D_w0nnx")
 monitoring = false
 
 [node name="AttackingCollide" type="CollisionShape2D" parent="DamagingArea"]
-position = Vector2(-17.0745, -11)
+position = Vector2(-30, -11)
 shape = SubResource("RectangleShape2D_1ixyp")
 
 [node name="AttackingArea" type="Area2D" parent="."]
 
 [node name="AttackingDetect" type="CollisionShape2D" parent="AttackingArea"]
-position = Vector2(-16.8888, -11)
+position = Vector2(-30, -11)
 shape = SubResource("RectangleShape2D_ef3yy")
 
 [node name="SelfDamage" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelfDamage"]
-position = Vector2(0, -12)
+position = Vector2(0, -13)
 shape = SubResource("CapsuleShape2D_jkox5")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -222,12 +223,6 @@ debug_enabled = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 autostart = true
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(0, -22)
-rotation = 1.5708
-target_position = Vector2(1.90735e-06, 33)
-collision_mask = 2
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

@@ -12,24 +12,37 @@ var currState := STATE.ALIVE
 
 class TurretProjectile extends Area2D:
 	@onready var sprite := Sprite2D.new()
+	@onready var collision := CollisionShape2D.new()
+	var distance := 0.0
 
 	var speed := 2.5
 
 	func _ready() -> void:
-		connect("area_entered", Callable(self, "_on_Area2D_area_entered"))
+		connect("body_entered", Callable(self, "on_area_2d_body_entered"))
 		sprite.texture = load("res://assets/Entities/Player/Projectiles/Item_Rock1.png")
 		sprite.z_index = 3
 
 		self.add_child(sprite)
 
+		collision.shape = CircleShape2D.new()
+		collision.shape.radius = sprite.texture.get_width() / 2.0
+		self.add_child(collision)
+
 	func _process(_delta: float) -> void:
-		self.position -= transform.x * speed
+		var movement = transform.x * speed
 
-	func _on_Area2D_area_entered(area: Area2D) -> void:
-		if area.is_in_group("player"):
-			area.take_damage(10)
+		self.position -= movement
+		distance += movement.length()
 
-		self.queue_free()
+		if distance >= 250:
+			self.queue_free()
+
+		print("Distance: ", distance)
+
+	func on_area_2d_body_entered(body: Node2D) -> void:
+		if body.has_method("mc"):
+			body.take_damage(1)
+			self.queue_free()
 
 func _ready():
 	random.randomize()
@@ -38,7 +51,6 @@ func _ready():
 	add_child(timer)
 
 func _process(_delta: float) -> void:
-	print("Animation ", animation.current_animation)
 	match (currState):
 		STATE.ALIVE:
 			animation.play("idle")
@@ -48,17 +60,6 @@ func _process(_delta: float) -> void:
 			animation.play("shoot")
 		STATE.DEAD:
 			animation.play("death")
-
-	if animation.current_animation_position >= animation.current_animation_length:
-		if animation.current_animation.contains("death"):
-			free()
-
-		if animation.current_animation.contains("hurt"):
-			currState = STATE.ALIVE
-
-		if animation.current_animation.contains("shoot"):
-			currState = STATE.ALIVE
-
 
 # Spawns a projectile at the marker's position.
 func spawn_projectile():
