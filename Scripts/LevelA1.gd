@@ -56,7 +56,7 @@ func _ready():
 		data = Persist.Scene1
 		$Player.position = Vector2(data.player.position_x, data.player.position_y)
 	
-	
+	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/initial.dialogue"), "level1")
 	#MusicController.play_music()
 
 	

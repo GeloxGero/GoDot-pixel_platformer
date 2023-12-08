@@ -51,8 +51,6 @@ func _physics_process(delta):
 		$Sprite2D.flip_h = false
 		$AttackingArea/AttackingDetect.position = attack_left_position
 		$DamagingArea/AttackingCollide.position = attack_left_position
-	
-	print($AttackingArea/AttackingDetect.position)
 
 	if not is_on_floor():
 		velocity.y += gravity * delta
