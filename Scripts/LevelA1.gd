@@ -41,13 +41,7 @@ func update_player():
 		"position_x" = position.x
 	}
 
-func _ready():
-	var img = get_viewport().get_texture()
-	img.save_png("user://screenshot.png")
-	
-	
-	
-	print("asfas")
+func _ready():	
 	if !Persist.Scene1:
 		_initial_data()
 		inst(Enemy, Vector2(664, -194))
