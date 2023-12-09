@@ -13,7 +13,7 @@ extends CharacterBody2D
 @onready var willshoot = $WillShoot
 @onready var checkwall = $CheckWall
 @onready var damagearea = $DamageArea/CollisionShape2D
-@onready var attackarea = $DamageArea/CollisionShape2D
+@onready var attackarea = $Attack/CollisionShape2D
 
 var flipped : bool = false
 var jumped : bool = true

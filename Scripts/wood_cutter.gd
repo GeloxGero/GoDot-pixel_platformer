@@ -22,7 +22,7 @@ enum State {WALK, CHASE, IDLE, DAMAGED, DEATH, ATTACK}
 
 var attacking = false
 var _state = State.IDLE
-var speed = 30.0
+var speed = 50
 var flipped = false
 
 var gravity = 980 # The force of gravity
@@ -36,8 +36,7 @@ func makepath(player: Node2D) -> void:
 	nav_agent.target_position.y = player.position.y + 85
 
 func _ready():
-	print(to_local(nav_agent.get_next_path_position()))
-	print(to_local(nav_agent.get_next_path_position()).normalized())
+	pass
 
 
 func _physics_process(delta):
@@ -45,11 +44,14 @@ func _physics_process(delta):
 	
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	
+	print(wall_check)
 	if wall_check.is_colliding() and player:
+		print("satisfied")
 		jump()
 	
 	if jumped:
 		velocity.y = -300
+		jumped = false
 	
 	if player:
 		direction = check_direction(player)
@@ -94,13 +96,6 @@ func _physics_process(delta):
 			if can_attack:
 				animation.play("attack")
 
-
-	
-	
-	velocity = dir * speed * 5
-	move_and_slide()
-
-func temp():
 	if direction:
 		velocity.x = direction.x * movement_speed	
 	else:
@@ -108,8 +103,19 @@ func temp():
 		
 	if not can_attack:
 		velocity.x = 0
+		pass
+		
+	move_and_slide()
+	
+
+
+func temp():
+	#velocity = dir * speed * 5
+	pass
+
 		
 func jump():
+	print("jumping")
 	jumped = true
 
 func take_damage(damage):

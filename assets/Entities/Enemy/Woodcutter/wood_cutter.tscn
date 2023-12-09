@@ -146,12 +146,11 @@ _data = {
 "walk": SubResource("Animation_3pfxg")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8fno"]
-radius = 7.0
-height = 32.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7ics"]
+size = Vector2(14.369, 32.5276)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0nnx"]
-size = Vector2(184, 86.5)
+size = Vector2(314.369, 289.053)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixyp"]
 size = Vector2(67.7019, 11.5)
@@ -184,16 +183,16 @@ vframes = 6
 frame = 35
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(-1.19209e-07, -13)
 scale = Vector2(1.53107, 1.29121)
-shape = SubResource("CapsuleShape2D_p8fno")
+shape = SubResource("RectangleShape2D_r7ics")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 scale = Vector2(1, 0.52)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(0, -26.75)
+position = Vector2(0, -100.642)
 scale = Vector2(1.04018, 0.989087)
 shape = SubResource("RectangleShape2D_w0nnx")
 
@@ -218,11 +217,16 @@ shape = SubResource("CapsuleShape2D_jkox5")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_max_distance = 50.0
-debug_enabled = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 autostart = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, -22)
+rotation = 1.5708
+target_position = Vector2(1.1365e-06, 26)
+collision_mask = 2
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
