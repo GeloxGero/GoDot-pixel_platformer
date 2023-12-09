@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d22ghrgq2xulb" path="res://assets/Environment/Misc/Start/ladder_top.tscn" id="7_1nlrx"]
 [ext_resource type="PackedScene" uid="uid://bjts4rp80ikpj" path="res://assets/Environment/Misc/Start/tile_map_ladder.tscn" id="8_j6107"]
 [ext_resource type="PackedScene" uid="uid://7y5my6vdho8s" path="res://assets/Entities/Good/visayan_spotted_deer.tscn" id="11_6bvnn"]
-[ext_resource type="PackedScene" uid="uid://cqvoex7x3puko" path="res://assets/Entities/Enemy/Robot/Boss.tscn" id="12_bthn5"]
+[ext_resource type="PackedScene" uid="uid://btdk3l2iwede5" path="res://assets/Entities/Enemy/Guard/guard_2.tscn" id="12_ojbbf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxkyq"]
 size = Vector2(20, 500)
@@ -191,9 +191,8 @@ shape = SubResource("RectangleShape2D_g4pjc")
 position = Vector2(63, -68)
 scale = Vector2(2.48869, 2.48869)
 
-[node name="Boss" parent="." instance=ExtResource("12_bthn5")]
-position = Vector2(854, -193)
-damageable = false
+[node name="Guard2" parent="." instance=ExtResource("12_ojbbf")]
+position = Vector2(1621, -12)
 
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]

@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://cjrdekkhiyy6s" path="res://assets/Environment/Misc/Start/tilemap.png" id="1_i06pr"]
 [ext_resource type="Texture2D" uid="uid://bn86e5vnhbc5n" path="res://assets/Environment/Misc/spritesheet.png" id="2_itfbq"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_epvns"]
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_8wcsq"]
 vertices = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)])
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_4apw3"]
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_3hupx"]
 vertices = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)])
@@ -719,11 +719,11 @@ texture_region_size = Vector2i(32, 32)
 21:8/0 = 0
 21:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 21:8/0/physics_layer_0/angular_velocity = 0.0
-21:8/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_epvns")
+21:8/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_8wcsq")
 22:8/0 = 0
 22:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 22:8/0/physics_layer_0/angular_velocity = 0.0
-22:8/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_4apw3")
+22:8/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_3hupx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gr5xw"]
 texture = ExtResource("2_itfbq")

@@ -151,7 +151,7 @@ radius = 7.0
 height = 32.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0nnx"]
-size = Vector2(310.231, 189.247)
+size = Vector2(184, 86.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixyp"]
 size = Vector2(67.7019, 11.5)
@@ -164,7 +164,6 @@ radius = 11.0
 height = 42.0
 
 [node name="WoodCutter" type="CharacterBody2D"]
-collision_layer = 64
 collision_mask = 2
 script = ExtResource("1_6txvm")
 can_attack = true
@@ -194,7 +193,7 @@ scale = Vector2(1, 0.52)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(0, -80.7692)
+position = Vector2(0, -26.75)
 scale = Vector2(1.04018, 0.989087)
 shape = SubResource("RectangleShape2D_w0nnx")
 
@@ -224,12 +223,6 @@ debug_enabled = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 autostart = true
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(0, -27)
-rotation = 1.5708
-target_position = Vector2(1.18021e-06, 27)
-
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

@@ -1,5 +1,8 @@
 extends Node2D
 
+var inc = 0
+
+
 @export var limit_x_left : int
 @export var limit_x_right : int
 @export var limit_y_up : int
@@ -16,8 +19,8 @@ func _ready():
 	camera.limit_bottom = limit_y_down
 
 func _on_edge_left_body_entered(body):
-	if body.has_method("mc"):
-		get_tree().change_scene_to_file(StageManager.Level2)
+	if body.name == "Player":
+		get_tree().change_scene_to_file(StageManager.Level1)
 
 
 func _on_edge_left_body_exited(body):
@@ -26,6 +29,7 @@ func _on_edge_left_body_exited(body):
 
 
 func _on_edge_right_body_entered(body):
+	print(body.has_method("mc"))
 	if body.has_method("mc"):
 		get_tree().change_scene_to_file(StageManager.Level3)
 

@@ -77,4 +77,5 @@ func _on_area_2d_body_exited(body):
 
 
 func _on_timer_timeout():
+	print("ASFASF")
 	can_shoot = true

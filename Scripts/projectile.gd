@@ -31,14 +31,12 @@ func set_direction(vector: Vector2):
 
 
 func _on_body_entered(body):
-	print(body)
 	if body.name == "TileMap":
 		self.queue_free()
-	if body.name == "FactoryTile":
-		self.queue_free()
 	if body.has_method("enemy"):
-		body.take_damage(20)
-		self.queue_free()
+		if body._state != body.State.DEATH:
+			body.take_damage(20)
+			self.queue_free()
 
 	if body.has_method("turret"):
 		body.take_damage(20)
