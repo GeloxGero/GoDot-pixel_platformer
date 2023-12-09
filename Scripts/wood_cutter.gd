@@ -36,8 +36,7 @@ func makepath(player: Node2D) -> void:
 	nav_agent.target_position.y = player.position.y + 85
 
 func _ready():
-	print(to_local(nav_agent.get_next_path_position()))
-	print(to_local(nav_agent.get_next_path_position()).normalized())
+	pass
 
 
 func _physics_process(delta):
@@ -50,6 +49,7 @@ func _physics_process(delta):
 	
 	if jumped:
 		velocity.y = -300
+		jumped = false
 	
 	if player:
 		direction = check_direction(player)
@@ -134,7 +134,6 @@ func _on_attacking_area_body_exited(body):
 
 func _on_damaging_area_body_entered(body):
 	if body.name == "Player":
-		print("Hit")
 		body.take_damage(1)
 
 
