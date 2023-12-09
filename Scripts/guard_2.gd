@@ -14,8 +14,7 @@ var direction
 var can_shoot = true
 
 func _ready():
-	print(sprite)
-	print(timer)
+	pass
 
 func _physics_process(delta):
 	check_death()
@@ -77,5 +76,4 @@ func _on_area_2d_body_exited(body):
 
 
 func _on_timer_timeout():
-	print("ASFASF")
 	can_shoot = true

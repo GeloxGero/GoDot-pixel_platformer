@@ -28,7 +28,8 @@ func _on_edge_left_body_exited(body):
 func _on_edge_right_body_entered(body):
 	print(body.has_method("mc"))
 	if body.has_method("mc"):
-		get_tree().change_scene_to_file(StageManager.Level1)
+		pass
+		#get_tree().change_scene_to_file(StageManager.Level4)
 
 
 func _on_edge_right_body_exited(body):
