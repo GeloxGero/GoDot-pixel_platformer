@@ -8,6 +8,11 @@ var inc = 0
 @export var limit_y_up : int
 @export var limit_y_down : int
 
+@onready var piganimation = $VisayanWartyPig/AnimationPlayer
+
+var found_pig = false
+var saved_pig = false
+
 var Enemy = preload("res://assets/Entities/Enemy/Woodcutter/wood_cutter.tscn")
 
 var data
@@ -38,6 +43,7 @@ func inst(node: PackedScene, position: Vector2):
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
+	piganimation.play("trapped")
 	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s2initial.dialogue"), "s2first")
 	
 	var camera = get_node("Player/Camera2D")
@@ -58,7 +64,7 @@ func _ready():
 
 func _on_edge_left_body_entered(body):
 	if body.name == "Player":
-		get_tree().change_scene_to_file(StageManager.Level2)
+		get_tree().change_scene_to_file(StageManager.Level1)
 
 
 func _on_edge_left_body_exited(body):
@@ -76,3 +82,9 @@ func _on_edge_right_body_entered(body):
 
 func _on_edge_right_body_exited(body):
 	pass # Replace with function body.
+
+
+func _on_found_pig_body_entered(body):
+	if !found_pig:
+		DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s2pig.dialogue"), "pig")
+

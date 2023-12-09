@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://1bmalf5j3q3v"]
+[gd_scene load_steps=28 format=3 uid="uid://1bmalf5j3q3v"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA2.gd" id="1_vl6vr"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_kedl6"]
@@ -1288,6 +1288,9 @@ size = Vector2(20, 285.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtef0"]
 size = Vector2(20, 162)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hb657"]
+size = Vector2(91, 178)
+
 [node name="LevelA2" type="Node2D"]
 position = Vector2(29, 205)
 script = ExtResource("1_vl6vr")
@@ -1491,7 +1494,14 @@ position = Vector2(47, -90)
 position = Vector2(2112, 170)
 collision_layer = 0
 
+[node name="FoundPig" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FoundPig"]
+position = Vector2(1798, 7)
+shape = SubResource("RectangleShape2D_hb657")
+
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]
 [connection signal="body_entered" from="EdgeLeft" to="." method="_on_edge_left_body_entered"]
 [connection signal="body_exited" from="EdgeLeft" to="." method="_on_edge_left_body_exited"]
+[connection signal="body_entered" from="FoundPig" to="." method="_on_found_pig_body_entered"]

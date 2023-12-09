@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
-@onready animation = $AnimationPlayer
+@onready var animation = $AnimationPlayer
 
 @export var trapped : bool = false
 
 func _physics_process(delta):
+	pass
 	

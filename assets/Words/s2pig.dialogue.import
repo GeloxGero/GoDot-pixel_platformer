@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bwsw3sko14baq"
+path="res://.godot/imported/s2pig.dialogue-aa5d9c912b6511f64f1ae0cf5e86b7a9.tres"
+
+[deps]
+
+source_file="res://assets/Words/s2pig.dialogue"
+dest_files=["res://.godot/imported/s2pig.dialogue-aa5d9c912b6511f64f1ae0cf5e86b7a9.tres"]
+
+[params]
+
+defaults=true

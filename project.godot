@@ -145,7 +145,7 @@ Interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://assets/Words/main.dialogue", "res://assets/Words/initial.dialogue", "res://assets/Words/s2initial.dialogue", "res://assets/Words/s1extra1.dialogue")
+locale/translations_pot_files=PackedStringArray("res://assets/Words/main.dialogue", "res://assets/Words/initial.dialogue", "res://assets/Words/s2initial.dialogue", "res://assets/Words/s1extra1.dialogue", "res://assets/Words/s2pig.dialogue")
 
 [layer_names]
 
