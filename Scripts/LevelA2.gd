@@ -44,14 +44,14 @@ func _ready():
 	camera.limit_top = limit_y_up
 	camera.limit_bottom = limit_y_down
 	
-	if !Persist.Scene2:
+	if !Persist.Scene3:
 		_initial_data()
 		inst(Enemy, Vector2(664, -194))
 		inst(Enemy, Vector2(903, -164))
 		inst(Enemy, Vector2(1563, -97))
 		update_player()
 	else:
-		data = Persist.Scene2
+		data = Persist.Scene3
 		$Player.position = Vector2(data.player.position_x, data.player.position_y)
 
 func _on_edge_left_body_entered(body):
@@ -69,7 +69,7 @@ func _on_edge_right_body_entered(body):
 	if body.has_method("mc"):
 		update_player()
 		data.player.position_x -= 50
-		Persist.update_data(data, "Scene2")
+		Persist.update_data(data, "Scene3")
 		get_tree().change_scene_to_file(StageManager.Level3)
 
 

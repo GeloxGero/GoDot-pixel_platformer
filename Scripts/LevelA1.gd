@@ -5,6 +5,8 @@ extends Node2D
 @export var limit_y_up : int
 @export var limit_y_down : int
 
+var extras : bool = false
+
 var y_offset = -82
 # Called when the node enters the scene tree for the first time.
 
@@ -75,3 +77,13 @@ func _on_edge_right_body_exited(body):
 func _on_area_2d_body_entered(body:Node2D) -> void:
 	if body.has_method("mc"):
 		body.die()
+
+
+func _on_surprise_dialog_body_entered(body):
+	if !extras:
+		extras = true
+		DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s1extra1.dialogue"), "s1extra1")
+
+
+func _on_surprise_dialog_body_exited(body):
+	pass

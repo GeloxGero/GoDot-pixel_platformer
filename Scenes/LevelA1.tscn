@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://5x0oa87g8kqy"]
+[gd_scene load_steps=16 format=3 uid="uid://5x0oa87g8kqy"]
 
 [ext_resource type="Script" path="res://Scripts/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
@@ -18,6 +18,9 @@ size = Vector2(20, 500)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4pjc"]
 size = Vector2(142, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2viv8"]
+size = Vector2(179, 160.5)
 
 [node name="LevelA1" type="Node2D"]
 position = Vector2(0, 82)
@@ -194,7 +197,15 @@ scale = Vector2(2.48869, 2.48869)
 [node name="Guard2" parent="." instance=ExtResource("12_ojbbf")]
 position = Vector2(1621, -12)
 
+[node name="SurpriseDialog" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SurpriseDialog"]
+position = Vector2(2553, -80)
+shape = SubResource("RectangleShape2D_2viv8")
+
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]
 [connection signal="body_entered" from="DeathZone" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="DeathZone2" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="SurpriseDialog" to="." method="_on_surprise_dialog_body_entered"]
+[connection signal="body_exited" from="SurpriseDialog" to="." method="_on_surprise_dialog_body_exited"]
