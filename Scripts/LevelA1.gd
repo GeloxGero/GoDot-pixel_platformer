@@ -61,7 +61,7 @@ func _ready():
 	
 
 func _on_edge_right_body_entered(body):
-	if body.name == "Player":
+	if body.has_method("mc"):
 		update_player()
 		data.player.position_x -= 50
 		Persist.update_data(data, "Scene1")
