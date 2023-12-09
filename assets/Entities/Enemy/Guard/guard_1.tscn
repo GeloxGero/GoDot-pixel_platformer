@@ -120,6 +120,8 @@ _data = {
 size = Vector2(336, 77.375)
 
 [node name="Guard1" type="CharacterBody2D"]
+collision_layer = 64
+collision_mask = 2
 script = ExtResource("1_wnd2e")
 projectile = ExtResource("2_s2g14")
 

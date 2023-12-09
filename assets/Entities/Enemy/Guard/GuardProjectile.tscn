@@ -12,6 +12,8 @@ radius = 3.0
 height = 10.0
 
 [node name="GuardProjectile" type="Area2D"]
+collision_layer = 32
+collision_mask = 2
 script = ExtResource("1_141fi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
