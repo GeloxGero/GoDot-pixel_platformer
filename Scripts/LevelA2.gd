@@ -36,7 +36,9 @@ func inst(node: PackedScene, position: Vector2):
 	add_child(object)
 	object.position = position
 # Called when the node enters the scene tree for the first time.
+
 func _ready():
+	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s2initial.dialogue"), "s2first")
 	
 	var camera = get_node("Player/Camera2D")
 	camera.limit_left = limit_x_left

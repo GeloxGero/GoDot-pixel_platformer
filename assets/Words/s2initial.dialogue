@@ -1,12 +1,8 @@
 ~ s2first
 
-Guardian: The waters are dirty. No life can exist within the waters surrounded with waste.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Guardian: The waters are contaminated, suffocating the life within.
+Random Person: The DENR officers are like eco-warriors in the heart of the forest, working to preserve nature. Love Their "leave only footprints behind" philosophy! I heard they also started projects like "KapakinaBangan" to repurpose waste. Imagine turning discarded items into seed pots
+Guardian: Huh? Who are you?
+Random Person: Solid waste management is putting the region's trees and wildlife at serious risk.  Did you know that by 2050, there could be more plastic than fish in the water? 
 
 => END
