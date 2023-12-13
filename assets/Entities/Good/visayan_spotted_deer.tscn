@@ -1,7 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://7y5my6vdho8s"]
 
-[ext_resource type="Script" path="res://Scripts/visayan_spotted_deer.gd" id="1_pkgsx"]
+[ext_resource type="Script" path="res://Scripts/gdEntities/visayan_spotted_deer.gd" id="1_pkgsx"]
 [ext_resource type="Texture2D" uid="uid://8eeo147xb5k8" path="res://assets/Entities/Good/visayan_spotted_deer.png" id="1_rwklw"]
+
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_23ybc"]
 radius = 11.0

@@ -31,7 +31,8 @@ func set_direction(vector: Vector2):
 
 
 func _on_body_entered(body):
-	if body.name == "TileMap":
+	if body.has_node("TerrainComponent"):
+		print("free")
 		self.queue_free()
 	if body.has_method("enemy"):
 		if body._state != body.State.DEATH:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dm3qylc5lfxon"]
 
-[ext_resource type="Texture2D" uid="uid://cjrdekkhiyy6s" path="res://assets/Environment/Misc/Start/tilemap.png" id="1_i06pr"]
-[ext_resource type="Texture2D" uid="uid://bn86e5vnhbc5n" path="res://assets/Environment/Misc/spritesheet.png" id="2_itfbq"]
+[ext_resource type="Texture2D" uid="uid://cjrdekkhiyy6s" path="res://assets/Environment/Misc/Start/tilemap.png" id="1_xhhd2"]
+[ext_resource type="Texture2D" uid="uid://bn86e5vnhbc5n" path="res://assets/Environment/Misc/spritesheet.png" id="2_647go"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8wcsq"]
 vertices = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -14,7 +14,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)])
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l7xlx"]
-texture = ExtResource("1_i06pr")
+texture = ExtResource("1_xhhd2")
 texture_region_size = Vector2i(32, 32)
 1:5/0 = 0
 1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -726,7 +726,7 @@ texture_region_size = Vector2i(32, 32)
 22:8/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_3hupx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gr5xw"]
-texture = ExtResource("2_itfbq")
+texture = ExtResource("2_647go")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)

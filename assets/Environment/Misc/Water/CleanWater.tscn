@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkg53cwwhdx17"]
+
+[ext_resource type="Texture2D" uid="uid://ckpxvet4hlqog" path="res://assets/Environment/Misc/Water/Clean_Water_Animation1.png" id="1_6fxp2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj7vp"]
+atlas = ExtResource("1_6fxp2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap0mf"]
+atlas = ExtResource("1_6fxp2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa4yn"]
+atlas = ExtResource("1_6fxp2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg4bc"]
+atlas = ExtResource("1_6fxp2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvmil"]
+atlas = ExtResource("1_6fxp2")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdtjj"]
+atlas = ExtResource("1_6fxp2")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g678x"]
+atlas = ExtResource("1_6fxp2")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58rms"]
+atlas = ExtResource("1_6fxp2")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xhcnd"]
+animations = [{
+"frames": [{
+"duration": 2.4,
+"texture": SubResource("AtlasTexture_kj7vp")
+}, {
+"duration": 2.4,
+"texture": SubResource("AtlasTexture_ap0mf")
+}, {
+"duration": 2.4,
+"texture": SubResource("AtlasTexture_xa4yn")
+}, {
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_eg4bc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_vvmil")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_xdtjj")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_g678x")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_58rms")
+}],
+"loop": true,
+"name": &"default2",
+"speed": 5.0
+}]
+
+[node name="CleanWater" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_xhcnd")

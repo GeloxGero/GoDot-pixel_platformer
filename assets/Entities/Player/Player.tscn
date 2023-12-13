@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://ihvc1sbpvo6q"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_ww3em"]
-[ext_resource type="PackedScene" uid="uid://5ii0pieomnpv" path="res://assets/Entities/Player/Projectiles/projectile.tscn" id="2_5t3b8"]
+[ext_resource type="Script" path="res://Scripts/gdEntities/Player.gd" id="1_6qnkp"]
 [ext_resource type="Texture2D" uid="uid://dmx04f7fx4qpt" path="res://assets/Entities/Player/character_spriteshet.png" id="2_kvy2l"]
+[ext_resource type="PackedScene" uid="uid://dqn10kb0cb7o1" path="res://assets/Entities/Player/Projectiles/PlayerProjectile.tscn" id="2_vun23"]
 [ext_resource type="PackedScene" uid="uid://w2vqxv1dfjdx" path="res://assets/Environment/Common Environment/UI.tscn" id="3_w712q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lagd1"]
@@ -154,9 +154,9 @@ size = Vector2(5, 26)
 [node name="Player" type="CharacterBody2D"]
 z_index = 21
 collision_mask = 54
-script = ExtResource("1_ww3em")
+script = ExtResource("1_6qnkp")
 jump_force = 1.5
-projectile = ExtResource("2_5t3b8")
+projectile = ExtResource("2_vun23")
 
 [node name="UI" parent="." instance=ExtResource("3_w712q")]
 

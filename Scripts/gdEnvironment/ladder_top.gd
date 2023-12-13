@@ -1,5 +1,4 @@
 extends StaticBody2D
-
 var above_ladder : bool = false
 
 func _physics_process(_delta):

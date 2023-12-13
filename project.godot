@@ -11,17 +11,17 @@ config_version=5
 [application]
 
 config/name="Gubatt"
-run/main_scene="res://Title Screen.tscn"
+run/main_scene="res://Scenes/Title Screen.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Scripts/global.gd"
+Global="*res://Scripts/gdGlobals/global.gd"
 MusicController="*res://Assets/Audio/MusicController.tscn"
-StageManager="*res://StageManager.gd"
+StageManager="*res://Scripts/StageManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Persist="*res://persist.gd"
+Persist="*res://Scripts/gdGlobals/persist.gd"
 
 [display]
 

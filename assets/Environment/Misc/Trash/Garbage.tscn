@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyp7qpsfeer5m"]
 
-[ext_resource type="Script" path="res://Scripts/Garbage.gd" id="1_jb2i4"]
+[ext_resource type="Script" path="res://Scripts/gdEnvironment/Garbage.gd" id="1_jb2i4"]
 [ext_resource type="Texture2D" uid="uid://sqs2stw52fga" path="res://assets/Environment/Misc/waste.Garbage_NEW.png" id="2_eel7j"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ic7if"]
 resource_local_to_scene = true

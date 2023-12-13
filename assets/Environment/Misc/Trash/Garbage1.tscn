@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dklkhgcdu4f2b"]
 
-[ext_resource type="Script" path="res://Scripts/Garbage.gd" id="1_c1m8u"]
+[ext_resource type="Script" path="res://Scripts/gdEnvironment/Garbage.gd" id="1_c1m8u"]
 [ext_resource type="Texture2D" uid="uid://sqs2stw52fga" path="res://assets/Environment/Misc/waste.Garbage_NEW.png" id="2_y8vj0"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6idw1"]
 atlas = ExtResource("2_y8vj0")

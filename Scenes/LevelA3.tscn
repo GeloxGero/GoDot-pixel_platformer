@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://7vb20e8tc1wr"]
 
-[ext_resource type="Script" path="res://Scripts/LevelA3.gd" id="1_akg65"]
+[ext_resource type="Script" path="res://Scripts/gdScenes/LevelA3.gd" id="1_akg65"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="1_kdpcf"]
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://assets/Environment/Misc/Start/bg/plx-2.png" id="2_mvj7d"]
 [ext_resource type="PackedScene" uid="uid://8kqu50gtq1w2" path="res://assets/Environment/Misc/switch.tscn" id="2_sbucs"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cnw3tx21w3cy7" path="res://assets/Environment/Level3/Factory Objects all.png" id="9_vc3go"]
 [ext_resource type="Texture2D" uid="uid://b70podauug000" path="res://assets/Environment/Level3/Tileset.png" id="10_lqhn6"]
 [ext_resource type="PackedScene" uid="uid://bf3clf2c0ulrc" path="res://assets/Entities/Enemy/Shooter/ball_shooter.tscn" id="12_lfbap"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kc06n"]
 texture = ExtResource("9_vc3go")

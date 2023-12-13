@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cevbk2dj7hyqu"]
 
 [ext_resource type="Script" path="res://Assets/Entities/Common Entities/bird.gd" id="1_cd17b"]
-[ext_resource type="Texture2D" uid="uid://bi8552bvb545p" path="res://Assets/Entities/Common Entities/Bird1.png" id="2_he77h"]
+[ext_resource type="Texture2D" uid="uid://bi8552bvb545p" path="res://assets/Entities/Common Entities/Bird1.png" id="2_he77h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_58eer"]
 radius = 5.0

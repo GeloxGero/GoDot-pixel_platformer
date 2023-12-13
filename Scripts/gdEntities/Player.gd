@@ -158,11 +158,13 @@ func move():
 func shoot():
 	var boko = projectile.instantiate()
 	owner.add_child(boko)
+	
 	boko.position = position
+	var bullet = boko.get_node("ProjectileComponent")
 	if flipped: 
-		boko.set_direction(Vector2.LEFT) 
+		bullet.set_direction(Vector2.LEFT) 
 	else:
-		boko.set_direction(Vector2.RIGHT)
+		bullet.set_direction(Vector2.RIGHT)
 		
 	
 
@@ -211,11 +213,11 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func _on_ladder_checker_body_entered(body):
-	if body.name == "TileMap2":
+	if body.has_node("Ladder"):
 		on_ladder = true
 	
 
 func _on_ladder_checker_body_exited(body):
-	if body.name == "TileMap2":
+	if body.has_node("Ladder"):
 		on_ladder = false
 		

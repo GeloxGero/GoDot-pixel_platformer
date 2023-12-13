@@ -1,7 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://cqvoex7x3puko"]
 
-[ext_resource type="Script" path="res://Scripts/Boss.gd" id="1_gtftt"]
+[ext_resource type="Script" path="res://Scripts/gdEntities/Boss.gd" id="1_gtftt"]
 [ext_resource type="Texture2D" uid="uid://xjcj45rlores" path="res://assets/Entities/Enemy/Robot/Boss_Spritesheet.png" id="1_ok6r2"]
+
 
 [sub_resource type="Animation" id="Animation_ydiua"]
 length = 0.001

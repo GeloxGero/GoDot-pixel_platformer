@@ -1,9 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://w2vqxv1dfjdx"]
 
-[ext_resource type="Script" path="res://Scripts/hearts.gd" id="1_poyse"]
+[ext_resource type="Script" path="res://Scripts/gdUI/hearts.gd" id="1_poyse"]
 [ext_resource type="Texture2D" uid="uid://sqs2stw52fga" path="res://assets/Environment/Misc/waste.Garbage_NEW.png" id="2_pgsoi"]
 [ext_resource type="Texture2D" uid="uid://dc8cv88vih03m" path="res://assets/Environment/Misc/hearts.png" id="3_j2g4s"]
 [ext_resource type="Texture2D" uid="uid://b4t1mlhy4qgco" path="res://assets/Environment/Common Environment/Wooden GUI.png" id="4_74vva"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d3aj2"]
 atlas = ExtResource("2_pgsoi")

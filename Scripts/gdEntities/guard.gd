@@ -13,9 +13,6 @@ var flipped
 var direction
 var can_shoot = true
 
-func _ready():
-	pass
-
 func _physics_process(delta):
 	check_death()
 	if player:
@@ -51,10 +48,12 @@ func shoot():
 	var bullet = projectile.instantiate()
 	owner.add_child(bullet)
 	bullet.position = position
+	
+	var component = bullet.get_node("ProjectileComponent")
 	if flipped: 
-		bullet.set_direction(Vector2.LEFT) 
+		component.set_direction(Vector2.LEFT) 
 	else:
-		bullet.set_direction(Vector2.RIGHT)
+		component.set_direction(Vector2.RIGHT)
 
 func check_direction(player : CharacterBody2D) -> Vector2:
 	if player.position < self.position:
@@ -63,7 +62,6 @@ func check_direction(player : CharacterBody2D) -> Vector2:
 	else:
 		flipped = true
 		return Vector2.RIGHT
-
 
 func _on_area_2d_body_entered(body):
 	if body.has_method("mc"):

@@ -1,7 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://bf3clf2c0ulrc"]
 
 [ext_resource type="Texture2D" uid="uid://dk3eyrsasp8j7" path="res://assets/Entities/Enemy/Shooter/Shooter.png" id="1_senbc"]
-[ext_resource type="Script" path="res://Scripts/BallShooter.gd" id="1_y17ii"]
+[ext_resource type="Script" path="res://Scripts/gdEntities/BallShooter.gd" id="1_y17ii"]
+
 
 [sub_resource type="Animation" id="Animation_21fgy"]
 length = 0.001

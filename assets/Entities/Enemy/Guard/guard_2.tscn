@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://btdk3l2iwede5"]
 
 [ext_resource type="Texture2D" uid="uid://3ed5kwvf6jbu" path="res://assets/Entities/Enemy/Guard/Guard.png" id="1_w85bw"]
-[ext_resource type="Script" path="res://Scripts/guard_2.gd" id="1_yla2s"]
-[ext_resource type="PackedScene" uid="uid://db26mpx05ksgk" path="res://assets/Entities/Enemy/Guard/GuardProjectile.tscn" id="2_6r7e3"]
+[ext_resource type="Script" path="res://Scripts/gdEntities/guard_2.gd" id="1_yla2s"]
+[ext_resource type="PackedScene" uid="uid://8nw7317lxaxo" path="res://assets/Entities/Enemy/Guard/GuardProjectile.tscn" id="2_6r7e3"]
 
 [sub_resource type="Animation" id="Animation_7nowf"]
 length = 0.001

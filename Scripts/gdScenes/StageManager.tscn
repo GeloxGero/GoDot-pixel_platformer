@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://q074ixj1ajlf"]
 
-[ext_resource type="Script" path="res://StageManager.gd" id="1_cwqu8"]
+[ext_resource type="Script" path="res://Scripts/StageManager.gd" id="1_oi1d6"]
 
 [sub_resource type="Animation" id="Animation_gvb76"]
 length = 0.001
@@ -61,7 +61,7 @@ _data = {
 }
 
 [node name="StageManager" type="CanvasLayer"]
-script = ExtResource("1_cwqu8")
+script = ExtResource("1_oi1d6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 640.0

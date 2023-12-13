@@ -44,9 +44,7 @@ func _physics_process(delta):
 	
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	
-	print(wall_check)
 	if wall_check.is_colliding() and player:
-		print("satisfied")
 		jump()
 	
 	if jumped:
@@ -115,7 +113,6 @@ func temp():
 
 		
 func jump():
-	print("jumping")
 	jumped = true
 
 func take_damage(damage):
@@ -140,7 +137,6 @@ func _on_attacking_area_body_exited(body):
 
 func _on_damaging_area_body_entered(body):
 	if body.name == "Player":
-		print("Hit")
 		body.take_damage(1)
 
 

@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bynkc2sarakay"]
 
-[ext_resource type="Script" path="res://Scripts/seed.gd" id="1_5na6w"]
-[ext_resource type="Texture2D" uid="uid://c3raq8lnpn0xa" path="res://Assets/Environment/Common Environment/seeds.png" id="1_tloux"]
+[ext_resource type="Script" path="res://Scripts/gdEnvironment/seed.gd" id="1_5na6w"]
+[ext_resource type="Texture2D" uid="uid://c3raq8lnpn0xa" path="res://assets/Environment/Common Environment/seeds.png" id="1_tloux"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aypfn"]
 radius = 4.12311

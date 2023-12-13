@@ -1,29 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://db26mpx05ksgk"]
+[gd_scene load_steps=5 format=3 uid="uid://8nw7317lxaxo"]
 
-[ext_resource type="Script" path="res://Scripts/guardprojectile.gd" id="1_141fi"]
+[ext_resource type="PackedScene" uid="uid://dijrt1dwsd75q" path="res://assets/Components/ProjectileComponent.tscn" id="1_ik8yj"]
 [ext_resource type="Texture2D" uid="uid://xjcj45rlores" path="res://assets/Entities/Enemy/Robot/Boss_Spritesheet.png" id="1_ummpt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nmpwc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg2kg"]
 atlas = ExtResource("1_ummpt")
-region = Rect2(24, 536, 16, 16)
+region = Rect2(88, 536, 16, 16)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2rb4f"]
-radius = 3.0
-height = 10.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cx7go"]
+radius = 5.0
+height = 14.0
 
-[node name="GuardProjectile" type="Area2D"]
+[node name="Projectile" type="Area2D"]
 collision_layer = 32
-collision_mask = 2
-script = ExtResource("1_141fi")
+collision_mask = 7
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-5, -5)
-scale = Vector2(0.6875, 0.5625)
-texture = SubResource("AtlasTexture_nmpwc")
+[node name="ProjectileComponent" parent="." node_paths=PackedStringArray("timer", "sprite") instance=ExtResource("1_ik8yj")]
+timer = NodePath("Timer")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="ProjectileComponent"]
+position = Vector2(-8, -9)
+texture = SubResource("AtlasTexture_eg2kg")
 centered = false
+
+[node name="Timer" type="Timer" parent="ProjectileComponent"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_2rb4f")
+shape = SubResource("CapsuleShape2D_cx7go")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="ProjectileComponent" method="_on_projectile_body_entered"]

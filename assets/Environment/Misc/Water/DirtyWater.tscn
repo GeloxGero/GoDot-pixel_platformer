@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctr54ls0kvx47"]
+
+[ext_resource type="Texture2D" uid="uid://chkje5nvlk3e7" path="res://assets/Environment/Misc/Water/Contaminated_Water_Animation1.png" id="1_uflkd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcqqt"]
+atlas = ExtResource("1_uflkd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn7x6"]
+atlas = ExtResource("1_uflkd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsiua"]
+atlas = ExtResource("1_uflkd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gy3jq"]
+atlas = ExtResource("1_uflkd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8soq"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_rcqqt")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_yn7x6")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_xsiua")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_gy3jq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DirtyWater" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_x8soq")
+frame_progress = 0.118224

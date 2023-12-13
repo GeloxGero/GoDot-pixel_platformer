@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://5ii0pieomnpv"]
 
-[ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_auncj"]
+[ext_resource type="Script" path="res://Scripts/gdEntities/gdProjectiles/projectile.gd" id="1_auncj"]
 [ext_resource type="Texture2D" uid="uid://c0qy4fg5gvbmf" path="res://assets/Entities/Player/Projectiles/Item_Rock1.png" id="2_mkhyq"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1h1ig"]
 size = Vector2(10, 8.85359)

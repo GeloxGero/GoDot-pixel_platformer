@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d22ghrgq2xulb"]
 
-[ext_resource type="Script" path="res://Scripts/ladder_top.gd" id="1_mc7af"]
+[ext_resource type="Script" path="res://Scripts/gdEnvironment/ladder_top.gd" id="1_k61qw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4ykd"]
 size = Vector2(26.3473, 8.45024)
@@ -11,7 +11,7 @@ size = Vector2(10, 5)
 [node name="LadderTop" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("1_mc7af")
+script = ExtResource("1_k61qw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_j4ykd")
