@@ -40,4 +40,4 @@ animations = [{
 
 [node name="DirtyWater" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_x8soq")
-frame_progress = 0.118224
+frame_progress = 0.462458

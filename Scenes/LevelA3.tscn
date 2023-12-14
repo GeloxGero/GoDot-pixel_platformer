@@ -8,11 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://ihvc1sbpvo6q" path="res://assets/Entities/Player/Player.tscn" id="3_f33n1"]
 [ext_resource type="Texture2D" uid="uid://chu02ygvmvtm2" path="res://assets/Environment/Misc/Start/bg/plx-4.png" id="4_eyalj"]
 [ext_resource type="Texture2D" uid="uid://sjv0gwdp8fq" path="res://assets/Environment/Misc/Start/bg/plx-5.png" id="5_qfhv7"]
-[ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://assets/Environment/Misc/Start/tile_map1.tscn" id="7_2gtr4"]
+[ext_resource type="PackedScene" uid="uid://dm3qylc5lfxon" path="res://assets/Environment/Tilemaps/TerrainTilemap.tscn" id="7_2gtr4"]
 [ext_resource type="Texture2D" uid="uid://cnw3tx21w3cy7" path="res://assets/Environment/Level3/Factory Objects all.png" id="9_vc3go"]
 [ext_resource type="Texture2D" uid="uid://b70podauug000" path="res://assets/Environment/Level3/Tileset.png" id="10_lqhn6"]
 [ext_resource type="PackedScene" uid="uid://bf3clf2c0ulrc" path="res://assets/Entities/Enemy/Shooter/ball_shooter.tscn" id="12_lfbap"]
-
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kc06n"]
 texture = ExtResource("9_vc3go")

@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://8kqu50gtq1w2"]
 
 [ext_resource type="Texture2D" uid="uid://g10x8xcon6ga" path="res://assets/Environment/Misc/Fire Assets/burning_start_1.png" id="1_aumex"]
-[ext_resource type="Script" path="res://Scripts/switch.gd" id="1_u84t5"]
+[ext_resource type="Script" path="res://Scripts/gdEnvironment/switch.gd" id="1_u84t5"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ddrf"]
 atlas = ExtResource("1_aumex")

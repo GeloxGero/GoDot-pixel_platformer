@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bre4w34ddgh62"]
+
+[ext_resource type="PackedScene" uid="uid://dijrt1dwsd75q" path="res://assets/Components/ProjectileComponent.tscn" id="1_84au6"]
+[ext_resource type="Texture2D" uid="uid://c0qy4fg5gvbmf" path="res://assets/Entities/Player/Projectiles/Item_Rock1.png" id="2_4ixhx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7a68v"]
+radius = 4.0
+
+[node name="Projectile" type="Area2D"]
+z_index = 10
+collision_layer = 32
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7a68v")
+
+[node name="ProjectileComponent" parent="." node_paths=PackedStringArray("timer", "sprite") instance=ExtResource("1_84au6")]
+timer = NodePath("Timer")
+sprite = NodePath("Sprite2D")
+
+[node name="Timer" type="Timer" parent="ProjectileComponent"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ProjectileComponent"]
+texture = ExtResource("2_4ixhx")
+
+[connection signal="body_entered" from="." to="ProjectileComponent" method="_on_projectile_body_entered"]
+[connection signal="timeout" from="ProjectileComponent/Timer" to="ProjectileComponent" method="_on_timer_timeout"]

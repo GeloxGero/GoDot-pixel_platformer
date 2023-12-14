@@ -40,14 +40,11 @@ func _on_projectile_body_entered(body):
 	if body.has_node("TerrainComponent"):
 		projectile.queue_free()
 	if body.has_method("enemy"):
-		if body._state != body.State.DEATH:
-			body.take_damage(20)
-			projectile.queue_free()
+		body.take_damage(20)
+		projectile.queue_free()
 
 	if body.has_method("mc"):
 		body.take_damage(1)
 		projectile.queue_free()
-	if body.has_method("turret"):
-		body.take_damage(20)
-		projectile.queue_free()
+
 
