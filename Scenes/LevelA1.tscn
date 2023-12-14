@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://5x0oa87g8kqy"]
+[gd_scene load_steps=22 format=3 uid="uid://5x0oa87g8kqy"]
 
 [ext_resource type="Script" path="res://Scripts/gdScenes/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bjts4rp80ikpj" path="res://assets/Environment/Tilemaps/LaddersTilemap.tscn" id="8_j6107"]
 [ext_resource type="PackedScene" uid="uid://bf8nenl14scvc" path="res://assets/Components/TerrainComponent.tscn" id="10_fqasc"]
 [ext_resource type="PackedScene" uid="uid://7y5my6vdho8s" path="res://assets/Entities/Good/visayan_spotted_deer.tscn" id="11_6bvnn"]
+[ext_resource type="Texture2D" uid="uid://7y3y13k78e0a" path="res://assets/Environment/Common Environment/leaf.png" id="12_3om14"]
 [ext_resource type="PackedScene" uid="uid://btdk3l2iwede5" path="res://assets/Entities/Enemy/Guard/guard_2.tscn" id="12_ojbbf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxkyq"]
@@ -196,6 +197,15 @@ layer_0/tile_data = PackedInt32Array(524289, 1310721, 2, 524290, 1310721, 2, 458
 layer_3/tile_data = PackedInt32Array(-196592, 196609, 2, -196590, 131073, 2, -196589, 1, 2, -196588, 131073, 2, -131053, 720897, 1, -131052, 720897, 1, -131054, 720897, 1, -131056, 720897, 1)
 
 [node name="TerrainComponent" parent="Terrain" instance=ExtResource("10_fqasc")]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Terrain"]
+position = Vector2(2102.3, -34.8124)
+texture = ExtResource("12_3om14")
+emission_shape = 3
+emission_rect_extents = Vector2(1700, 100)
+gravity = Vector2(200, 100)
+initial_velocity_min = 1.0
+initial_velocity_max = 10.0
 
 [node name="Player" parent="." instance=ExtResource("5_eqgv7")]
 texture_filter = 1
