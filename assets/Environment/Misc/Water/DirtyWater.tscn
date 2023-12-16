@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctr54ls0kvx47"]
+[gd_scene load_steps=8 format=3 uid="uid://ctr54ls0kvx47"]
 
 [ext_resource type="Texture2D" uid="uid://chkje5nvlk3e7" path="res://assets/Environment/Misc/Water/Contaminated_Water_Animation1.png" id="1_uflkd"]
+[ext_resource type="Script" path="res://Scripts/gdEnvironment/DirtyWater.gd" id="2_32jys"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rcqqt"]
 atlas = ExtResource("1_uflkd")
@@ -41,3 +42,4 @@ animations = [{
 [node name="DirtyWater" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_x8soq")
 frame_progress = 0.462458
+script = ExtResource("2_32jys")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dkg53cwwhdx17"]
+[gd_scene load_steps=12 format=3 uid="uid://dkg53cwwhdx17"]
 
 [ext_resource type="Texture2D" uid="uid://ckpxvet4hlqog" path="res://assets/Environment/Misc/Water/Clean_Water_Animation1.png" id="1_6fxp2"]
+[ext_resource type="Script" path="res://Scripts/gdEnvironment/CleanWater.gd" id="2_xmtxx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kj7vp"]
 atlas = ExtResource("1_6fxp2")
@@ -73,3 +74,4 @@ animations = [{
 
 [node name="CleanWater" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_xhcnd")
+script = ExtResource("2_xmtxx")
