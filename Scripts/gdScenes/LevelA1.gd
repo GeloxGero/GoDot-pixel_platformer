@@ -5,6 +5,7 @@ extends Node2D
 @export var limit_y_up : int
 @export var limit_y_down : int
 
+var level_blocked := false
 var extras : bool = false
 
 var y_offset = -82
@@ -12,15 +13,28 @@ var y_offset = -82
 
 var Garbage = preload("res://assets/Environment/Misc/Trash/Garbage.tscn")
 var Enemy = preload("res://assets/Entities/Enemy/Woodcutter/wood_cutter.tscn")
+var Seed = preload("res://assets/Environment/Seeds/LevelSeed.tscn")
+
+@onready var area_blocked = $Lock/LevelBlock
+@onready var level_blocker = $Lock/LevelBlocker
 
 var data
 
 func _initial_data():
 	data = {
 		"player": null,
-		"garbage": [],
 		"enemy": [],
+		"dialogue": []
 	}
+
+#dialogue[0] would be initial dialogue
+
+func inst_seed(node: PackedScene, position: Vector2, to_animate: String):
+	var object = node.instantiate()
+	object.to_animate = to_animate
+	add_child(object)
+	object.position = position
+
 
 func inst(node: PackedScene, position: Vector2):
 	var object = node.instantiate()
@@ -46,11 +60,20 @@ func _ready():
 		inst(Enemy, Vector2(903, -164))
 		inst(Enemy, Vector2(1563, -97))
 		update_player()
+		inst_seed(Seed, Vector2(228, -63), "apple_float")
+		inst_seed(Seed, Vector2(623, -221), "banana_float")
+		inst_seed(Seed, Vector2(1037, -191), "grapes_float")
+		inst_seed(Seed, Vector2(1743, -209), "orange_float")
+		inst_seed(Seed, Vector2(2420, -94), "strawberry_float")
+		inst_seed(Seed, Vector2(2542, -37), "apple_float")
+		DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/initial.dialogue"), "level1")
 	else:
 		data = Persist.Scene1
 		$Player.position = Vector2(data.player.position_x, data.player.position_y)
+		#for load in data.enemy:
+			#inst(Enemy, Vector2(load.position_x, load.position_y))
 	
-	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/initial.dialogue"), "level1")
+
 	#MusicController.play_music()
 
 	
@@ -87,3 +110,12 @@ func _on_surprise_dialog_body_entered(body):
 
 func _on_surprise_dialog_body_exited(body):
 	pass
+
+
+func _on_level_block_body_entered(body):
+	if body.has_method("mc"):
+		if Global.seeds_collected == 6:
+			set_deferred("monitoring", false)
+			level_blocker.queue_free()
+		else:
+			DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s1end.dialogue"), "incomplete")

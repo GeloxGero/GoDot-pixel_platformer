@@ -1319,7 +1319,7 @@ script = ExtResource("1_kq6tq")
 limit_x_left = 34
 limit_x_right = 2600
 limit_y_up = -400
-limit_y_down = 380
+limit_y_down = 400
 metadata/_edit_horizontal_guides_ = [42.0]
 metadata/_edit_vertical_guides_ = []
 

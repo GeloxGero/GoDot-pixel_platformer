@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if has_player and Input.is_action_just_pressed("Interact"):
+	if has_player and Input.is_action_just_pressed("Interact") and not interacted:
 		var sprite = $AnimatedSprite2D
 		sprite.play("default")
 		sprite.show()

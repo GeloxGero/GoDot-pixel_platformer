@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cpnmpflk03m7t"
+path="res://.godot/imported/s1end.dialogue-188f78d3f0d400227d9d8f6c84773e51.tres"
+
+[deps]
+
+source_file="res://assets/Words/s1end.dialogue"
+dest_files=["res://.godot/imported/s1end.dialogue-188f78d3f0d400227d9d8f6c84773e51.tres"]
+
+[params]
+
+defaults=true

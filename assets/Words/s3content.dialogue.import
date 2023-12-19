@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bnvd5lpp2mwvq"
+path="res://.godot/imported/s3content.dialogue-7c076dcbca815dcc44b44c270c1874a1.tres"
+
+[deps]
+
+source_file="res://assets/Words/s3content.dialogue"
+dest_files=["res://.godot/imported/s3content.dialogue-7c076dcbca815dcc44b44c270c1874a1.tres"]
+
+[params]
+
+defaults=true

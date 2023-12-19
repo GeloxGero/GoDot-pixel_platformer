@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://na7lsnjbh60e"
+path="res://.godot/imported/s2content.dialogue-8d1eefcb19fe0546095c2e8b311d5cb1.tres"
+
+[deps]
+
+source_file="res://assets/Words/s2content.dialogue"
+dest_files=["res://.godot/imported/s2content.dialogue-8d1eefcb19fe0546095c2e8b311d5cb1.tres"]
+
+[params]
+
+defaults=true
