@@ -7,7 +7,8 @@ var TIMER = 0
 var two_to_one = false
 
 var hp = 5
-var trash = 0
+var trashthrown = 0
+var seeds_collected = 0
 
 func reset():
 	hp = 5

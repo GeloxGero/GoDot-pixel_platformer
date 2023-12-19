@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://1bmalf5j3q3v"]
+[gd_scene load_steps=35 format=3 uid="uid://1bmalf5j3q3v"]
 
 [ext_resource type="Script" path="res://Scripts/gdScenes/LevelA2.gd" id="1_kq6tq"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_kedl6"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c6avkbtcpnlos" path="res://assets/Environment/Misc/Start/bg/plx-2.png" id="4_2y7yr"]
 [ext_resource type="Texture2D" uid="uid://waygwibvnisi" path="res://assets/Environment/Misc/Start/bg/plx-3.png" id="5_b8j4t"]
 [ext_resource type="Texture2D" uid="uid://chu02ygvmvtm2" path="res://assets/Environment/Misc/Start/bg/plx-4.png" id="6_c6irj"]
-[ext_resource type="PackedScene" uid="uid://bynkc2sarakay" path="res://assets/Environment/Common Environment/seed.tscn" id="7_bo81s"]
+[ext_resource type="PackedScene" uid="uid://toh26otosy65" path="res://assets/Environment/Common Environment/seed.tscn" id="7_bo81s"]
 [ext_resource type="PackedScene" uid="uid://d22ghrgq2xulb" path="res://assets/Environment/Misc/Start/ladder_top.tscn" id="7_gie48"]
 [ext_resource type="PackedScene" uid="uid://bjts4rp80ikpj" path="res://assets/Environment/Tilemaps/LaddersTilemap.tscn" id="8_e4n31"]
 [ext_resource type="Texture2D" uid="uid://c7erqodpldp3p" path="res://assets/Environment/Level2/water_tileset.png" id="8_floso"]
@@ -1295,6 +1295,12 @@ texture = ExtResource("11_nrs5a")
 sources/0 = SubResource("TileSetAtlasSource_o5a5k")
 sources/1 = SubResource("TileSetAtlasSource_ii223")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mfu53"]
+size = Vector2(255, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ha5un"]
+size = Vector2(384, 63)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbrkr"]
 size = Vector2(23.5, 162)
 
@@ -1316,6 +1322,8 @@ limit_y_up = -400
 limit_y_down = 380
 metadata/_edit_horizontal_guides_ = [42.0]
 metadata/_edit_vertical_guides_ = []
+
+[node name="DamageTick" type="Timer" parent="."]
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -1637,6 +1645,20 @@ format = 2
 [node name="Player" parent="." instance=ExtResource("3_5f3oj")]
 position = Vector2(33, 113)
 
+[node name="DangerZones" type="Node2D" parent="."]
+
+[node name="DeathZone" type="Area2D" parent="DangerZones"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DangerZones/DeathZone"]
+position = Vector2(2111.5, 236.5)
+shape = SubResource("RectangleShape2D_mfu53")
+
+[node name="DamageZone" type="Area2D" parent="DangerZones"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DangerZones/DamageZone"]
+position = Vector2(1312, 127.5)
+shape = SubResource("RectangleShape2D_ha5un")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -1717,6 +1739,10 @@ collision_layer = 0
 position = Vector2(1798, 7)
 shape = SubResource("RectangleShape2D_hb657")
 
+[connection signal="timeout" from="DamageTick" to="." method="_on_damage_tick_timeout"]
+[connection signal="body_entered" from="DangerZones/DeathZone" to="." method="_on_death_zone_body_entered"]
+[connection signal="body_entered" from="DangerZones/DamageZone" to="." method="_on_damage_zone_body_entered"]
+[connection signal="body_exited" from="DangerZones/DamageZone" to="." method="_on_damage_zone_body_exited"]
 [connection signal="body_entered" from="EdgeRight" to="." method="_on_edge_right_body_entered"]
 [connection signal="body_exited" from="EdgeRight" to="." method="_on_edge_right_body_exited"]
 [connection signal="body_entered" from="EdgeLeft" to="." method="_on_edge_left_body_entered"]

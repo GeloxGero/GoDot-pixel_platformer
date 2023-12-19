@@ -1,6 +1,7 @@
 extends StaticBody2D
 var above_ladder : bool = false
 
+
 func _physics_process(_delta):
 	if Input.is_action_pressed("down") and above_ladder:
 		$CollisionShape2D.rotation_degrees = 180

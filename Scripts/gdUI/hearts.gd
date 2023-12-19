@@ -19,10 +19,10 @@ func _process(_delta):
 		$Hearts.set_frame(5)
 	
 	
-	if Global.trash == 0:
+	if Global.trashthrown == 0:
 		$Trash/Label.text = ""
 	else:
-		$Trash/Label.text = str(Global.trash)
+		$Trash/Label.text = str(Global.trashthrown)
 
 
 func _on_pause_button_pressed():

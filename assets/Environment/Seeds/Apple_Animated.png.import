@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpbbnah3hlsr2"
-path="res://.godot/imported/seeds.png-473d154b0998935b568c1873519e0273.ctex"
+uid="uid://b0l5o2ckqcfrd"
+path="res://.godot/imported/Apple_Animated.png-7c6e52c0d216d4cab0c9cc698907627c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Environment/Common Environment/seeds.png"
-dest_files=["res://.godot/imported/seeds.png-473d154b0998935b568c1873519e0273.ctex"]
+source_file="res://assets/Environment/Seeds/Apple_Animated.png"
+dest_files=["res://.godot/imported/Apple_Animated.png-7c6e52c0d216d4cab0c9cc698907627c.ctex"]
 
 [params]
 

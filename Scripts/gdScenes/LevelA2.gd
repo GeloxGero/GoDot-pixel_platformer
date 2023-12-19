@@ -9,9 +9,11 @@ var inc = 0
 @export var limit_y_down : int
 
 @onready var piganimation = $VisayanWartyPig/AnimationPlayer
+@onready var damage_tick = $DamageTick
 
 var found_pig = false
 var saved_pig = false
+var poison_player = false
 
 var Enemy = preload("res://assets/Entities/Enemy/Woodcutter/wood_cutter.tscn")
 
@@ -88,3 +90,28 @@ func _on_found_pig_body_entered(body):
 	if !found_pig:
 		DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s2pig.dialogue"), "pig")
 
+
+
+func _on_death_zone_body_entered(body):
+	if body.has_method("mc"):
+		$Player.die()
+
+
+
+func _on_damage_zone_body_entered(body):
+	if body.has_method("mc"):
+		poison_player = true
+		damage_tick.start(1)
+
+
+func _on_damage_zone_body_exited(body):
+	if body.has_method("mc"):
+		poison_player = false
+		
+
+
+
+func _on_damage_tick_timeout():
+	if poison_player:
+		$Player.take_damage(1)
+		damage_tick.start(1)

@@ -14,6 +14,7 @@ func _process(_delta):
 
 func _on_area_entered(area):
 	if area.has_method("garbage"):
+		Global.trashthrown += 1
 		area.get_parent().remove_child(area)
 		area.queue_free()
 

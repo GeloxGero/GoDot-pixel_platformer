@@ -183,16 +183,16 @@ func throw():
 	else:
 		garbage.throw(Vector2.RIGHT)
 	
-	Global.trash = inventory.size()
+	Global.trashthrown = inventory.size()
 
 
 func store_item(item: Area2D):
 	inventory.append(item)
-	Global.trash = inventory.size()
+	Global.trashthrown = inventory.size()
 
 func clear_inventory():
 	inventory = []
-	Global.trash = inventory.size()
+	Global.trashthrown = inventory.size()
 
 func mc():
 	pass

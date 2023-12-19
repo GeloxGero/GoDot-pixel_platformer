@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpbbnah3hlsr2"
-path="res://.godot/imported/seeds.png-473d154b0998935b568c1873519e0273.ctex"
+uid="uid://bsioj0w6vqkno"
+path="res://.godot/imported/banana_Animated.png-5b837aaf7d42f44d3361f79503d061f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Environment/Common Environment/seeds.png"
-dest_files=["res://.godot/imported/seeds.png-473d154b0998935b568c1873519e0273.ctex"]
+source_file="res://assets/Environment/Seeds/banana_Animated.png"
+dest_files=["res://.godot/imported/banana_Animated.png-5b837aaf7d42f44d3361f79503d061f0.ctex"]
 
 [params]
 

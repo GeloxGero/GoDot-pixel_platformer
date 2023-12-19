@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://5x0oa87g8kqy"]
+[gd_scene load_steps=23 format=3 uid="uid://5x0oa87g8kqy"]
 
 [ext_resource type="Script" path="res://Scripts/gdScenes/LevelA1.gd" id="1_eqk3o"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_12vgc"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://7y5my6vdho8s" path="res://assets/Entities/Good/visayan_spotted_deer.tscn" id="11_6bvnn"]
 [ext_resource type="Texture2D" uid="uid://7y3y13k78e0a" path="res://assets/Environment/Common Environment/leaf.png" id="12_3om14"]
 [ext_resource type="PackedScene" uid="uid://btdk3l2iwede5" path="res://assets/Entities/Enemy/Guard/guard_2.tscn" id="12_ojbbf"]
+[ext_resource type="PackedScene" uid="uid://bh5c26xlhsy8h" path="res://assets/Environment/Seeds/LevelSeed.tscn" id="16_6xo0g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxkyq"]
 size = Vector2(20, 500)
@@ -47,6 +48,33 @@ limit_x_right = 3351
 limit_y_up = -200
 limit_y_down = 300
 metadata/_edit_horizontal_guides_ = [42.0]
+
+[node name="Seeds" type="Node2D" parent="."]
+position = Vector2(16, 17)
+
+[node name="LevelSeed" parent="Seeds" instance=ExtResource("16_6xo0g")]
+position = Vector2(228, -63)
+to_animate = "apple_float"
+
+[node name="LevelSeed2" parent="Seeds" instance=ExtResource("16_6xo0g")]
+position = Vector2(623, -221)
+to_animate = "banana_float"
+
+[node name="LevelSeed3" parent="Seeds" instance=ExtResource("16_6xo0g")]
+position = Vector2(1037, -191)
+to_animate = "grapes_float"
+
+[node name="LevelSeed4" parent="Seeds" instance=ExtResource("16_6xo0g")]
+position = Vector2(1743, -209)
+to_animate = "orange_float"
+
+[node name="LevelSeed5" parent="Seeds" instance=ExtResource("16_6xo0g")]
+position = Vector2(2420, -94)
+to_animate = "strawberry_float"
+
+[node name="LevelSeed6" parent="Seeds" instance=ExtResource("16_6xo0g")]
+position = Vector2(2542, 37)
+to_animate = "apple_float"
 
 [node name="Background" type="Node2D" parent="."]
 
