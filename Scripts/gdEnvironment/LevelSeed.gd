@@ -12,6 +12,8 @@ func _ready():
 func _on_body_entered(body):
 	if body.has_method("mc"):
 		Global.seeds_collected += 1
+		if Global.seeds_collected >= 6:
+			get_parent().all_seeds_collected()
 		self.queue_free()
 
 

@@ -9,9 +9,11 @@ var has_player := false
 
 func _process(delta):
 	if has_player and Input.is_action_just_pressed("Interact") and not interacted:
+		get_parent().save_pig()
 		var animator = $AnimationPlayer
 		animator.play("idle")
 		interacted = true
+	
 	
 
 

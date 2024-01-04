@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://1bmalf5j3q3v"]
+[gd_scene load_steps=37 format=3 uid="uid://1bmalf5j3q3v"]
 
 [ext_resource type="Script" path="res://Scripts/gdScenes/LevelA2.gd" id="1_kq6tq"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_kedl6"]
@@ -20,6 +20,12 @@
 [ext_resource type="PackedScene" uid="uid://cqnb47ywotbur" path="res://assets/Environment/Common Environment/garbage_can.tscn" id="16_kwww4"]
 [ext_resource type="PackedScene" uid="uid://cyp7qpsfeer5m" path="res://assets/Environment/Misc/Trash/Garbage.tscn" id="17_j7k8b"]
 [ext_resource type="PackedScene" uid="uid://47p5lvstorbh" path="res://assets/Entities/Good/VisayanWartyPig.tscn" id="18_jw74x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpv87"]
+size = Vector2(20, 286)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lx428"]
+size = Vector2(20, 287)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vl3td"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1617,6 +1623,20 @@ position = Vector2(2000, 239)
 [node name="WoodCutter" parent="Enemies" instance=ExtResource("13_j3571")]
 position = Vector2(874, 121)
 
+[node name="Lock" type="Node2D" parent="."]
+
+[node name="Block" type="StaticBody2D" parent="Lock"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lock/Block"]
+position = Vector2(2558, 20)
+shape = SubResource("RectangleShape2D_xpv87")
+
+[node name="Check" type="Area2D" parent="Lock"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lock/Check"]
+position = Vector2(2545, 19.5)
+shape = SubResource("RectangleShape2D_lx428")
+
 [node name="Navigation" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_axi16")
 format = 2
@@ -1740,6 +1760,7 @@ position = Vector2(1798, 7)
 shape = SubResource("RectangleShape2D_hb657")
 
 [connection signal="timeout" from="DamageTick" to="." method="_on_damage_tick_timeout"]
+[connection signal="body_entered" from="Lock/Check" to="." method="_on_check_body_entered"]
 [connection signal="body_entered" from="DangerZones/DeathZone" to="." method="_on_death_zone_body_entered"]
 [connection signal="body_entered" from="DangerZones/DamageZone" to="." method="_on_damage_zone_body_entered"]
 [connection signal="body_exited" from="DangerZones/DamageZone" to="." method="_on_damage_zone_body_exited"]

@@ -8,6 +8,7 @@ var two_to_one = false
 
 var hp = 5
 var trashthrown = 0
+var trash_disposed = 0
 var seeds_collected = 0
 
 func reset():

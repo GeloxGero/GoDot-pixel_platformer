@@ -221,3 +221,4 @@ func _on_ladder_checker_body_exited(body):
 	if body.has_node("Ladder"):
 		on_ladder = false
 		
+

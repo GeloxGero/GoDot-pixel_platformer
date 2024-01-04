@@ -75,7 +75,8 @@ func _ready():
 	
 
 	#MusicController.play_music()
-
+	if Global.seeds_collected == 6:
+		$Terrain/CPUParticles2D.emitting = true
 	
 	
 	var camera = get_node("Player/Camera2D")
@@ -106,6 +107,7 @@ func _on_surprise_dialog_body_entered(body):
 	if !extras:
 		extras = true
 		DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s1extra1.dialogue"), "s1extra1")
+		print(DialogueManager.got_dialogue)
 
 
 func _on_surprise_dialog_body_exited(body):
@@ -119,3 +121,8 @@ func _on_level_block_body_entered(body):
 			level_blocker.queue_free()
 		else:
 			DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s1end.dialogue"), "incomplete")
+
+
+func all_seeds_collected():
+	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s1extra1.dialogue"), "s1extra1")
+	$Terrain/CPUParticles2D.emitting = true

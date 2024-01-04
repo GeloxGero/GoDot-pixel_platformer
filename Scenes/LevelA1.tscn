@@ -221,12 +221,17 @@ layer_3/tile_data = PackedInt32Array(-196592, 196609, 2, -196590, 131073, 2, -19
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Terrain"]
 position = Vector2(2102.3, -34.8124)
+emitting = false
+amount = 20
 texture = ExtResource("12_3om14")
 emission_shape = 3
-emission_rect_extents = Vector2(1700, 100)
+emission_rect_extents = Vector2(2000, 100)
+spread = 43.5
 gravity = Vector2(200, 100)
 initial_velocity_min = 1.0
 initial_velocity_max = 10.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
 
 [node name="Player" parent="." instance=ExtResource("5_eqgv7")]
 texture_filter = 1

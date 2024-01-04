@@ -14,6 +14,7 @@ var inc = 0
 var found_pig = false
 var saved_pig = false
 var poison_player = false
+var cleaned_up = false
 
 var Enemy = preload("res://assets/Entities/Enemy/Woodcutter/wood_cutter.tscn")
 
@@ -89,6 +90,7 @@ func _on_edge_right_body_exited(body):
 func _on_found_pig_body_entered(body):
 	if !found_pig:
 		DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s2pig.dialogue"), "pig")
+		found_pig = true
 
 
 
@@ -115,3 +117,26 @@ func _on_damage_tick_timeout():
 	if poison_player:
 		$Player.take_damage(1)
 		damage_tick.start(1)
+
+
+func save_pig():
+	saved_pig = true
+	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s2content.dialogue"), "freedom")
+
+
+func clean_up():
+	if saved_pig and !cleaned_up:
+		DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s2content.dialogue"), "musing")
+		cleaned_up = true
+	if Global.trash_disposed == 15:
+		DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s2content.dialogue"), "complete")
+
+
+func _on_check_body_entered(body):
+	if body.has_method("mc"):
+		if Global.trash_disposed == 15:
+			if $Lock/Block:
+				$Lock/Block.queue_free()
+		else :
+			DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s2content.dialogue"), "incomplete")
+			
