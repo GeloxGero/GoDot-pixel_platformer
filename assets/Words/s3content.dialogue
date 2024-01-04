@@ -1,5 +1,6 @@
 ~ start
 
+
 Negros Bleeding Heart: Greetings Guardian! I have heard from the Visayan Warty Pig and the VIsayan Spotted Deer about your deeds. I truly thank you. 
 
 Negros Bleeding Heart: This place… is dangerous. It is full of things not part of nature that shoots whatever approaches. You must find the switches and destroy them.
@@ -14,12 +15,26 @@ Guardian: I will do what I can.
 
 Press “E” to interact with things that can be interacted with, like switches to turn them off.
 
+
+
 => END
+
+~ pollution
+
+Negros Bleeding Heart: It seems this facility has been responsible for poisoning our rivers, and polluting our home.
+
+Negros Bleeding Heart: Guardian! Please turn off this facility by destroying the switches inside.
+
+Negros Bleeding Heart: You have the power to make the world a better place.
+
+
+=> END
+
 
 
 ~ motivate
 
-Negros Bleeding Heart: Great job guardian! There are only n switches left. 
+Negros Bleeding Heart: Great job guardian! There are only {{10 - Global.switches_destroyed}} switches left. 
 
 
 => END

@@ -10,10 +10,18 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if has_player and Input.is_action_just_pressed("Interact") and not interacted:
+		
 		var sprite = $AnimatedSprite2D
+		Global.switches_destroyed += 1
 		sprite.play("default")
 		sprite.show()
 		interacted = true
+		
+		var owner = get_owner()
+		
+		owner.tell_switch()
+		if Global.switches_destroyed % 4 == 0:
+			owner.motivate()
 
 
 func _on_body_entered(body):

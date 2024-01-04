@@ -1626,6 +1626,7 @@ position = Vector2(874, 121)
 [node name="Lock" type="Node2D" parent="."]
 
 [node name="Block" type="StaticBody2D" parent="Lock"]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lock/Block"]
 position = Vector2(2558, 20)
@@ -1690,7 +1691,7 @@ position = Vector2(1932, 59)
 collision_layer = 2
 
 [node name="EdgeRightA2" type="CollisionShape2D" parent="EdgeRight"]
-position = Vector2(633, -38)
+position = Vector2(641, -41)
 shape = SubResource("RectangleShape2D_gip2l")
 
 [node name="EdgeLeft" type="Area2D" parent="."]
