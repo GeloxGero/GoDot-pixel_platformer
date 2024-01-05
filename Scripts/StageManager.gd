@@ -1,10 +1,11 @@
 extends CanvasLayer
 
 
-
+const TitleScreen = "res://Scenes/Title Screen.tscn"
 const Level1 = "res://Scenes/LevelA1.tscn"
 const Level2 = "res://Scenes/LevelA2.tscn"
 const Level3 = "res://Scenes/LevelA3.tscn"
+const Ending = "res://Scenes/Ending.tscn"
 
 
 func changeStage(stage_path):
