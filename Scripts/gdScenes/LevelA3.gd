@@ -5,6 +5,8 @@ extends Node2D
 @export var limit_y_up : int
 @export var limit_y_down : int
 
+@onready var bird = $NegrosBleedingHeart/AnimationPlayer
+
 
 var level_start : bool = false
 var found_switch : bool = false
@@ -18,9 +20,10 @@ func _ready():
 	camera.limit_top = limit_y_up
 	camera.limit_bottom = limit_y_down
 	
-	
+	bird.play("idle")
+	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s3content.dialogue"), "tooltip")
 	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s3content.dialogue"), "start")
-	
+
 
 
 func _on_edge_left_body_entered(body):
@@ -41,7 +44,7 @@ func _on_edge_right_body_entered(body):
 
 
 func _on_edge_right_body_exited(body):
-	pass # Replace with function body.
+	get_tree().change_scene_to_file(StageManager.Ending)
 
 
 func tell_switch():
@@ -52,4 +55,7 @@ func tell_switch():
 func motivate():
 	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s3content.dialogue"), "motivate")
 
+
+func unlock():
+	$Lock.queue_free()
 

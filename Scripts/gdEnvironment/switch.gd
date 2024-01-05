@@ -22,6 +22,9 @@ func _process(delta):
 		owner.tell_switch()
 		if Global.switches_destroyed % 4 == 0:
 			owner.motivate()
+			
+		if Global.switches_destroyed == 9:
+			owner.unlock()
 
 
 func _on_body_entered(body):

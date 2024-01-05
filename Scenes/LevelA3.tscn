@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://7vb20e8tc1wr"]
+[gd_scene load_steps=21 format=3 uid="uid://7vb20e8tc1wr"]
 
 [ext_resource type="Script" path="res://Scripts/gdScenes/LevelA3.gd" id="1_akg65"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="1_kdpcf"]
@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://cnw3tx21w3cy7" path="res://assets/Environment/Level3/Factory Objects all.png" id="9_vc3go"]
 [ext_resource type="Texture2D" uid="uid://b70podauug000" path="res://assets/Environment/Level3/Tileset.png" id="10_lqhn6"]
 [ext_resource type="PackedScene" uid="uid://bf3clf2c0ulrc" path="res://assets/Entities/Enemy/Shooter/ball_shooter.tscn" id="12_lfbap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oudio"]
+size = Vector2(20, 285)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kc06n"]
 texture = ExtResource("9_vc3go")
@@ -1472,7 +1475,20 @@ position = Vector2(1600, -1)
 [node name="Switch9" parent="Switches" instance=ExtResource("2_sbucs")]
 position = Vector2(2096, -98)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("8_2ua2e")]
+[node name="Lock" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Lock"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lock/StaticBody2D"]
+position = Vector2(14, 64)
+shape = SubResource("RectangleShape2D_oudio")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lock/StaticBody2D"]
+position = Vector2(3157, 19.5)
+shape = SubResource("RectangleShape2D_oudio")
+
+[node name="NegrosBleedingHeart" parent="." instance=ExtResource("8_2ua2e")]
 position = Vector2(84, 112)
 scale = Vector2(2, 2)
 

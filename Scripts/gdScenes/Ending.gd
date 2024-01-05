@@ -28,17 +28,6 @@ func _ready():
 	show_achievements()
 	await DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/ending.dialogue"), "start")
 	
-	
-
-
-
-
-
-
-
-
-
-
 
 func show_achievements():
 	await DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/ending.dialogue"), "achievements")

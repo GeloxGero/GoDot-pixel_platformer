@@ -30,11 +30,16 @@ Negros Bleeding Heart: You have the power to make the world a better place.
 
 => END
 
+~ completed
 
+
+
+
+=> END
 
 ~ motivate
 
-Negros Bleeding Heart: Great job guardian! There are only {{10 - Global.switches_destroyed}} switches left. 
+Negros Bleeding Heart: Great job guardian! There are only {{9 - Global.switches_destroyed}} switches left. 
 
 
 => END
