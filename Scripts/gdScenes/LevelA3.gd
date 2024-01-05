@@ -58,4 +58,5 @@ func motivate():
 
 func unlock():
 	$Lock.queue_free()
+	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s3content.dialogue"), "completed")
 
