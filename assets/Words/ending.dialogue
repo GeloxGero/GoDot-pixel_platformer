@@ -24,8 +24,8 @@ Visayan Spotted Deer: Guardian, we truly thank you from the bottom of our hearts
 ~ achievements
 
 Tooltip: Congratulations for clearing the game!!
-Tooltip: Player x , you have collected a total of n seeds, bringing hope for restoration of forests!
-Tooltip: You have properly disposed a total of n garbage, cleaning up the forests, the waters, and the environment.
+Tooltip: Player x , you have collected a total of {{Global.seeds_collected}} seeds, bringing hope for restoration of forests!
+Tooltip: You have properly disposed a total of {{Global.trash_disposed}} garbage, cleaning up the forests, the waters, and the environment.
 Tooltip: Congratulations for surviving the factory, it was meant to be a little easier...
 Tooltip: Thank you for playing Gubat Guardians. Lets join hands to combat deforestation and safeguard our planets precious species.
 Tooltip: You may exit the game by collecting the final seed to the left.
