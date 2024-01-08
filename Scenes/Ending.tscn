@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dpula6k0vcgex"]
+[gd_scene load_steps=22 format=3 uid="uid://dpula6k0vcgex"]
 
 [ext_resource type="Script" path="res://Scripts/gdScenes/Ending.gd" id="1_ul83f"]
 [ext_resource type="Texture2D" uid="uid://c8y1igbq45x0j" path="res://assets/Environment/Misc/Start/bg/plx-1.png" id="2_4ytgm"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://7y5my6vdho8s" path="res://assets/Entities/Good/visayan_spotted_deer.tscn" id="14_4tpfr"]
 [ext_resource type="PackedScene" uid="uid://u3cugo04sraw" path="res://assets/Entities/Good/NegrosBleedingHeart.tscn" id="14_m4g42"]
 [ext_resource type="PackedScene" uid="uid://47p5lvstorbh" path="res://assets/Entities/Good/VisayanWartyPig.tscn" id="15_n1so7"]
+[ext_resource type="PackedScene" uid="uid://c8b5wriowgvxv" path="res://assets/Environment/Seeds/EndSeed.tscn" id="17_8hfuc"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_o5umx"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -227,6 +228,11 @@ scale = Vector2(2, 2)
 
 [node name="VisayanWartyPig" parent="." instance=ExtResource("15_n1so7")]
 position = Vector2(1065, -168)
+
+[node name="EndSeed" parent="." instance=ExtResource("17_8hfuc")]
+position = Vector2(1804, -15)
+scale = Vector2(2, 2)
+collision_layer = 16
 
 [connection signal="body_entered" from="DeathZone" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="DeathZone2" to="." method="_on_area_2d_body_entered"]
