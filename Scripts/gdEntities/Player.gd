@@ -30,6 +30,8 @@ var gravity = 980 # The force of gravity
 
 var interact : bool = false
 
+var playing_walking : bool = false
+
 func _physics_process(delta):	
 	
 	
@@ -76,6 +78,8 @@ func _physics_process(delta):
 		States.DROP:
 			animation.play("fall")
 		States.CLIMB:
+			playing_walking = false
+			MusicController.stop(MusicController.SFX)
 			jumpval = 2
 			down = Input.is_action_pressed('down')
 			velocity.y = 0
@@ -94,6 +98,7 @@ func _physics_process(delta):
 			jumpval -= 1
 			animation.play("jump")
 			MusicController.play(MusicController.SFX, MusicController.JUMP)
+			playing_walking = false
 			velocity.y = jump_speed * jump_force
 			_state = States.IN_AIR
 	elif(up):
@@ -105,6 +110,8 @@ func _physics_process(delta):
 				_state = States.CLIMB
 		elif _state == States.CROUCH:
 			_state = States.ON_GROUND
+			
+
 	elif(down):
 		if on_ladder:
 			if _state == States.CLIMB:
@@ -120,18 +127,22 @@ func _physics_process(delta):
 			animation.play("run")
 		$Sprite2D.flip_h = false
 		direction.x += 1
-		if on_floor:
+		if on_floor and !playing_walking:
 			MusicController.play(MusicController.SFX, MusicController.WALK)
+			playing_walking = true
 	elif(left and not lock_x):
 		flipped = true
 		if _state == States.ON_GROUND:
 			animation.play("run")
 		$Sprite2D.flip_h = true
 		direction.x -= 1
-		if on_floor:
+		if on_floor and !playing_walking:
 			MusicController.play(MusicController.SFX, MusicController.WALK)
+			playing_walking = true
 	else:
 		if _state == States.ON_GROUND:
+			playing_walking = false
+			MusicController.stop(MusicController.SFX)
 			animation.play("idle")
 		
 	

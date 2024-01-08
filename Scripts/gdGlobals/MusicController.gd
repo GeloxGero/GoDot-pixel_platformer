@@ -17,3 +17,6 @@ func play(player, audio):
 	player.stream = audio
 	player.play()
 
+
+func stop(player):
+	player.stop()
