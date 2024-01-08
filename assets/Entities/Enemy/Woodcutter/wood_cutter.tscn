@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://leaokftbf25j"]
+[gd_scene load_steps=17 format=3 uid="uid://leaokftbf25j"]
 
 [ext_resource type="Script" path="res://Scripts/gdEntities/wood_cutter.gd" id="1_hpefj"]
 [ext_resource type="Texture2D" uid="uid://1teq21s8dv7g" path="res://assets/Entities/Enemy/Woodcutter/woodcutter.png" id="2_rojqd"]
+[ext_resource type="AudioStream" uid="uid://bqf1sr5ajcprf" path="res://assets/Audio/Axe.mp3" id="3_ya5kv"]
 
 [sub_resource type="Animation" id="Animation_nyxg1"]
 length = 0.001
@@ -229,6 +230,9 @@ position = Vector2(0, -22)
 rotation = 1.5708
 target_position = Vector2(1.1365e-06, 26)
 collision_mask = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ya5kv")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

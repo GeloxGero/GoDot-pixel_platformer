@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bf3clf2c0ulrc"]
+[gd_scene load_steps=13 format=3 uid="uid://bf3clf2c0ulrc"]
 
 [ext_resource type="Texture2D" uid="uid://dk3eyrsasp8j7" path="res://assets/Entities/Enemy/Shooter/Shooter.png" id="1_senbc"]
 [ext_resource type="Script" path="res://Scripts/gdEntities/BallShooter.gd" id="1_y17ii"]
 [ext_resource type="PackedScene" uid="uid://bre4w34ddgh62" path="res://assets/Entities/Enemy/Shooter/BallShooterProjectile.tscn" id="2_gnxk0"]
+[ext_resource type="AudioStream" uid="uid://bg1bdxpc2mjpm" path="res://assets/Audio/turret.mp3" id="4_nt1qp"]
 
 [sub_resource type="Animation" id="Animation_21fgy"]
 length = 0.001
@@ -144,6 +145,10 @@ shape = SubResource("CapsuleShape2D_x8s78")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_nt1qp")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

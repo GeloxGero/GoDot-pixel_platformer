@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var animation := $AnimationPlayer
 @onready var timer := $Timer # create a new Timer instance
 @onready var random := RandomNumberGenerator.new()
+@onready var audio = $AudioStreamPlayer
 
 @export var projectile: PackedScene
 
@@ -35,6 +36,8 @@ func shoot():
 	
 	var component = bullet.get_node("ProjectileComponent")
 	component.set_direction(Vector2.LEFT) 
+	audio.play()
+	
 
 
 # Take damage function in taking damage of turret
@@ -45,6 +48,8 @@ func take_damage(damage: int) -> void:
 		currState = STATE.DEAD
 	else:
 		currState = STATE.HIT
+	
+	audio.stop()
 
 func _on_timer_timeout() -> void:
 	print("Shooting")

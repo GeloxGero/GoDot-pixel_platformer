@@ -9,6 +9,7 @@ extends CharacterBody2D
 @export var attack_right_position : Vector2
 
 @onready var animation = $AnimationPlayer
+@onready var audio = $AudioStreamPlayer
 @onready var nav_agent = $NavigationAgent2D
 @onready var wall_check = $RayCast2D
 @onready var attack_detect = $AttackingArea/AttackingDetect
@@ -87,13 +88,14 @@ func _physics_process(delta):
 		State.DAMAGED:
 			movement_speed = 0
 			animation.play("damaged")
+			audio.stop()
 		State.DEATH:
 			movement_speed = 0
 			animation.play("death")
 		State.ATTACK:
 			if can_attack:
 				animation.play("attack")
-				MusicController.play(MusicController.SFX, MusicController.AXE)
+				audio.play()
 
 	if direction:
 		velocity.x = direction.x * movement_speed	

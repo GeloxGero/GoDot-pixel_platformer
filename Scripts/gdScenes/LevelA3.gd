@@ -37,21 +37,18 @@ func _on_edge_left_body_exited(body):
 
 
 func _on_edge_right_body_entered(body):
-	print(body.has_method("mc"))
 	if body.has_method("mc"):
-		pass
-		#get_tree().change_scene_to_file(StageManager.Level4)
+		get_tree().change_scene_to_file(StageManager.Ending)
 
 
 func _on_edge_right_body_exited(body):
-	get_tree().change_scene_to_file(StageManager.Ending)
+	pass
 
 
 func tell_switch():
 	if not found_switch:
 		DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s3content.dialogue"), "pollution")
 		found_switch = true
-
 func motivate():
 	DialogueManager.show_example_dialogue_balloon(load("res://assets/Words/s3content.dialogue"), "motivate")
 

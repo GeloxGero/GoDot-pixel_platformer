@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://5ii0pieomnpv"]
+[gd_scene load_steps=5 format=3 uid="uid://5ii0pieomnpv"]
 
 [ext_resource type="Script" path="res://Scripts/gdEntities/gdProjectiles/projectile.gd" id="1_auncj"]
 [ext_resource type="Texture2D" uid="uid://c0qy4fg5gvbmf" path="res://assets/Entities/Player/Projectiles/Item_Rock1.png" id="2_mkhyq"]
-
+[ext_resource type="AudioStream" uid="uid://du1aea7whyk0c" path="res://assets/Audio/gun.mp3" id="3_6eym1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1h1ig"]
 size = Vector2(10, 8.85359)
@@ -22,5 +22,10 @@ texture = ExtResource("2_mkhyq")
 position = Vector2(0, -1.19209e-07)
 scale = Vector2(1, 0.903588)
 shape = SubResource("RectangleShape2D_1h1ig")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6eym1")
+autoplay = true
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
