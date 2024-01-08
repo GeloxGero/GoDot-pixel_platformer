@@ -1332,6 +1332,7 @@ metadata/_edit_vertical_guides_ = []
 [node name="DamageTick" type="Timer" parent="."]
 
 [node name="Background" type="Node2D" parent="."]
+position = Vector2(0, 20)
 
 [node name="Plx-1" type="Sprite2D" parent="Background"]
 z_index = -20

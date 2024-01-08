@@ -21,6 +21,7 @@ var Seed = preload("res://assets/Environment/Seeds/LevelSeed.tscn")
 var data
 
 func _initial_data():
+	print(Global.player_name)
 	data = {
 		"player": null,
 		"enemy": [],
@@ -116,7 +117,7 @@ func _on_surprise_dialog_body_exited(body):
 
 func _on_level_block_body_entered(body):
 	if body.has_method("mc"):
-		if Global.seeds_collected == 6:
+		if Global.seeds_collected >= 6:
 			set_deferred("monitoring", false)
 			level_blocker.queue_free()
 		else:
