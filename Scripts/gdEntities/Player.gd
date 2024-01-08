@@ -93,6 +93,7 @@ func _physics_process(delta):
 		elif jumpval > 0:
 			jumpval -= 1
 			animation.play("jump")
+			MusicController.play(MusicController.SFX, MusicController.JUMP)
 			velocity.y = jump_speed * jump_force
 			_state = States.IN_AIR
 	elif(up):
@@ -119,13 +120,16 @@ func _physics_process(delta):
 			animation.play("run")
 		$Sprite2D.flip_h = false
 		direction.x += 1
+		if on_floor:
+			MusicController.play(MusicController.SFX, MusicController.WALK)
 	elif(left and not lock_x):
 		flipped = true
 		if _state == States.ON_GROUND:
 			animation.play("run")
 		$Sprite2D.flip_h = true
 		direction.x -= 1
-
+		if on_floor:
+			MusicController.play(MusicController.SFX, MusicController.WALK)
 	else:
 		if _state == States.ON_GROUND:
 			animation.play("idle")
@@ -205,6 +209,7 @@ func take_damage(damage):
 	if Global.hp == 1:
 		die()
 	Global.hp -= damage
+	MusicController.play(MusicController.SFX, MusicController.DAMAGE)
 	
 
 func _on_animation_player_animation_finished(anim_name):

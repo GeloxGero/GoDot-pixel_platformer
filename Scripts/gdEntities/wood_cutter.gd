@@ -93,6 +93,7 @@ func _physics_process(delta):
 		State.ATTACK:
 			if can_attack:
 				animation.play("attack")
+				MusicController.play(MusicController.SFX, MusicController.AXE)
 
 	if direction:
 		velocity.x = direction.x * movement_speed	

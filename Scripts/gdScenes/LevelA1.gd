@@ -75,7 +75,7 @@ func _ready():
 			#inst(Enemy, Vector2(load.position_x, load.position_y))
 	
 
-	#MusicController.play_music()
+	MusicController.play(MusicController.MUSIC, MusicController.BACKGROUND)
 	if Global.seeds_collected == 6:
 		$Terrain/CPUParticles2D.emitting = true
 	
