@@ -69,6 +69,7 @@ texture_normal = SubResource("AtlasTexture_2gfy0")
 
 [node name="PauseUI" type="Control" parent="."]
 process_mode = 2
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = -232.0
@@ -106,6 +107,7 @@ offset_bottom = 144.603
 texture_normal = SubResource("AtlasTexture_21sxe")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="PauseUI"]
+layout_mode = 0
 offset_left = 313.594
 offset_top = 108.09
 offset_right = 442.594

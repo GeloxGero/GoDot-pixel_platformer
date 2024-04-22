@@ -13,7 +13,7 @@ config_version=5
 config/name="Gubatt"
 run/main_scene="res://Scenes/Title Screen.tscn"
 config/features=PackedStringArray("4.1")
-config/icon="res://icon.png"
+config/icon="res://assets/Environment/Common Environment/logo.png"
 
 [autoload]
 
