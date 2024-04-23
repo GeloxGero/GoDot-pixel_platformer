@@ -64,6 +64,9 @@ func _ready():
 	else:
 		data = Persist.Scene2
 		$Player.position = Vector2(data.player.position_x, data.player.position_y)
+		
+	if Global.trash_disposed == 15:
+		$Garbage.queue_free()
 
 func _on_edge_left_body_entered(body):
 	if body.name == "Player":

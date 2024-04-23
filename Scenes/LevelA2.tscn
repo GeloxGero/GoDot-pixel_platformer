@@ -22,10 +22,10 @@
 [ext_resource type="PackedScene" uid="uid://47p5lvstorbh" path="res://assets/Entities/Good/VisayanWartyPig.tscn" id="18_jw74x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpv87"]
-size = Vector2(20, 286)
+size = Vector2(20, 460)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lx428"]
-size = Vector2(20, 350.5)
+size = Vector2(20, 523.5)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vl3td"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1635,18 +1635,18 @@ position = Vector2(2558, 20)
 shape = SubResource("RectangleShape2D_xpv87")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Lock/Block"]
-position = Vector2(1, -6)
+position = Vector2(1, -93)
 shape = SubResource("RectangleShape2D_xpv87")
 
 [node name="Check" type="Area2D" parent="Lock"]
 position = Vector2(21, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lock/Check"]
-position = Vector2(2545, 19.5)
+position = Vector2(2527, 20)
 shape = SubResource("RectangleShape2D_lx428")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Lock/Check"]
-position = Vector2(-16, 19.25)
+position = Vector2(-16, -67.25)
 shape = SubResource("RectangleShape2D_lx428")
 
 [node name="Navigation" type="TileMap" parent="."]
@@ -1755,11 +1755,11 @@ position = Vector2(719, 145)
 [node name="Garbage13" parent="Garbage" instance=ExtResource("17_j7k8b")]
 position = Vector2(1520, -69)
 
+[node name="Garbage15" parent="Garbage" instance=ExtResource("17_j7k8b")]
+position = Vector2(47, -90)
+
 [node name="Garbage14" parent="Garbage" instance=ExtResource("17_j7k8b")]
 position = Vector2(1041, 42)
-
-[node name="Garbage2" parent="." instance=ExtResource("17_j7k8b")]
-position = Vector2(47, -90)
 
 [node name="VisayanWartyPig" parent="." instance=ExtResource("18_jw74x")]
 position = Vector2(2112, 170)
