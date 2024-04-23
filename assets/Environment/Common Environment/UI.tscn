@@ -69,7 +69,6 @@ texture_normal = SubResource("AtlasTexture_2gfy0")
 
 [node name="PauseUI" type="Control" parent="."]
 process_mode = 2
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = -232.0
@@ -108,18 +107,18 @@ texture_normal = SubResource("AtlasTexture_21sxe")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="PauseUI"]
 layout_mode = 0
-offset_left = 313.594
-offset_top = 108.09
-offset_right = 442.594
-offset_bottom = 148.09
+offset_left = 314.0
+offset_top = 108.0
+offset_right = 387.0
+offset_bottom = 148.0
 text = "Restart"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PauseUI"]
 layout_mode = 0
-offset_left = 314.266
-offset_top = 57.8805
-offset_right = 443.266
-offset_bottom = 97.8805
+offset_left = 314.0
+offset_top = 58.0
+offset_right = 390.0
+offset_bottom = 98.0
 text = "Resume"
 
 [node name="GameOverUI" type="Control" parent="."]
