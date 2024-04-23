@@ -67,6 +67,7 @@ func _ready():
 		
 	if Global.trash_disposed == 15:
 		$Garbage.queue_free()
+		$Seeds.queue_free()
 
 func _on_edge_left_body_entered(body):
 	if body.name == "Player":
