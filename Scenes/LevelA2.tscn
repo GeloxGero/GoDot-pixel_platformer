@@ -25,7 +25,7 @@
 size = Vector2(20, 286)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lx428"]
-size = Vector2(20, 287)
+size = Vector2(20, 350.5)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vl3td"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1350,6 +1350,7 @@ texture = ExtResource("5_b8j4t")
 texture = ExtResource("6_c6irj")
 
 [node name="Plx-5" type="Sprite2D" parent="Background/Plx-1"]
+position = Vector2(10.5554, -29.3221)
 texture = ExtResource("3_q46hs")
 
 [node name="Plx-3" type="Sprite2D" parent="Background"]
@@ -1633,10 +1634,19 @@ collision_layer = 2
 position = Vector2(2558, 20)
 shape = SubResource("RectangleShape2D_xpv87")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lock/Block"]
+position = Vector2(1, -6)
+shape = SubResource("RectangleShape2D_xpv87")
+
 [node name="Check" type="Area2D" parent="Lock"]
+position = Vector2(21, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lock/Check"]
 position = Vector2(2545, 19.5)
+shape = SubResource("RectangleShape2D_lx428")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lock/Check"]
+position = Vector2(-16, 19.25)
 shape = SubResource("RectangleShape2D_lx428")
 
 [node name="Navigation" type="TileMap" parent="."]
@@ -1684,7 +1694,7 @@ shape = SubResource("RectangleShape2D_ha5un")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-8.5, 81)
+position = Vector2(-19, 61)
 shape = SubResource("RectangleShape2D_wbrkr")
 
 [node name="EdgeRight" type="Area2D" parent="."]
@@ -1698,7 +1708,7 @@ shape = SubResource("RectangleShape2D_gip2l")
 [node name="EdgeLeft" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EdgeLeft"]
-position = Vector2(6, 82)
+position = Vector2(-5, 61)
 shape = SubResource("RectangleShape2D_vtef0")
 
 [node name="GarbageCan" parent="." instance=ExtResource("16_kwww4")]

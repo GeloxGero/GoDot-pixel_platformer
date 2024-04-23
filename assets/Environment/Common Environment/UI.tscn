@@ -69,6 +69,7 @@ texture_normal = SubResource("AtlasTexture_2gfy0")
 
 [node name="PauseUI" type="Control" parent="."]
 process_mode = 2
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = -232.0
